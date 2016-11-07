@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7BA1DCC528400698B41 /* AppDelegate.swift */; };
+		828DA7C21DCC528400698B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828DA7C11DCC528400698B41 /* Assets.xcassets */; };
+		828DA7C51DCC528400698B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828DA7C31DCC528400698B41 /* LaunchScreen.storyboard */; };
+		828DA7D01DCC528400698B41 /* HopOnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7CF1DCC528400698B41 /* HopOnTests.swift */; };
+		828DA7DB1DCC528500698B41 /* HopOnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7DA1DCC528500698B41 /* HopOnUITests.swift */; };
+		828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */; };
+		828DA7ED1DCC938F00698B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828DA7EB1DCC938F00698B41 /* Main.storyboard */; };
+		828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7EE1DCC947D00698B41 /* T&CViewController.swift */; };
+		82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D251DCCAD73005CC046 /* LoginViewController.swift */; };
+		82C81D281DCCAD86005CC046 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D271DCCAD86005CC046 /* SignUpViewController.swift */; };
+		82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		828DA7CC1DCC528400698B41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 828DA7AF1DCC528400698B41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 828DA7B61DCC528400698B41;
+			remoteInfo = HopOn;
+		};
+		828DA7D71DCC528500698B41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 828DA7AF1DCC528400698B41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 828DA7B61DCC528400698B41;
+			remoteInfo = HopOn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		828DA7B71DCC528400698B41 /* HopOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		828DA7BA1DCC528400698B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		828DA7C11DCC528400698B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		828DA7C41DCC528400698B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		828DA7C61DCC528400698B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828DA7CB1DCC528400698B41 /* HopOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		828DA7CF1DCC528400698B41 /* HopOnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopOnTests.swift; sourceTree = "<group>"; };
+		828DA7D11DCC528500698B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828DA7D61DCC528500698B41 /* HopOnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopOnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		828DA7DA1DCC528500698B41 /* HopOnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopOnUITests.swift; sourceTree = "<group>"; };
+		828DA7DC1DCC528500698B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		828DA7EC1DCC938F00698B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		828DA7EE1DCC947D00698B41 /* T&CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "T&CViewController.swift"; sourceTree = "<group>"; };
+		82C81D251DCCAD73005CC046 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		82C81D271DCCAD86005CC046 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationPageViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		828DA7B41DCC528400698B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828DA7C81DCC528400698B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828DA7D31DCC528500698B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		828DA7AE1DCC528400698B41 = {
+			isa = PBXGroup;
+			children = (
+				828DA7B91DCC528400698B41 /* HopOn */,
+				828DA7CE1DCC528400698B41 /* HopOnTests */,
+				828DA7D91DCC528500698B41 /* HopOnUITests */,
+				828DA7B81DCC528400698B41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		828DA7B81DCC528400698B41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				828DA7B71DCC528400698B41 /* HopOn.app */,
+				828DA7CB1DCC528400698B41 /* HopOnTests.xctest */,
+				828DA7D61DCC528500698B41 /* HopOnUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		828DA7B91DCC528400698B41 /* HopOn */ = {
+			isa = PBXGroup;
+			children = (
+				828DA7E81DCC617800698B41 /* View Controllers */,
+				828DA7BA1DCC528400698B41 /* AppDelegate.swift */,
+				828DA7C11DCC528400698B41 /* Assets.xcassets */,
+				828DA7EB1DCC938F00698B41 /* Main.storyboard */,
+				828DA7C31DCC528400698B41 /* LaunchScreen.storyboard */,
+				828DA7C61DCC528400698B41 /* Info.plist */,
+			);
+			path = HopOn;
+			sourceTree = "<group>";
+		};
+		828DA7CE1DCC528400698B41 /* HopOnTests */ = {
+			isa = PBXGroup;
+			children = (
+				828DA7CF1DCC528400698B41 /* HopOnTests.swift */,
+				828DA7D11DCC528500698B41 /* Info.plist */,
+			);
+			path = HopOnTests;
+			sourceTree = "<group>";
+		};
+		828DA7D91DCC528500698B41 /* HopOnUITests */ = {
+			isa = PBXGroup;
+			children = (
+				828DA7DA1DCC528500698B41 /* HopOnUITests.swift */,
+				828DA7DC1DCC528500698B41 /* Info.plist */,
+			);
+			path = HopOnUITests;
+			sourceTree = "<group>";
+		};
+		828DA7E81DCC617800698B41 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */,
+				828DA7EE1DCC947D00698B41 /* T&CViewController.swift */,
+				82C81D251DCCAD73005CC046 /* LoginViewController.swift */,
+				82C81D271DCCAD86005CC046 /* SignUpViewController.swift */,
+				82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		828DA7B61DCC528400698B41 /* HopOn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828DA7DF1DCC528500698B41 /* Build configuration list for PBXNativeTarget "HopOn" */;
+			buildPhases = (
+				828DA7B31DCC528400698B41 /* Sources */,
+				828DA7B41DCC528400698B41 /* Frameworks */,
+				828DA7B51DCC528400698B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HopOn;
+			productName = HopOn;
+			productReference = 828DA7B71DCC528400698B41 /* HopOn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		828DA7CA1DCC528400698B41 /* HopOnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828DA7E21DCC528500698B41 /* Build configuration list for PBXNativeTarget "HopOnTests" */;
+			buildPhases = (
+				828DA7C71DCC528400698B41 /* Sources */,
+				828DA7C81DCC528400698B41 /* Frameworks */,
+				828DA7C91DCC528400698B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				828DA7CD1DCC528400698B41 /* PBXTargetDependency */,
+			);
+			name = HopOnTests;
+			productName = HopOnTests;
+			productReference = 828DA7CB1DCC528400698B41 /* HopOnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		828DA7D51DCC528500698B41 /* HopOnUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 828DA7E51DCC528500698B41 /* Build configuration list for PBXNativeTarget "HopOnUITests" */;
+			buildPhases = (
+				828DA7D21DCC528500698B41 /* Sources */,
+				828DA7D31DCC528500698B41 /* Frameworks */,
+				828DA7D41DCC528500698B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				828DA7D81DCC528500698B41 /* PBXTargetDependency */,
+			);
+			name = HopOnUITests;
+			productName = HopOnUITests;
+			productReference = 828DA7D61DCC528500698B41 /* HopOnUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		828DA7AF1DCC528400698B41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = AppLives;
+				TargetAttributes = {
+					828DA7B61DCC528400698B41 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2P5GT7V5CU;
+						ProvisioningStyle = Automatic;
+					};
+					828DA7CA1DCC528400698B41 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 828DA7B61DCC528400698B41;
+					};
+					828DA7D51DCC528500698B41 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 828DA7B61DCC528400698B41;
+					};
+				};
+			};
+			buildConfigurationList = 828DA7B21DCC528400698B41 /* Build configuration list for PBXProject "HopOn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 828DA7AE1DCC528400698B41;
+			productRefGroup = 828DA7B81DCC528400698B41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				828DA7B61DCC528400698B41 /* HopOn */,
+				828DA7CA1DCC528400698B41 /* HopOnTests */,
+				828DA7D51DCC528500698B41 /* HopOnUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		828DA7B51DCC528400698B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828DA7ED1DCC938F00698B41 /* Main.storyboard in Resources */,
+				828DA7C51DCC528400698B41 /* LaunchScreen.storyboard in Resources */,
+				828DA7C21DCC528400698B41 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828DA7C91DCC528400698B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828DA7D41DCC528500698B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		828DA7B31DCC528400698B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */,
+				82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */,
+				828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */,
+				828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */,
+				828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */,
+				82C81D281DCCAD86005CC046 /* SignUpViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828DA7C71DCC528400698B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828DA7D01DCC528400698B41 /* HopOnTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828DA7D21DCC528500698B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828DA7DB1DCC528500698B41 /* HopOnUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		828DA7CD1DCC528400698B41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 828DA7B61DCC528400698B41 /* HopOn */;
+			targetProxy = 828DA7CC1DCC528400698B41 /* PBXContainerItemProxy */;
+		};
+		828DA7D81DCC528500698B41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 828DA7B61DCC528400698B41 /* HopOn */;
+			targetProxy = 828DA7D71DCC528500698B41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		828DA7C31DCC528400698B41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				828DA7C41DCC528400698B41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		828DA7EB1DCC938F00698B41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				828DA7EC1DCC938F00698B41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		828DA7DD1DCC528500698B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		828DA7DE1DCC528500698B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		828DA7E01DCC528500698B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2P5GT7V5CU;
+				INFOPLIST_FILE = HopOn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AppLives.-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		828DA7E11DCC528500698B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2P5GT7V5CU;
+				INFOPLIST_FILE = HopOn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AppLives.-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		828DA7E31DCC528500698B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HopOnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppLives.HopOn.HopOnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HopOn.app/HopOn";
+			};
+			name = Debug;
+		};
+		828DA7E41DCC528500698B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HopOnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppLives.HopOn.HopOnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HopOn.app/HopOn";
+			};
+			name = Release;
+		};
+		828DA7E61DCC528500698B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = HopOnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppLives.HopOn.HopOnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HopOn;
+			};
+			name = Debug;
+		};
+		828DA7E71DCC528500698B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = HopOnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AppLives.HopOn.HopOnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HopOn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		828DA7B21DCC528400698B41 /* Build configuration list for PBXProject "HopOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828DA7DD1DCC528500698B41 /* Debug */,
+				828DA7DE1DCC528500698B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		828DA7DF1DCC528500698B41 /* Build configuration list for PBXNativeTarget "HopOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828DA7E01DCC528500698B41 /* Debug */,
+				828DA7E11DCC528500698B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		828DA7E21DCC528500698B41 /* Build configuration list for PBXNativeTarget "HopOnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828DA7E31DCC528500698B41 /* Debug */,
+				828DA7E41DCC528500698B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		828DA7E51DCC528500698B41 /* Build configuration list for PBXNativeTarget "HopOnUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828DA7E61DCC528500698B41 /* Debug */,
+				828DA7E71DCC528500698B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 828DA7AF1DCC528400698B41 /* Project object */;
+}
