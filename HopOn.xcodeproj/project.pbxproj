@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		827126041DD5A3F9009ADC24 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126031DD5A3F9009ADC24 /* Helper.swift */; };
+		827126071DD5A917009ADC24 /* ServerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126061DD5A917009ADC24 /* ServerClass.swift */; };
+		8271260A1DD5A9F5009ADC24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827126081DD5A9F5009ADC24 /* Main.storyboard */; };
+		8271260F1DD5C472009ADC24 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8271260E1DD5C472009ADC24 /* AppConstants.swift */; };
+		82845D5B1DD457CC00AD780A /* ChooseOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */; };
 		828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7BA1DCC528400698B41 /* AppDelegate.swift */; };
 		828DA7C21DCC528400698B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828DA7C11DCC528400698B41 /* Assets.xcassets */; };
 		828DA7C51DCC528400698B41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828DA7C31DCC528400698B41 /* LaunchScreen.storyboard */; };
 		828DA7D01DCC528400698B41 /* HopOnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7CF1DCC528400698B41 /* HopOnTests.swift */; };
 		828DA7DB1DCC528500698B41 /* HopOnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7DA1DCC528500698B41 /* HopOnUITests.swift */; };
 		828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */; };
-		828DA7ED1DCC938F00698B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828DA7EB1DCC938F00698B41 /* Main.storyboard */; };
 		828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7EE1DCC947D00698B41 /* T&CViewController.swift */; };
+		829EED8E1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8A1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf */; };
+		829EED8F1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8B1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf */; };
+		829EED901DD9F3D70045CC3A /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */; };
+		829EED911DD9F3D70045CC3A /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */; };
 		82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D251DCCAD73005CC046 /* LoginViewController.swift */; };
 		82C81D281DCCAD86005CC046 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D271DCCAD86005CC046 /* SignUpViewController.swift */; };
 		82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */; };
@@ -38,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		827126031DD5A3F9009ADC24 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		827126061DD5A917009ADC24 /* ServerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerClass.swift; sourceTree = "<group>"; };
+		827126091DD5A9F5009ADC24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8271260E1DD5C472009ADC24 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseOneViewController.swift; sourceTree = "<group>"; };
 		828DA7B71DCC528400698B41 /* HopOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828DA7BA1DCC528400698B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828DA7C11DCC528400698B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,8 +63,11 @@
 		828DA7DA1DCC528500698B41 /* HopOnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopOnUITests.swift; sourceTree = "<group>"; };
 		828DA7DC1DCC528500698B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		828DA7EC1DCC938F00698B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		828DA7EE1DCC947D00698B41 /* T&CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "T&CViewController.swift"; sourceTree = "<group>"; };
+		829EED8A1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
+		829EED8B1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
+		829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
+		829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		82C81D251DCCAD73005CC046 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C81D271DCCAD86005CC046 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationPageViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +98,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		827126021DD5A3E0009ADC24 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				827126031DD5A3F9009ADC24 /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		827126051DD5A8F5009ADC24 /* ServerManager */ = {
+			isa = PBXGroup;
+			children = (
+				827126061DD5A917009ADC24 /* ServerClass.swift */,
+			);
+			path = ServerManager;
+			sourceTree = "<group>";
+		};
+		8271260D1DD5C44E009ADC24 /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				8271260E1DD5C472009ADC24 /* AppConstants.swift */,
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
 		828DA7AE1DCC528400698B41 = {
 			isa = PBXGroup;
 			children = (
@@ -105,11 +145,15 @@
 		828DA7B91DCC528400698B41 /* HopOn */ = {
 			isa = PBXGroup;
 			children = (
+				8271260D1DD5C44E009ADC24 /* AppConstants */,
+				827126051DD5A8F5009ADC24 /* ServerManager */,
+				827126021DD5A3E0009ADC24 /* Helper */,
+				8294D1BE1DD37DED00920A43 /* Resources */,
 				828DA7E81DCC617800698B41 /* View Controllers */,
 				828DA7BA1DCC528400698B41 /* AppDelegate.swift */,
 				828DA7C11DCC528400698B41 /* Assets.xcassets */,
-				828DA7EB1DCC938F00698B41 /* Main.storyboard */,
 				828DA7C31DCC528400698B41 /* LaunchScreen.storyboard */,
+				827126081DD5A9F5009ADC24 /* Main.storyboard */,
 				828DA7C61DCC528400698B41 /* Info.plist */,
 			);
 			path = HopOn;
@@ -141,8 +185,20 @@
 				82C81D251DCCAD73005CC046 /* LoginViewController.swift */,
 				82C81D271DCCAD86005CC046 /* SignUpViewController.swift */,
 				82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */,
+				82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8294D1BE1DD37DED00920A43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				829EED8A1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf */,
+				829EED8B1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf */,
+				829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */,
+				829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +269,7 @@
 				TargetAttributes = {
 					828DA7B61DCC528400698B41 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2P5GT7V5CU;
+						DevelopmentTeam = PY3LT3EKXV;
 						ProvisioningStyle = Automatic;
 					};
 					828DA7CA1DCC528400698B41 = {
@@ -253,9 +309,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				828DA7ED1DCC938F00698B41 /* Main.storyboard in Resources */,
+				8271260A1DD5A9F5009ADC24 /* Main.storyboard in Resources */,
 				828DA7C51DCC528400698B41 /* LaunchScreen.storyboard in Resources */,
 				828DA7C21DCC528400698B41 /* Assets.xcassets in Resources */,
+				829EED911DD9F3D70045CC3A /* CaviarDreams.ttf in Resources */,
+				829EED8F1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf in Resources */,
+				829EED901DD9F3D70045CC3A /* CaviarDreams_Italic.ttf in Resources */,
+				829EED8E1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,12 +340,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82845D5B1DD457CC00AD780A /* ChooseOneViewController.swift in Sources */,
 				82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */,
 				82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */,
 				828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */,
 				828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */,
 				828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */,
+				827126071DD5A917009ADC24 /* ServerClass.swift in Sources */,
 				82C81D281DCCAD86005CC046 /* SignUpViewController.swift in Sources */,
+				827126041DD5A3F9009ADC24 /* Helper.swift in Sources */,
+				8271260F1DD5C472009ADC24 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,20 +385,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		827126081DD5A9F5009ADC24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				827126091DD5A9F5009ADC24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		828DA7C31DCC528400698B41 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				828DA7C41DCC528400698B41 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		828DA7EB1DCC938F00698B41 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				828DA7EC1DCC938F00698B41 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -437,11 +501,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2P5GT7V5CU;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PY3LT3EKXV;
 				INFOPLIST_FILE = HopOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AppLives.-";
+				PRODUCT_BUNDLE_IDENTIFIER = PY3LT3EKXV.com.AppLives.HopOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -450,11 +518,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2P5GT7V5CU;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PY3LT3EKXV;
 				INFOPLIST_FILE = HopOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AppLives.-";
+				PRODUCT_BUNDLE_IDENTIFIER = PY3LT3EKXV.com.AppLives.HopOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
