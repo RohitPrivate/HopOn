@@ -77,19 +77,19 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="71"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SaveMoney" translatesAutoresizingMaskIntoConstraints="NO" id="aiE-wj-XNk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="71"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="aiE-wj-XNk" secondAttribute="height" multiplier="1:1" id="la8-Az-mOF"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split costs and save money" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPQ-lz-Dzy">
-                                                        <rect key="frame" x="80" y="0.0" width="255" height="70"/>
+                                                        <rect key="frame" x="81" y="0.0" width="254" height="70"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee1-lI-TDN" userLabel="Underline View">
-                                                        <rect key="frame" x="80" y="70" width="255" height="1"/>
+                                                        <rect key="frame" x="81" y="70" width="254" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="xjq-gF-shH"/>
@@ -148,22 +148,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yko-fe-dsr" userLabel="Daily Traffic View">
-                                                <rect key="frame" x="0.0" y="171.5" width="335" height="71.5"/>
+                                                <rect key="frame" x="0.0" y="171.5" width="335" height="70.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Traffic" translatesAutoresizingMaskIntoConstraints="NO" id="vkB-5x-Ikr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="71.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="vkB-5x-Ikr" secondAttribute="height" multiplier="1:1" id="TdQ-HC-l1t"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two hours spent on daily traffic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8f-1p-jgR">
-                                                        <rect key="frame" x="81" y="0.0" width="254" height="70.5"/>
+                                                        <rect key="frame" x="80" y="0.0" width="255" height="69.5"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNp-fm-7Vk" userLabel="Underline View">
-                                                        <rect key="frame" x="81" y="70.5" width="254" height="1"/>
+                                                        <rect key="frame" x="80" y="69.5" width="255" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="ZEE-gS-WgE"/>
@@ -185,22 +185,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb4-W0-FpH" userLabel="Driver View">
-                                                <rect key="frame" x="0.0" y="258" width="335" height="71.5"/>
+                                                <rect key="frame" x="0.0" y="257" width="335" height="70.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome Page Driver" translatesAutoresizingMaskIntoConstraints="NO" id="S7l-gI-7Sm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="71.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="S7l-gI-7Sm" secondAttribute="height" multiplier="1:1" id="K5h-Kq-ZL0"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 out of 10 cars have only one driver" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwv-bp-JTE">
-                                                        <rect key="frame" x="81" y="0.0" width="254" height="70.5"/>
+                                                        <rect key="frame" x="80" y="0.0" width="255" height="69.5"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B05-L3-UHe" userLabel="Underline View">
-                                                        <rect key="frame" x="81" y="70.5" width="254" height="1"/>
+                                                        <rect key="frame" x="80" y="69.5" width="255" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="j8V-1k-qXc"/>
@@ -1053,14 +1053,14 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 <rect key="frame" x="30" y="387" width="315" height="43.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile Number Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-fe-91G">
-                                                        <rect key="frame" x="18" y="12.5" width="23" height="22"/>
+                                                        <rect key="frame" x="18" y="12.5" width="23" height="22.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Zen-fe-91G" secondAttribute="height" multiplier="2:1" constant="-22" id="GVk-mP-9es"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAT-JM-JrY" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="38.5" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="39" width="295" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="elk-Kt-InV"/>
@@ -1070,7 +1070,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-NZ-sqE" userLabel="Vertical Label">
-                                                        <rect key="frame" x="52" y="7.5" width="1" height="31"/>
+                                                        <rect key="frame" x="52" y="7.5" width="1" height="31.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="EpC-Xx-OdA"/>
@@ -1080,7 +1080,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-d8-mWX">
-                                                        <rect key="frame" x="63" y="7.5" width="242" height="31"/>
+                                                        <rect key="frame" x="63" y="7.5" width="242" height="31.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1828,7 +1828,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="41x-vY-eXI">
-                                <rect key="frame" x="195.5" y="159.5" width="162" height="161"/>
+                                <rect key="frame" x="196.5" y="159.5" width="161" height="161"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlP-rY-Y4E">
                                 <rect key="frame" x="185.5" y="363.5" width="1" height="106"/>
@@ -1935,7 +1935,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
         <scene sceneID="opE-su-4p2">
             <objects>
                 <navigationController id="ozx-BW-ab8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GRF-4S-Kfc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GRF-4S-Kfc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
