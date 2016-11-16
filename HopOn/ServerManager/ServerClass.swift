@@ -70,18 +70,44 @@ class ServerClass: NSObject {
                 if httpResponse?.statusCode == 200 {
                     completion(true, sessionData as! String)
                 }
-//                do {
-//                    let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
-//                    var description : String = "Success"
-//                    if httpResponse?.statusCode == 200 {
-//                        completion(true, description)
-//                    } else {
-//                        description = (dataDictionary as! NSDictionary).object(forKey: "message") as! String
-//                        completion(false, description)
-//                    }
-//                } catch {
-//                    print("\(error)")
-//                }
+            }
+        })
+        task.resume()
+    }
+    
+    func performLoginAction(_ loginURLString : String, _ completion : @escaping (_ success : Bool, _ message : String) -> Void) {
+        let session : URLSession = URLSession.shared
+        let loginURL : URL = URL.init(string: loginURLString)!
+        
+        let task : URLSessionTask = session.dataTask(with: loginURL as URL, completionHandler: { (jsonData, response, error) in
+            let httpResponse = response as? HTTPURLResponse
+            
+            if (error != nil) {
+                completion(false, error!.localizedDescription)
+                return
+            }
+            
+            let sessionData = NSString(data: jsonData!, encoding: String.Encoding.utf8.rawValue)
+            print(sessionData ?? "Raw")
+            if sessionData?.length != 0 {
+                do {
+                    let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
+                    var description : String? = "Success"
+                    var status : Bool = false
+                    if httpResponse?.statusCode == 200 {
+                        description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
+                        if description == nil || description?.characters.count == 0 || description == "" {
+                            status = true
+                            description = "Success"
+                        }
+                        completion(status, description!)
+                    } else {
+                        description = "Server Error"
+                        completion(status, description!)
+                    }
+                } catch {
+                    print("\(error)")
+                }
             }
         })
         task.resume()

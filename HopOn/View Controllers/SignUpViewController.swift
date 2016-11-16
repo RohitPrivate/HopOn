@@ -13,7 +13,10 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
     var scrollViewContentSize : CGSize! = CGSize.zero
     var scrollViewContentOffset : CGPoint! = CGPoint.zero
     var selectedTextField : UITextField?
+    var isTermsAndConditionAccepted : Bool = false
     
+    @IBOutlet weak var termsAndConditionsButton: UIButton!
+    @IBOutlet weak var termsAndConditionsLabelButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContainerView: UIView!
     @IBOutlet weak var nameField: UITextField!
@@ -24,8 +27,6 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
     @IBOutlet weak var organizationField: UITextField!
     
     @IBOutlet weak var signUpFillUpBox: UIImageView!
-    
-    var isTermsAndConditionAccepted : Bool! = false
     
     @IBOutlet weak var topViewTopConstraint: NSLayoutConstraint!
     
@@ -45,6 +46,13 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
             organizationField.font = font
         }
 
+        let attributedText : NSMutableAttributedString = termsAndConditionsLabelButton.titleLabel!.attributedText as! NSMutableAttributedString
+        
+        attributedText.beginEditing()
+        attributedText.addAttribute(NSFontAttributeName, value: UIFont(name: "CaviarDreams", size: 14) as Any, range: NSMakeRange(0, attributedText.length))
+        attributedText.endEditing()
+        
+        termsAndConditionsLabelButton.setAttributedTitle(attributedText, for: UIControlState.normal)
     }
     
     override func viewDidLayoutSubviews() {
@@ -72,7 +80,9 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
     
+    //This method is used for the sign up process
     @IBAction func signUpAction(_ sender: Any) {
+        //To dismiss the keyboard
         scrollView.endEditing(true)
         
         let isValidated : Bool = self.validateRegistrationFields()
@@ -129,6 +139,18 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
     @IBAction func uploadProfileImage(_ sender: Any) {
     }
     
+    @IBAction func selectOrDeselectTermsAndConditions(_ sender: Any) {
+        var image : UIImage = UIImage.init(named: "Circle With Tick")!
+        
+        if isTermsAndConditionAccepted {
+            image = UIImage.init(named: "Circle without Tick")!
+            isTermsAndConditionAccepted = false
+        } else {
+            isTermsAndConditionAccepted = true
+        }
+        termsAndConditionsButton.setImage(image, for: UIControlState.normal)
+    }
+    
     @IBAction func backAction(_ sender: Any) {
         self.backButtonAction(nil)
     }
@@ -176,10 +198,10 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
                 showPopup = true
                 alertString = "Phone number should be of 10 digit"
             }
-//            else if !isT&CAccepted {
-//                showPopup = true
-//                alertString = "Please accept the terms & conditions"
-//            }
+            else if !isTermsAndConditionAccepted {
+                showPopup = true
+                alertString = "Please accept the terms & conditions"
+            }
         }
         
         if showPopup {

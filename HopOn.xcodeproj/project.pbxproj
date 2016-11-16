@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823D3ABB1DDC74F800F97A5D /* SignUpViewController.swift */; };
 		827126041DD5A3F9009ADC24 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126031DD5A3F9009ADC24 /* Helper.swift */; };
 		827126071DD5A917009ADC24 /* ServerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126061DD5A917009ADC24 /* ServerClass.swift */; };
 		8271260A1DD5A9F5009ADC24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827126081DD5A9F5009ADC24 /* Main.storyboard */; };
@@ -24,7 +25,6 @@
 		829EED901DD9F3D70045CC3A /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */; };
 		829EED911DD9F3D70045CC3A /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */; };
 		82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D251DCCAD73005CC046 /* LoginViewController.swift */; };
-		82C81D281DCCAD86005CC046 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D271DCCAD86005CC046 /* SignUpViewController.swift */; };
 		82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		823D3ABB1DDC74F800F97A5D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		827126031DD5A3F9009ADC24 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		827126061DD5A917009ADC24 /* ServerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerClass.swift; sourceTree = "<group>"; };
 		827126091DD5A9F5009ADC24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		82C81D251DCCAD73005CC046 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		82C81D271DCCAD86005CC046 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,10 +180,10 @@
 		828DA7E81DCC617800698B41 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				823D3ABB1DDC74F800F97A5D /* SignUpViewController.swift */,
 				828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */,
 				828DA7EE1DCC947D00698B41 /* T&CViewController.swift */,
 				82C81D251DCCAD73005CC046 /* LoginViewController.swift */,
-				82C81D271DCCAD86005CC046 /* SignUpViewController.swift */,
 				82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */,
 				82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */,
 			);
@@ -344,10 +344,10 @@
 				82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */,
 				82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */,
 				828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */,
+				823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */,
 				828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */,
 				828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */,
 				827126071DD5A917009ADC24 /* ServerClass.swift in Sources */,
-				82C81D281DCCAD86005CC046 /* SignUpViewController.swift in Sources */,
 				827126041DD5A3F9009ADC24 /* Helper.swift in Sources */,
 				8271260F1DD5C472009ADC24 /* AppConstants.swift in Sources */,
 			);
