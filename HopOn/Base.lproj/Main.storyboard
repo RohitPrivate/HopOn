@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ozx-BW-ab8">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -30,11 +31,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome Icon" translatesAutoresizingMaskIntoConstraints="NO" id="n3J-oa-tFo">
-                                <rect key="frame" x="86.5" y="31" width="202" height="136"/>
+                                <rect key="frame" x="59" y="31" width="202" height="136"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="3QB-6e-WGI"/>
@@ -42,7 +43,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXB-ug-tCu">
-                                <rect key="frame" x="41" y="580" width="293" height="57"/>
+                                <rect key="frame" x="13.5" y="481" width="293" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="NUo-Ya-3kB"/>
                                     <constraint firstAttribute="width" constant="293" id="x36-t5-x2c"/>
@@ -55,7 +56,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Hop On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g7-2e-nWi">
-                                <rect key="frame" x="0.0" y="182" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="182" width="320" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NsF-bS-tut"/>
                                 </constraints>
@@ -64,32 +65,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-b7-ppT">
-                                <rect key="frame" x="0.0" y="222" width="375" height="26.5"/>
+                                <rect key="frame" x="0.0" y="222" width="320" height="22.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAL-bW-rB7">
-                                <rect key="frame" x="20" y="248.5" width="335" height="321.5"/>
+                                <rect key="frame" x="20" y="244.5" width="280" height="226.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-Hf-AiR" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="321.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="227.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-Ev-bsr" userLabel="Split Costs and Money View">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="71"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SaveMoney" translatesAutoresizingMaskIntoConstraints="NO" id="aiE-wj-XNk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="aiE-wj-XNk" secondAttribute="height" multiplier="1:1" id="la8-Az-mOF"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split costs and save money" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPQ-lz-Dzy">
-                                                        <rect key="frame" x="81" y="0.0" width="254" height="70"/>
+                                                        <rect key="frame" x="59.5" y="0.0" width="220.5" height="49"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ee1-lI-TDN" userLabel="Underline View">
-                                                        <rect key="frame" x="81" y="70" width="254" height="1"/>
+                                                        <rect key="frame" x="59.5" y="49" width="220.5" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="xjq-gF-shH"/>
@@ -111,22 +112,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSs-J5-eML" userLabel="Green Commute View">
-                                                <rect key="frame" x="0.0" y="86" width="335" height="70.5"/>
+                                                <rect key="frame" x="0.0" y="65" width="280" height="49.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EcoFriendly" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-Di-BzI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="70.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="49.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="3qc-Di-BzI" secondAttribute="height" multiplier="1:1" id="iuA-Zy-8Z8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green commute, reduce emission with less cars on the roads" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mh-QF-CQF">
-                                                        <rect key="frame" x="81" y="0.0" width="254" height="69.5"/>
+                                                        <rect key="frame" x="59.5" y="0.0" width="220.5" height="48.5"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cED-et-C7N" userLabel="Underline View">
-                                                        <rect key="frame" x="81" y="69.5" width="254" height="1"/>
+                                                        <rect key="frame" x="59.5" y="48.5" width="220.5" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="6TK-2Q-RIS"/>
@@ -148,22 +149,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yko-fe-dsr" userLabel="Daily Traffic View">
-                                                <rect key="frame" x="0.0" y="171.5" width="335" height="70.5"/>
+                                                <rect key="frame" x="0.0" y="129.5" width="280" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Traffic" translatesAutoresizingMaskIntoConstraints="NO" id="vkB-5x-Ikr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="vkB-5x-Ikr" secondAttribute="height" multiplier="1:1" id="TdQ-HC-l1t"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two hours spent on daily traffic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8f-1p-jgR">
-                                                        <rect key="frame" x="80" y="0.0" width="255" height="69.5"/>
+                                                        <rect key="frame" x="59.5" y="0.0" width="220.5" height="49"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNp-fm-7Vk" userLabel="Underline View">
-                                                        <rect key="frame" x="80" y="69.5" width="255" height="1"/>
+                                                        <rect key="frame" x="59.5" y="49" width="220.5" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="ZEE-gS-WgE"/>
@@ -185,22 +186,22 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb4-W0-FpH" userLabel="Driver View">
-                                                <rect key="frame" x="0.0" y="257" width="335" height="70.5"/>
+                                                <rect key="frame" x="0.0" y="194.5" width="280" height="49.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome Page Driver" translatesAutoresizingMaskIntoConstraints="NO" id="S7l-gI-7Sm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="49.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="S7l-gI-7Sm" secondAttribute="height" multiplier="1:1" id="K5h-Kq-ZL0"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 out of 10 cars have only one driver" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwv-bp-JTE">
-                                                        <rect key="frame" x="80" y="0.0" width="255" height="69.5"/>
+                                                        <rect key="frame" x="59.5" y="0.0" width="220.5" height="48.5"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B05-L3-UHe" userLabel="Underline View">
-                                                        <rect key="frame" x="80" y="69.5" width="255" height="1"/>
+                                                        <rect key="frame" x="59.5" y="48.5" width="220.5" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="j8V-1k-qXc"/>
@@ -303,11 +304,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Rsg-3b-4zK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ir0-je-lDm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="be5-IB-KtW">
-                                <rect key="frame" x="0.0" y="20" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="7dk-gP-In9"/>
                                 </constraints>
@@ -324,7 +325,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wR-0H-VPq">
-                                <rect key="frame" x="19.5" y="591" width="165" height="52"/>
+                                <rect key="frame" x="16" y="496" width="141" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="cLO-0h-ekk"/>
                                 </constraints>
@@ -337,7 +338,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-eY-o70">
-                                <rect key="frame" x="192.5" y="591" width="165" height="52"/>
+                                <rect key="frame" x="165" y="496" width="141" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="nSL-I0-tu1"/>
                                 </constraints>
@@ -350,7 +351,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Licence Agreement " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Np-3S-HvG">
-                                <rect key="frame" x="82.5" y="28" width="211" height="40"/>
+                                <rect key="frame" x="55" y="28" width="211" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="211" id="3al-FB-p27"/>
                                 </constraints>
@@ -359,22 +360,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="n0t-7y-mHh">
-                                <rect key="frame" x="60" y="73" width="255" height="143"/>
+                                <rect key="frame" x="33" y="73" width="255" height="143"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="143" id="eIQ-X7-6Uf"/>
                                     <constraint firstAttribute="width" constant="255" id="z4c-eh-AYs"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zj-1N-vWO">
-                                <rect key="frame" x="0.0" y="643" width="375" height="24"/>
+                                <rect key="frame" x="0.0" y="548" width="320" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-CK-Uod">
-                                <rect key="frame" x="184.5" y="591" width="6" height="52"/>
+                                <rect key="frame" x="157" y="496" width="6" height="52"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yab-vb-PQw">
-                                <rect key="frame" x="10" y="216" width="355" height="363"/>
+                                <rect key="frame" x="10" y="216" width="300" height="268"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an un known printer took a gallary of type and scrambled it to make a type speciman book. It has survived not only five centuries, but also the leap into electronic typesettinge emaining essential unchanged. It was popularised in the 1960s with the release of Latraset sheets containing of orem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
@@ -436,20 +437,20 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                         <viewControllerLayoutGuide type="bottom" id="f91-mh-xzO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8Au-4U-qUA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Video Page BG" translatesAutoresizingMaskIntoConstraints="NO" id="7et-ti-hsQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Video Page Button Shadow" translatesAutoresizingMaskIntoConstraints="NO" id="hMC-cG-uUQ">
-                                <rect key="frame" x="0.0" y="509" width="375" height="158"/>
+                                <rect key="frame" x="0.0" y="433" width="320" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hMC-cG-uUQ" secondAttribute="height" multiplier="64:27" id="c9E-ET-rQE"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfJ-xc-eJS">
-                                <rect key="frame" x="12" y="577" width="161.5" height="48"/>
+                                <rect key="frame" x="10" y="484" width="138" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="k6V-wL-ScL"/>
                                 </constraints>
@@ -462,7 +463,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHc-Nk-Y47">
-                                <rect key="frame" x="201.5" y="577" width="161.5" height="48"/>
+                                <rect key="frame" x="172" y="484" width="138" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="axY-g0-VV8"/>
                                 </constraints>
@@ -475,20 +476,20 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Video Page Logo" translatesAutoresizingMaskIntoConstraints="NO" id="4AQ-A5-wEk">
-                                <rect key="frame" x="41" y="20" width="293" height="172.5"/>
+                                <rect key="frame" x="35" y="20" width="250" height="147"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4AQ-A5-wEk" secondAttribute="height" multiplier="251:148" id="cRv-zl-6GK"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwm-93-qgh">
-                                <rect key="frame" x="173.5" y="577" width="28" height="48"/>
+                                <rect key="frame" x="148" y="484" width="24" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="XSC-Rb-3dL"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0F-tV-VHT">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="534" width="320" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="T0F-tV-VHT" secondAttribute="height" multiplier="160:17" id="KZS-FW-0N3"/>
@@ -537,11 +538,11 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                         <viewControllerLayoutGuide type="bottom" id="lUf-vE-nOh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pd1-0t-KfP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="S20-XB-om1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="dPG-4z-psE"/>
                                 </constraints>
@@ -558,12 +559,12 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U22-o8-Pm5">
-                                <rect key="frame" x="15" y="575.5" width="345" height="43"/>
+                                <rect key="frame" x="15" y="479" width="290" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="zQG-XS-cfg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="20"/>
-                                <state key="normal" title="Login with Facebook" backgroundImage="Facebook Button">
+                                <state key="normal" title="LOGIN WITH FACEBOOK" backgroundImage="Facebook Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -571,12 +572,12 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOh-Ze-WJG">
-                                <rect key="frame" x="15" y="461" width="345" height="57"/>
+                                <rect key="frame" x="15" y="370" width="290" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="SVF-b8-qeb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="20"/>
-                                <state key="normal" title="Login" backgroundImage="LargeButton">
+                                <state key="normal" title="LOGIN" backgroundImage="LargeButton">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -584,7 +585,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8U-KT-5NZ">
-                                <rect key="frame" x="22.5" y="547" width="147" height="1"/>
+                                <rect key="frame" x="17" y="453" width="125" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="aVx-2s-Q4h"/>
@@ -594,7 +595,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1v-cz-rSC">
-                                <rect key="frame" x="177.5" y="538" width="20" height="20"/>
+                                <rect key="frame" x="150" y="444" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Qqg-eT-80Z"/>
                                     <constraint firstAttribute="width" constant="20" id="y0s-MX-hjF"/>
@@ -604,7 +605,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICN-To-wRk">
-                                <rect key="frame" x="205.5" y="547" width="147" height="1"/>
+                                <rect key="frame" x="178" y="453" width="125" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="uQL-cK-VaT"/>
@@ -614,7 +615,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaf-VA-pJI">
-                                <rect key="frame" x="88.5" y="20" width="199" height="53"/>
+                                <rect key="frame" x="61" y="20" width="199" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="199" id="7j0-d4-pT0"/>
                                 </constraints>
@@ -623,10 +624,10 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxl-Tn-NSE">
-                                <rect key="frame" x="0.0" y="648.5" width="375" height="18.5"/>
+                                <rect key="frame" x="0.0" y="552" width="320" height="16"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hG6-lu-3Oa">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="18.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -640,41 +641,41 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYQ-BO-zKc">
-                                <rect key="frame" x="0.0" y="557" width="375" height="18.5"/>
+                                <rect key="frame" x="0.0" y="463" width="320" height="16"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Otk-cw-wwl">
-                                <rect key="frame" x="0.0" y="518" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="427" width="320" height="17"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y84-FV-V1y">
-                                <rect key="frame" x="0.0" y="73" width="375" height="348"/>
+                                <rect key="frame" x="0.0" y="73" width="320" height="257"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NkN-lP-zQ7" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="348"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="257"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="RyY-gj-uiO">
-                                                <rect key="frame" x="77.5" y="0.0" width="220" height="143"/>
+                                                <rect key="frame" x="50" y="0.0" width="220" height="143"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="PHe-PI-0EM"/>
                                                     <constraint firstAttribute="height" constant="143" id="RUl-yC-4cG"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Up Fill Ups Box" translatesAutoresizingMaskIntoConstraints="NO" id="N2T-Ox-lCR" userLabel="Log In Fill Ups Box">
-                                                <rect key="frame" x="30" y="183" width="315" height="166"/>
+                                                <rect key="frame" x="30" y="183" width="260" height="166"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-zn-K1X" userLabel="Enter Email View">
-                                                <rect key="frame" x="30" y="203" width="315" height="43"/>
+                                                <rect key="frame" x="30" y="203" width="260" height="43"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Full Name Icon" translatesAutoresizingMaskIntoConstraints="NO" id="O5t-0h-pDm">
-                                                        <rect key="frame" x="18" y="12.5" width="22" height="22"/>
+                                                        <rect key="frame" x="18" y="14" width="18" height="20"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="O5t-0h-pDm" secondAttribute="height" multiplier="2:1" constant="-22" id="v67-3Z-S2G"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCb-PF-Klp" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="38.5" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="38" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Ogy-xN-3Rx"/>
@@ -684,7 +685,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cok-bk-8Y1" userLabel="Vertical Label">
-                                                        <rect key="frame" x="51" y="7.5" width="1" height="31"/>
+                                                        <rect key="frame" x="47" y="9" width="1" height="29"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="YAA-5k-nN9"/>
@@ -694,7 +695,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Emai id or Mobile No." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-di-09T">
-                                                        <rect key="frame" x="62" y="7.5" width="243" height="31"/>
+                                                        <rect key="frame" x="58" y="9" width="192" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -723,17 +724,17 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYn-FZ-9pc" userLabel="Enter Password View">
-                                                <rect key="frame" x="30" y="256" width="315" height="43"/>
+                                                <rect key="frame" x="30" y="256" width="260" height="43"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password Icon" translatesAutoresizingMaskIntoConstraints="NO" id="cyB-7l-OqD">
-                                                        <rect key="frame" x="18" y="12.5" width="22" height="22"/>
+                                                        <rect key="frame" x="18" y="14" width="18" height="20"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="cyB-7l-OqD" secondAttribute="height" multiplier="2:1" constant="-22" id="cce-Cb-qcW"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAh-7D-nLg" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="38.5" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="38" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="dL5-3g-BCD"/>
@@ -743,7 +744,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCQ-Ng-muN" userLabel="Vertical Label">
-                                                        <rect key="frame" x="51" y="7.5" width="1" height="31"/>
+                                                        <rect key="frame" x="47" y="9" width="1" height="29"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="zBE-YB-HAC"/>
@@ -753,7 +754,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rWV-bY-Obm">
-                                                        <rect key="frame" x="62" y="7.5" width="243" height="31"/>
+                                                        <rect key="frame" x="58" y="9" width="192" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -782,7 +783,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8W-2k-Mp8">
-                                                <rect key="frame" x="40" y="304" width="126.5" height="22"/>
+                                                <rect key="frame" x="40" y="304" width="104" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="BAf-Vx-ZvW"/>
                                                 </constraints>
@@ -795,7 +796,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CyF-Mk-VZX">
-                                                <rect key="frame" x="203.5" y="304" width="126.5" height="22"/>
+                                                <rect key="frame" x="171" y="304" width="104" height="22"/>
                                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <state key="normal" image="Forgot Password exclamation">
@@ -811,6 +812,9 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="0Di-8x-rAj" kind="show" id="aCf-en-aGr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -848,7 +852,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lkN-Yq-C2B">
-                                <rect key="frame" x="15" y="628.5" width="345" height="30"/>
+                                <rect key="frame" x="15" y="532" width="290" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hOJ-Mk-HyA"/>
                                 </constraints>
@@ -929,11 +933,193 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                         <outlet property="passwordField" destination="rWV-bY-Obm" id="fuW-EN-71b"/>
                         <outlet property="scrollView" destination="Y84-FV-V1y" id="zjh-ha-3NN"/>
                         <outlet property="stayLogginginButton" destination="S8W-2k-Mp8" id="Iys-ng-V6W"/>
+                        <segue destination="Cgj-pm-pex" kind="show" identifier="VerificationPage" id="Fug-LZ-Kjf"/>
+                        <segue destination="Nc0-cz-Bzw" kind="show" identifier="ChooseOne" id="EeI-NQ-0Cz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFe-9r-8dN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2689.8550724637685" y="-83.967391304347828"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="IxP-HM-rxE">
+            <objects>
+                <viewController id="0Di-8x-rAj" customClass="ForgotPasswordViewController" customModule="HopOn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iYe-p2-L1r"/>
+                        <viewControllerLayoutGuide type="bottom" id="NiW-ma-acf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KtY-oJ-C1i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="VNY-zj-CRa">
+                                <rect key="frame" x="0.0" y="20" width="320" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="oJR-Vl-5d0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dr-Ax-srx">
+                                <rect key="frame" x="20" y="35" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="MKX-cy-k9c"/>
+                                    <constraint firstAttribute="height" constant="22" id="c0D-o5-d0H"/>
+                                </constraints>
+                                <state key="normal" image="Back Button"/>
+                                <connections>
+                                    <action selector="backAction:" destination="0Di-8x-rAj" eventType="touchUpInside" id="3pj-Aj-eYJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LL-HB-FQu">
+                                <rect key="frame" x="70" y="20" width="181" height="53"/>
+                                <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-zm-dqE">
+                                <rect key="frame" x="0.0" y="73" width="320" height="308.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B5-CS-lca" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="308.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-Pz-Q9t">
+                                                <rect key="frame" x="50" y="0.0" width="220" height="143"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="143" id="eKa-lL-TfM"/>
+                                                    <constraint firstAttribute="width" constant="220" id="zeg-hf-mnD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Up Fill Ups Box" translatesAutoresizingMaskIntoConstraints="NO" id="g0W-sc-gwc" userLabel="Forgot Password Fill Ups Box">
+                                                <rect key="frame" x="30" y="203" width="260" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="8G5-jk-2Cz"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsk-st-2Ao" userLabel="Enter Forgot Password View">
+                                                <rect key="frame" x="30" y="223" width="260" height="14"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Full Name Icon" translatesAutoresizingMaskIntoConstraints="NO" id="YLs-zh-R25">
+                                                        <rect key="frame" x="18" y="-1" width="18" height="20"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="YLs-zh-R25" secondAttribute="height" multiplier="2:1" constant="-22" id="tZa-Oe-AeF"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB3-8y-sNc" userLabel="Horizontal Label">
+                                                        <rect key="frame" x="10" y="22.5" width="240" height="1"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="U6q-Wz-h5J"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNU-HA-tFX" userLabel="Vertical Label">
+                                                        <rect key="frame" x="47" y="-6" width="1" height="28.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="1" id="mGP-Nu-ZFG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please enter your email address." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJf-np-WaH">
+                                                        <rect key="frame" x="58" y="-6" width="192" height="28.5"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="13"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                                <color key="value" red="0.78823529410000004" green="0.83529411760000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="ZB3-8y-sNc" secondAttribute="trailing" constant="10" id="1FP-jc-8ai"/>
+                                                    <constraint firstItem="EJf-np-WaH" firstAttribute="leading" secondItem="HNU-HA-tFX" secondAttribute="leading" constant="11" id="1T0-EQ-LNb"/>
+                                                    <constraint firstItem="YLs-zh-R25" firstAttribute="leading" secondItem="rsk-st-2Ao" secondAttribute="leading" constant="18" id="4nt-Xv-5KC"/>
+                                                    <constraint firstItem="YLs-zh-R25" firstAttribute="width" secondItem="rsk-st-2Ao" secondAttribute="width" multiplier="0.0723684" id="DLa-Xw-sUa"/>
+                                                    <constraint firstItem="HNU-HA-tFX" firstAttribute="height" secondItem="YLs-zh-R25" secondAttribute="height" multiplier="1.19" constant="5" id="J8u-Ko-fIz"/>
+                                                    <constraint firstItem="EJf-np-WaH" firstAttribute="top" secondItem="HNU-HA-tFX" secondAttribute="top" id="PMg-bR-aXk"/>
+                                                    <constraint firstItem="ZB3-8y-sNc" firstAttribute="top" secondItem="HNU-HA-tFX" secondAttribute="bottom" id="QTR-Mi-bBw"/>
+                                                    <constraint firstItem="EJf-np-WaH" firstAttribute="height" secondItem="HNU-HA-tFX" secondAttribute="height" id="h5o-ZI-4Vf"/>
+                                                    <constraint firstItem="ZB3-8y-sNc" firstAttribute="leading" secondItem="rsk-st-2Ao" secondAttribute="leading" constant="10" id="mHI-8X-U4j"/>
+                                                    <constraint firstItem="YLs-zh-R25" firstAttribute="centerY" secondItem="rsk-st-2Ao" secondAttribute="centerY" constant="2" id="mcx-Xl-mgS"/>
+                                                    <constraint firstItem="EJf-np-WaH" firstAttribute="trailing" secondItem="ZB3-8y-sNc" secondAttribute="trailing" id="spF-fh-FDW"/>
+                                                    <constraint firstItem="HNU-HA-tFX" firstAttribute="leading" secondItem="YLs-zh-R25" secondAttribute="trailing" constant="11" id="unV-jR-Ifd"/>
+                                                    <constraint firstItem="HNU-HA-tFX" firstAttribute="top" secondItem="YLs-zh-R25" secondAttribute="top" constant="-5" id="xfk-Kn-4J9"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="g0W-sc-gwc" firstAttribute="top" secondItem="Zqa-Pz-Q9t" secondAttribute="bottom" constant="60" id="20I-Pj-i79"/>
+                                            <constraint firstItem="rsk-st-2Ao" firstAttribute="leading" secondItem="g0W-sc-gwc" secondAttribute="leading" id="7CD-Xa-Vex"/>
+                                            <constraint firstItem="rsk-st-2Ao" firstAttribute="top" secondItem="g0W-sc-gwc" secondAttribute="top" constant="20" id="DPz-jf-tbL"/>
+                                            <constraint firstItem="Zqa-Pz-Q9t" firstAttribute="centerX" secondItem="0B5-CS-lca" secondAttribute="centerX" id="Vss-i7-bLh"/>
+                                            <constraint firstItem="Zqa-Pz-Q9t" firstAttribute="top" secondItem="0B5-CS-lca" secondAttribute="top" id="Xb2-VA-GhZ"/>
+                                            <constraint firstItem="g0W-sc-gwc" firstAttribute="leading" secondItem="0B5-CS-lca" secondAttribute="leading" constant="30" id="cPy-LC-Pez"/>
+                                            <constraint firstItem="rsk-st-2Ao" firstAttribute="trailing" secondItem="g0W-sc-gwc" secondAttribute="trailing" id="emH-dC-6q2"/>
+                                            <constraint firstItem="rsk-st-2Ao" firstAttribute="height" secondItem="g0W-sc-gwc" secondAttribute="height" multiplier="0.234" id="fKs-yO-UmI"/>
+                                            <constraint firstAttribute="trailing" secondItem="g0W-sc-gwc" secondAttribute="trailing" constant="30" id="ztl-9z-o0d"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0B5-CS-lca" firstAttribute="centerX" secondItem="AcT-zm-dqE" secondAttribute="centerX" id="1pf-d0-ed0"/>
+                                    <constraint firstAttribute="bottom" secondItem="0B5-CS-lca" secondAttribute="bottom" id="8VV-r4-Q94"/>
+                                    <constraint firstItem="0B5-CS-lca" firstAttribute="top" secondItem="AcT-zm-dqE" secondAttribute="top" id="am6-j8-Abl"/>
+                                    <constraint firstItem="0B5-CS-lca" firstAttribute="leading" secondItem="AcT-zm-dqE" secondAttribute="leading" id="cb7-Xs-Sfd"/>
+                                    <constraint firstAttribute="trailing" secondItem="0B5-CS-lca" secondAttribute="trailing" id="e0q-kU-Btu"/>
+                                    <constraint firstItem="0B5-CS-lca" firstAttribute="centerY" secondItem="AcT-zm-dqE" secondAttribute="centerYWithinMargins" id="n4L-i3-BIm"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1b-MV-v8L" userLabel="Send Button">
+                                <rect key="frame" x="15" y="459.5" width="290" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="SBI-90-UVq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="20"/>
+                                <state key="normal" title="Send" backgroundImage="LargeButton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="0Di-8x-rAj" eventType="touchUpInside" id="FYg-qA-gjf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6470588235294118" green="0.75294117647058822" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AcT-zm-dqE" firstAttribute="height" secondItem="KtY-oJ-C1i" secondAttribute="height" multiplier="0.5427" id="2On-NR-KN9"/>
+                            <constraint firstAttribute="trailing" secondItem="AcT-zm-dqE" secondAttribute="trailing" id="6wV-UN-Jia"/>
+                            <constraint firstItem="3LL-HB-FQu" firstAttribute="centerX" secondItem="VNY-zj-CRa" secondAttribute="centerX" id="GaD-Vv-Eu8"/>
+                            <constraint firstItem="3LL-HB-FQu" firstAttribute="top" secondItem="VNY-zj-CRa" secondAttribute="bottom" constant="-53" id="J1o-ln-OvO"/>
+                            <constraint firstItem="0dr-Ax-srx" firstAttribute="centerY" secondItem="VNY-zj-CRa" secondAttribute="centerY" id="UIG-sN-dha"/>
+                            <constraint firstAttribute="trailing" secondItem="VNY-zj-CRa" secondAttribute="trailing" id="VDi-kH-FLG"/>
+                            <constraint firstItem="y1b-MV-v8L" firstAttribute="leading" secondItem="KtY-oJ-C1i" secondAttribute="leading" constant="15" id="aQe-RF-TKa"/>
+                            <constraint firstItem="AcT-zm-dqE" firstAttribute="top" secondItem="VNY-zj-CRa" secondAttribute="bottom" id="d0W-Pw-voL"/>
+                            <constraint firstItem="0dr-Ax-srx" firstAttribute="leading" secondItem="VNY-zj-CRa" secondAttribute="leading" constant="20" id="d9t-Pb-4Yz"/>
+                            <constraint firstItem="AcT-zm-dqE" firstAttribute="leading" secondItem="KtY-oJ-C1i" secondAttribute="leading" id="kue-oL-6OL"/>
+                            <constraint firstItem="y1b-MV-v8L" firstAttribute="top" secondItem="AcT-zm-dqE" secondAttribute="bottom" constant="78" id="mIe-k0-8DC"/>
+                            <constraint firstItem="VNY-zj-CRa" firstAttribute="leading" secondItem="KtY-oJ-C1i" secondAttribute="leading" id="ovc-Ew-THG"/>
+                            <constraint firstItem="VNY-zj-CRa" firstAttribute="top" secondItem="iYe-p2-L1r" secondAttribute="bottom" id="qKz-Vo-OKe"/>
+                            <constraint firstAttribute="trailing" secondItem="y1b-MV-v8L" secondAttribute="trailing" constant="15" id="sOC-wx-Hys"/>
+                            <constraint firstItem="3LL-HB-FQu" firstAttribute="height" secondItem="VNY-zj-CRa" secondAttribute="height" id="xOR-5E-hxS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="EJf-np-WaH" id="R69-6c-KHV"/>
+                        <outlet property="forgotPasswordFillUpBox" destination="g0W-sc-gwc" id="QEa-Dd-nmi"/>
+                        <outlet property="scrollView" destination="AcT-zm-dqE" id="7cp-UA-7hf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fU8-4k-XVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3534" y="-797"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="b7r-6p-R0S">
@@ -944,20 +1130,20 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                         <viewControllerLayoutGuide type="bottom" id="Igx-PY-TNz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PvL-9z-TWD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyf-8b-ZqC">
-                                <rect key="frame" x="0.0" y="73" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="73" width="320" height="398"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaP-pm-b4F">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="398"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-b5-uuS">
-                                                <rect key="frame" x="-2" y="20" width="379" height="133.5"/>
+                                                <rect key="frame" x="-2" y="20" width="324" height="114"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-Lw-Vj1" userLabel="Profile Image View">
-                                                        <rect key="frame" x="156.5" y="10" width="67" height="67"/>
+                                                        <rect key="frame" x="129" y="10" width="67" height="67"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="67" id="C3N-kQ-gbq"/>
                                                             <constraint firstAttribute="height" constant="67" id="KZ6-t6-ExH"/>
@@ -968,7 +1154,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgx-pt-sJY" userLabel="Upload Image Label">
-                                                        <rect key="frame" x="0.0" y="82" width="379" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="82" width="324" height="32"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -985,20 +1171,20 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </constraints>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Up Fill Ups Box" translatesAutoresizingMaskIntoConstraints="NO" id="6dj-oA-mJh">
-                                                <rect key="frame" x="30" y="163.5" width="315" height="367"/>
+                                                <rect key="frame" x="30" y="144" width="260" height="312"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSD-eI-vCW" userLabel="Re - Enter Password">
-                                                <rect key="frame" x="30" y="333.5" width="315" height="43.5"/>
+                                                <rect key="frame" x="30" y="296.5" width="260" height="37.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ncz-TD-ePf">
-                                                        <rect key="frame" x="18" y="12" width="23" height="22.5"/>
+                                                        <rect key="frame" x="18" y="11" width="19" height="20.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="ncz-TD-ePf" secondAttribute="height" multiplier="2:1" constant="-22" id="bWF-9S-Ca8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-lt-R9V" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="39" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="35.5" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="dWC-4T-Yhy"/>
@@ -1008,7 +1194,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTB-PN-cDU" userLabel="Vertical Label">
-                                                        <rect key="frame" x="52" y="7" width="1" height="32"/>
+                                                        <rect key="frame" x="48" y="6" width="1" height="29.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="yNi-ty-c1j"/>
@@ -1018,7 +1204,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re - Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0MU-bC-ozD">
-                                                        <rect key="frame" x="63" y="7" width="242" height="32"/>
+                                                        <rect key="frame" x="59" y="6" width="191" height="29.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1050,17 +1236,17 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9M-Cr-xI7" userLabel="Enter Mobile Number">
-                                                <rect key="frame" x="30" y="387" width="315" height="43.5"/>
+                                                <rect key="frame" x="30" y="344" width="260" height="37"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile Number Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-fe-91G">
-                                                        <rect key="frame" x="18" y="12.5" width="23" height="22.5"/>
+                                                        <rect key="frame" x="18" y="10.5" width="19" height="20.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Zen-fe-91G" secondAttribute="height" multiplier="2:1" constant="-22" id="GVk-mP-9es"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAT-JM-JrY" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="39" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="34.5" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="elk-Kt-InV"/>
@@ -1070,7 +1256,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmg-NZ-sqE" userLabel="Vertical Label">
-                                                        <rect key="frame" x="52" y="7.5" width="1" height="31.5"/>
+                                                        <rect key="frame" x="48" y="5.5" width="1" height="29"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="EpC-Xx-OdA"/>
@@ -1080,7 +1266,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-d8-mWX">
-                                                        <rect key="frame" x="63" y="7.5" width="242" height="31.5"/>
+                                                        <rect key="frame" x="59" y="5.5" width="191" height="29"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1112,17 +1298,17 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cnn-Ij-1Cj" userLabel="Enter Email Address">
-                                                <rect key="frame" x="30" y="227" width="315" height="43"/>
+                                                <rect key="frame" x="30" y="201.5" width="260" height="37.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Za2-er-kOs">
-                                                        <rect key="frame" x="18" y="12" width="23" height="22.5"/>
+                                                        <rect key="frame" x="18" y="11" width="19" height="20.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Za2-er-kOs" secondAttribute="height" multiplier="2:1" constant="-22" id="VLT-q9-WuU"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5te-S5-60y" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="38.5" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="35.5" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="3cE-N5-dL0"/>
@@ -1132,7 +1318,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gY-No-LNL" userLabel="Vertical Label">
-                                                        <rect key="frame" x="52" y="7" width="1" height="31.5"/>
+                                                        <rect key="frame" x="48" y="6" width="1" height="29.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="IJh-6O-oKq"/>
@@ -1142,7 +1328,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Hi-iP-uQz">
-                                                        <rect key="frame" x="63" y="7" width="242" height="31.5"/>
+                                                        <rect key="frame" x="59" y="6" width="191" height="29.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1174,17 +1360,17 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgO-SG-73D" userLabel="Enter Password">
-                                                <rect key="frame" x="30" y="280" width="315" height="43.5"/>
+                                                <rect key="frame" x="30" y="249" width="260" height="37.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password Icon" translatesAutoresizingMaskIntoConstraints="NO" id="RbZ-Xj-Gnq">
-                                                        <rect key="frame" x="18" y="12.5" width="23" height="22.5"/>
+                                                        <rect key="frame" x="18" y="10.5" width="19" height="20.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="RbZ-Xj-Gnq" secondAttribute="height" multiplier="2:1" constant="-22" id="d1Q-e5-bcK"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDr-eH-Nig" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="39" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="35" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="mUE-G0-Nhk"/>
@@ -1194,7 +1380,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJB-db-dKr" userLabel="Vertical Label">
-                                                        <rect key="frame" x="52" y="7.5" width="1" height="31.5"/>
+                                                        <rect key="frame" x="48" y="5.5" width="1" height="29.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="K5Y-fk-iel"/>
@@ -1204,7 +1390,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jZ8-i9-wTC">
-                                                        <rect key="frame" x="63" y="7.5" width="242" height="31.5"/>
+                                                        <rect key="frame" x="59" y="5.5" width="191" height="29.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1236,17 +1422,17 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdK-oW-MnL" userLabel="Enter Full Name View">
-                                                <rect key="frame" x="30" y="173.5" width="315" height="43.5"/>
+                                                <rect key="frame" x="30" y="154" width="260" height="37.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Full Name Icon" translatesAutoresizingMaskIntoConstraints="NO" id="qIn-vX-RgQ">
-                                                        <rect key="frame" x="18" y="12.5" width="23" height="22.5"/>
+                                                        <rect key="frame" x="18" y="10.5" width="19" height="20.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="qIn-vX-RgQ" secondAttribute="height" multiplier="2:1" constant="-22" id="4F8-vO-iYq"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcu-TJ-ZCE" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="39.5" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="34" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="U2s-vu-dyG"/>
@@ -1256,7 +1442,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YE-xe-5os" userLabel="Vertical Label">
-                                                        <rect key="frame" x="52" y="7.5" width="1" height="32"/>
+                                                        <rect key="frame" x="48" y="5.5" width="1" height="28.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="Y1f-1h-MZw"/>
@@ -1266,7 +1452,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JO2-Ry-040">
-                                                        <rect key="frame" x="63" y="7.5" width="242" height="32"/>
+                                                        <rect key="frame" x="59" y="5.5" width="191" height="28.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1298,17 +1484,17 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc6-Ag-0wS" userLabel="Enter Organization">
-                                                <rect key="frame" x="30" y="440.5" width="315" height="43.5"/>
+                                                <rect key="frame" x="30" y="391" width="260" height="37.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Organization Icon" translatesAutoresizingMaskIntoConstraints="NO" id="6iI-kL-NQF">
-                                                        <rect key="frame" x="18" y="12.5" width="23" height="22.5"/>
+                                                        <rect key="frame" x="18" y="11" width="19" height="20.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="6iI-kL-NQF" secondAttribute="height" multiplier="2:1" constant="-22" id="Rqg-Bf-J02"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuQ-qv-TFz" userLabel="Horizontal Label">
-                                                        <rect key="frame" x="10" y="38.5" width="295" height="1"/>
+                                                        <rect key="frame" x="10" y="36" width="240" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="uGx-CN-fNb"/>
@@ -1318,7 +1504,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dna-gY-sWc" userLabel="Vertical Label">
-                                                        <rect key="frame" x="52" y="7.5" width="1" height="31"/>
+                                                        <rect key="frame" x="48" y="6" width="1" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="Qdg-Dq-Shp"/>
@@ -1328,7 +1514,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Organization Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FBW-0a-g7c">
-                                                        <rect key="frame" x="63" y="7.5" width="242" height="31"/>
+                                                        <rect key="frame" x="59" y="6" width="191" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="19"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1405,18 +1591,18 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="72Y-NT-eb4">
-                                <rect key="frame" x="0.0" y="20" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="7yk-aY-7cy"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F51-1h-c7r" userLabel="Sign Up Button">
-                                <rect key="frame" x="15" y="580" width="345" height="57"/>
+                                <rect key="frame" x="15" y="481" width="290" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="ZyV-qd-28K"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="20"/>
-                                <state key="normal" title="Sign Up" backgroundImage="LargeButton">
+                                <state key="normal" title="SIGN UP" backgroundImage="LargeButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1424,7 +1610,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ph9-Ei-pPK" userLabel="T&amp;C Acceptance view">
-                                <rect key="frame" x="15" y="559" width="345" height="16"/>
+                                <rect key="frame" x="15" y="460" width="290" height="16"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6P-C8-1pB" userLabel="Terms And Conditions Button">
                                         <rect key="frame" x="15" y="0.0" width="12" height="12"/>
@@ -1476,7 +1662,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD4-2j-XZP" userLabel="Sign Up Label">
-                                <rect key="frame" x="87.5" y="20" width="201" height="53"/>
+                                <rect key="frame" x="60" y="20" width="201" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="201" id="lFx-XD-ToK"/>
                                 </constraints>
@@ -1550,17 +1736,17 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                         <viewControllerLayoutGuide type="bottom" id="sYx-kE-404"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2cV-4W-Ree">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-rK-APs">
-                                <rect key="frame" x="0.0" y="20" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="dYf-hk-XDl"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvu-nG-0Nz">
-                                <rect key="frame" x="82.5" y="20" width="211" height="53"/>
+                                <rect key="frame" x="55" y="20" width="211" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="211" id="e31-xa-9cK"/>
                                 </constraints>
@@ -1569,19 +1755,19 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Verification Icon" translatesAutoresizingMaskIntoConstraints="NO" id="r9s-0x-PZp">
-                                <rect key="frame" x="139.5" y="94.5" width="96" height="96"/>
+                                <rect key="frame" x="119" y="91" width="82" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="r9s-0x-PZp" secondAttribute="height" multiplier="1:1" id="4sS-GF-yUk"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Verification Box" translatesAutoresizingMaskIntoConstraints="NO" id="82j-bN-4bR">
-                                <rect key="frame" x="8.5" y="291.5" width="358.5" height="178"/>
+                                <rect key="frame" x="7" y="261" width="306" height="152"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="82j-bN-4bR" secondAttribute="height" multiplier="153:76" id="Psc-CH-eWy"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iT-2s-4Dz">
-                                <rect key="frame" x="16" y="590" width="343" height="57"/>
+                                <rect key="frame" x="14" y="491" width="292" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="aCy-cy-XfE"/>
                                 </constraints>
@@ -1594,7 +1780,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avO-fJ-Izg">
-                                <rect key="frame" x="27" y="403.5" width="321" height="29"/>
+                                <rect key="frame" x="27" y="373" width="266" height="29"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Send  code again or request a call">
@@ -1610,7 +1796,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A code was sent to you by text message. If not, click on this link -" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLN-tH-2wo">
-                                <rect key="frame" x="23" y="353.5" width="329" height="40"/>
+                                <rect key="frame" x="23" y="323" width="274" height="40"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1627,7 +1813,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Verification Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wma-tl-BJ3">
-                                <rect key="frame" x="0.0" y="207" width="375" height="20"/>
+                                <rect key="frame" x="0.0" y="186" width="320" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="8lD-TE-0XG"/>
                                 </constraints>
@@ -1636,15 +1822,15 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fg-8p-qo7">
-                                <rect key="frame" x="0.0" y="68" width="375" height="26.5"/>
+                                <rect key="frame" x="0.0" y="68" width="320" height="23"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9w-EI-WdW">
-                                <rect key="frame" x="0.0" y="190.5" width="375" height="17.5"/>
+                                <rect key="frame" x="0.0" y="173" width="320" height="14"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" placeholder="****" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D2E-9r-2dY">
-                                <rect key="frame" x="92" y="302.5" width="192" height="30"/>
+                                <rect key="frame" x="92" y="272" width="137" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wgj-NB-Y2h"/>
                                 </constraints>
@@ -1661,7 +1847,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9l-Iv-SdA">
-                                <rect key="frame" x="108.5" y="342.5" width="158" height="1"/>
+                                <rect key="frame" x="81" y="312" width="158" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="VAF-Vr-EEc"/>
@@ -1672,7 +1858,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C82-yT-7vK">
-                                <rect key="frame" x="0.0" y="227" width="375" height="64.5"/>
+                                <rect key="frame" x="0.0" y="206" width="320" height="55"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -1736,20 +1922,20 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
             </objects>
             <point key="canvasLocation" x="3513.75" y="615.84507042253517"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose One View Controller-->
         <scene sceneID="AY6-fZ-3nG">
             <objects>
-                <viewController id="Nc0-cz-Bzw" sceneMemberID="viewController">
+                <viewController id="Nc0-cz-Bzw" customClass="ChooseOneViewController" customModule="HopOn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IEc-nP-M9H"/>
                         <viewControllerLayoutGuide type="bottom" id="DYt-Mb-td9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oOe-Zr-l50">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="YHS-lr-UpL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="M6t-7V-Heg"/>
                                 </constraints>
@@ -1760,22 +1946,22 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                     <constraint firstAttribute="width" constant="22" id="tdN-4g-tZu"/>
                                     <constraint firstAttribute="height" constant="22" id="wwQ-gb-5iP"/>
                                 </constraints>
-                                <state key="normal" image="Back Button"/>
+                                <state key="normal" backgroundImage="Menu Icon"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choos One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olb-tR-J1R">
-                                <rect key="frame" x="123.5" y="20" width="128" height="53"/>
+                                <rect key="frame" x="96" y="20" width="128" height="53"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us to know, ho you are?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fig-VL-SFM">
-                                <rect key="frame" x="0.0" y="93.5" width="375" height="26"/>
+                                <rect key="frame" x="0.0" y="91" width="320" height="26"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvC-6E-JCs">
-                                <rect key="frame" x="14" y="596" width="343" height="57"/>
+                                <rect key="frame" x="14" y="499" width="288" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="zj3-zX-ymF"/>
                                 </constraints>
@@ -1785,27 +1971,27 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3P-GB-DOo">
-                                <rect key="frame" x="0.0" y="73" width="375" height="20.5"/>
+                                <rect key="frame" x="0.0" y="73" width="320" height="18"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lap-1A-d2s">
-                                <rect key="frame" x="0.0" y="119.5" width="375" height="27"/>
+                                <rect key="frame" x="0.0" y="117" width="320" height="22"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choos One Page BG" translatesAutoresizingMaskIntoConstraints="NO" id="QZo-O6-uoy">
-                                <rect key="frame" x="8" y="147.5" width="356.5" height="396.5"/>
+                                <rect key="frame" x="8" y="140" width="304" height="338"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Driver Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ajQ-aF-j5Q">
-                                <rect key="frame" x="16" y="159.5" width="162" height="162"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajQ-aF-j5Q">
+                                <rect key="frame" x="16" y="152" width="138" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ajQ-aF-j5Q" secondAttribute="height" multiplier="1:1" id="S87-aN-st1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-74-vqz">
-                                <rect key="frame" x="8" y="332.5" width="178.5" height="21"/>
+                                <rect key="frame" x="8" y="300" width="152" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="byg-Tz-PQJ"/>
                                 </constraints>
@@ -1814,24 +2000,24 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rider" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkm-A5-7dT">
-                                <rect key="frame" x="185.5" y="332.5" width="179" height="21"/>
+                                <rect key="frame" x="160" y="300" width="152" height="21"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbQ-n4-zOB">
-                                <rect key="frame" x="22.5" y="363.5" width="156" height="106"/>
+                                <rect key="frame" x="19" y="330" width="133" height="106"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <string key="text">You're driving today ! Great, share your ride and let's find a fellow traveller, save your fuel cost too. Enjoy your journey with great peoples</string>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="41x-vY-eXI">
-                                <rect key="frame" x="196.5" y="159.5" width="161" height="161"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="41x-vY-eXI">
+                                <rect key="frame" x="168" y="152" width="137" height="137"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlP-rY-Y4E">
-                                <rect key="frame" x="185.5" y="363.5" width="1" height="106"/>
+                                <rect key="frame" x="159" y="330" width="1" height="106"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="l99-z2-veI"/>
@@ -1841,24 +2027,38 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWA-Oe-9aM">
-                                <rect key="frame" x="8" y="321.5" width="356.5" height="11"/>
+                                <rect key="frame" x="8" y="290" width="304" height="10"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgB-OD-N3x">
-                                <rect key="frame" x="8" y="353.5" width="356.5" height="10"/>
+                                <rect key="frame" x="8" y="321" width="304" height="9"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I9J-xR-uQH">
-                                <rect key="frame" x="193.5" y="363.5" width="156" height="91"/>
+                                <rect key="frame" x="167" y="330" width="133" height="106"/>
                                 <string key="text">Looking for a ride ? Let's find someone who's going your way. Travel together with comfort on a least price, and enjoy the journey !</string>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84M-OZ-tUS">
-                                <rect key="frame" x="0.0" y="653" width="375" height="14"/>
+                                <rect key="frame" x="0.0" y="556" width="320" height="12"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swY-wS-xzJ" userLabel="DriverButton">
+                                <rect key="frame" x="16" y="152" width="138" height="138"/>
+                                <state key="normal" backgroundImage="Driver Icon"/>
+                                <connections>
+                                    <action selector="driverButtonSelected:" destination="Nc0-cz-Bzw" eventType="touchUpInside" id="4tp-Jt-WaG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-CC-aNB" userLabel="Rider Button">
+                                <rect key="frame" x="168" y="152" width="137" height="137"/>
+                                <state key="normal" backgroundImage="Rider Icon"/>
+                                <connections>
+                                    <action selector="riderButtonSelected:" destination="Nc0-cz-Bzw" eventType="touchUpInside" id="frV-uR-HDR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60392156862745094" green="0.74509803921568629" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1880,30 +2080,36 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                             <constraint firstItem="84M-OZ-tUS" firstAttribute="top" secondItem="QvC-6E-JCs" secondAttribute="bottom" id="Ehr-dJ-2cg"/>
                             <constraint firstItem="QZo-O6-uoy" firstAttribute="width" secondItem="oOe-Zr-l50" secondAttribute="width" multiplier="0.95" id="FTd-o1-ewZ"/>
                             <constraint firstItem="41x-vY-eXI" firstAttribute="height" secondItem="ajQ-aF-j5Q" secondAttribute="height" constant="-1" id="Fu3-yg-nc5"/>
+                            <constraint firstItem="swY-wS-xzJ" firstAttribute="bottom" secondItem="ajQ-aF-j5Q" secondAttribute="bottom" id="G7A-HD-t8m"/>
                             <constraint firstAttribute="trailing" secondItem="YHS-lr-UpL" secondAttribute="trailing" id="GCC-wS-dbn"/>
                             <constraint firstItem="I9J-xR-uQH" firstAttribute="top" secondItem="IbQ-n4-zOB" secondAttribute="top" id="JeV-Jm-lUR"/>
+                            <constraint firstItem="gUd-CC-aNB" firstAttribute="leading" secondItem="41x-vY-eXI" secondAttribute="leading" id="ME4-Vh-dsA"/>
                             <constraint firstItem="ajQ-aF-j5Q" firstAttribute="top" secondItem="lap-1A-d2s" secondAttribute="bottom" constant="13" id="MFW-V8-TXQ"/>
                             <constraint firstItem="lap-1A-d2s" firstAttribute="width" secondItem="G3P-GB-DOo" secondAttribute="width" id="Mcu-KE-6Al"/>
                             <constraint firstItem="84M-OZ-tUS" firstAttribute="leading" secondItem="oOe-Zr-l50" secondAttribute="leading" id="Mh7-ZO-389"/>
                             <constraint firstItem="YHS-lr-UpL" firstAttribute="leading" secondItem="oOe-Zr-l50" secondAttribute="leading" id="Ncv-So-Z5d"/>
+                            <constraint firstItem="gUd-CC-aNB" firstAttribute="bottom" secondItem="41x-vY-eXI" secondAttribute="bottom" id="Opo-DM-NzA"/>
                             <constraint firstItem="Lkm-A5-7dT" firstAttribute="height" secondItem="Kb1-74-vqz" secondAttribute="height" id="Pje-RD-HvU"/>
                             <constraint firstItem="G3P-GB-DOo" firstAttribute="width" secondItem="oOe-Zr-l50" secondAttribute="width" id="SFr-KH-PvB"/>
                             <constraint firstItem="JlP-rY-Y4E" firstAttribute="top" secondItem="tgB-OD-N3x" secondAttribute="bottom" id="SwA-1V-vp7"/>
                             <constraint firstItem="JlP-rY-Y4E" firstAttribute="height" secondItem="IbQ-n4-zOB" secondAttribute="height" id="ViZ-6g-a3w"/>
                             <constraint firstItem="mWA-Oe-9aM" firstAttribute="top" secondItem="ajQ-aF-j5Q" secondAttribute="bottom" id="WC0-VK-S1o"/>
                             <constraint firstItem="QZo-O6-uoy" firstAttribute="top" secondItem="lap-1A-d2s" secondAttribute="bottom" constant="1" id="WL8-Qx-M3f"/>
+                            <constraint firstItem="gUd-CC-aNB" firstAttribute="trailing" secondItem="41x-vY-eXI" secondAttribute="trailing" id="XTE-Qa-ARL"/>
                             <constraint firstItem="Kb1-74-vqz" firstAttribute="top" secondItem="mWA-Oe-9aM" secondAttribute="bottom" id="XoD-aA-IUK"/>
                             <constraint firstItem="QZo-O6-uoy" firstAttribute="leading" secondItem="oOe-Zr-l50" secondAttribute="leadingMargin" constant="-8" id="YUX-II-c98"/>
                             <constraint firstAttribute="trailing" secondItem="84M-OZ-tUS" secondAttribute="trailing" id="YVH-Oh-ZnS"/>
                             <constraint firstItem="I9J-xR-uQH" firstAttribute="width" secondItem="IbQ-n4-zOB" secondAttribute="width" id="bSF-ia-g2f"/>
                             <constraint firstItem="mWA-Oe-9aM" firstAttribute="width" secondItem="QZo-O6-uoy" secondAttribute="width" id="bZS-Bj-amY"/>
                             <constraint firstItem="41x-vY-eXI" firstAttribute="width" secondItem="ajQ-aF-j5Q" secondAttribute="width" constant="-1" id="c09-ga-tKq"/>
+                            <constraint firstItem="swY-wS-xzJ" firstAttribute="leading" secondItem="ajQ-aF-j5Q" secondAttribute="leading" id="cKR-P7-7QP"/>
                             <constraint firstItem="jpe-bs-hM8" firstAttribute="leading" secondItem="YHS-lr-UpL" secondAttribute="leading" constant="20" id="cT0-CQ-jcv"/>
                             <constraint firstItem="QvC-6E-JCs" firstAttribute="leading" secondItem="oOe-Zr-l50" secondAttribute="leadingMargin" constant="-2" id="cUz-0E-xTf"/>
                             <constraint firstItem="Olb-tR-J1R" firstAttribute="centerX" secondItem="oOe-Zr-l50" secondAttribute="centerX" id="czc-yT-fXC"/>
                             <constraint firstItem="IbQ-n4-zOB" firstAttribute="trailing" secondItem="JlP-rY-Y4E" secondAttribute="trailing" constant="-8" id="d6f-Sw-clY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QvC-6E-JCs" secondAttribute="trailing" constant="2" id="dpd-Hq-86C"/>
                             <constraint firstItem="Kb1-74-vqz" firstAttribute="leading" secondItem="QZo-O6-uoy" secondAttribute="leading" id="eqG-mQ-D7P"/>
+                            <constraint firstItem="swY-wS-xzJ" firstAttribute="top" secondItem="ajQ-aF-j5Q" secondAttribute="top" id="gP1-7k-Msc"/>
                             <constraint firstItem="IbQ-n4-zOB" firstAttribute="top" secondItem="tgB-OD-N3x" secondAttribute="bottom" id="h24-uW-jYy"/>
                             <constraint firstItem="QZo-O6-uoy" firstAttribute="height" secondItem="oOe-Zr-l50" secondAttribute="height" multiplier="0.595" id="hyZ-Ts-Zxu"/>
                             <constraint firstItem="Fig-VL-SFM" firstAttribute="leading" secondItem="oOe-Zr-l50" secondAttribute="leading" id="icA-PE-wPs"/>
@@ -1919,17 +2125,23 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                             <constraint firstItem="Olb-tR-J1R" firstAttribute="height" secondItem="YHS-lr-UpL" secondAttribute="height" id="rgA-aJ-sB2"/>
                             <constraint firstItem="YHS-lr-UpL" firstAttribute="top" secondItem="IEc-nP-M9H" secondAttribute="bottom" id="rqs-Hy-vsc"/>
                             <constraint firstItem="G3P-GB-DOo" firstAttribute="leading" secondItem="oOe-Zr-l50" secondAttribute="leading" id="ryA-dy-ZPk"/>
+                            <constraint firstItem="gUd-CC-aNB" firstAttribute="top" secondItem="41x-vY-eXI" secondAttribute="top" id="sGi-YC-PBG"/>
                             <constraint firstItem="mWA-Oe-9aM" firstAttribute="trailing" secondItem="QZo-O6-uoy" secondAttribute="trailing" id="smc-sX-HGY"/>
                             <constraint firstItem="Lkm-A5-7dT" firstAttribute="trailing" secondItem="QZo-O6-uoy" secondAttribute="trailing" id="tT4-Mg-SGw"/>
                             <constraint firstItem="Lkm-A5-7dT" firstAttribute="width" secondItem="Kb1-74-vqz" secondAttribute="width" id="uzt-K4-p04"/>
                             <constraint firstItem="JlP-rY-Y4E" firstAttribute="centerX" secondItem="QZo-O6-uoy" secondAttribute="centerX" id="v45-oX-YbG"/>
+                            <constraint firstItem="swY-wS-xzJ" firstAttribute="trailing" secondItem="ajQ-aF-j5Q" secondAttribute="trailing" id="yfM-Ch-01f"/>
                             <constraint firstItem="Olb-tR-J1R" firstAttribute="top" secondItem="YHS-lr-UpL" secondAttribute="bottom" constant="-53" id="yuC-ei-q2M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="driverButton" destination="swY-wS-xzJ" id="3MW-dS-SAW"/>
+                        <outlet property="riderButton" destination="gUd-CC-aNB" id="Kwt-OS-q0I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JK-lr-WpP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4260" y="616"/>
+            <point key="canvasLocation" x="4513" y="391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="opE-su-4p2">
@@ -1962,6 +2174,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
         <image name="Header" width="320" height="73"/>
         <image name="LargeButton" width="146" height="28"/>
         <image name="Logo" width="110" height="71"/>
+        <image name="Menu Icon" width="11" height="11"/>
         <image name="Mobile Number Icon" width="11" height="11"/>
         <image name="Organization Icon" width="11" height="11"/>
         <image name="Password Icon" width="11" height="11"/>
@@ -1979,7 +2192,9 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
         <image name="Welcome Page Driver" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="L6n-L0-7Iy"/>
+        <segue reference="EeI-NQ-0Cz"/>
         <segue reference="Hqn-4W-CgG"/>
+        <segue reference="L6n-L0-7Iy"/>
+        <segue reference="hbA-44-bUd"/>
     </inferredMetricsTieBreakers>
 </document>

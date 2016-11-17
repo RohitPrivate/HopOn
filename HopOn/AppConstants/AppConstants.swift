@@ -17,9 +17,19 @@ class AppConstants: NSObject {
     static let FORGOT_PASSWORD_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=forgot_password&email=%@"
     
     static var VERIFICATION_CODE_KEY = "VerificationCode"
+    static var VERIFICATION_CODE_VERIFIED_KEY = "isVerified"
     
     static let VERIFICATION_PAGE_SEGUE = "VerificationPage"
     static let CHOOSE_ONE_PAGE_SEGUE = "ChooseOne"
+    
+    //API response keys
+    static let FULL_NAME_API_KEY = "full_name"
+    static let EMAIL_API_KEY = "email"
+    static let PASSWORD_API_KEY = "password"
+    static let MOBILE_API_KEY = "mobile"
+    static let CITY_API_KEY = "city"
+    static let COUNTRY_API_KEY = "country"
+    static let ORGANISATION_API_VKEY = "organisation"
     
     static var deviceType : DeviceType = DeviceType.none
     

@@ -75,7 +75,7 @@ class ServerClass: NSObject {
         task.resume()
     }
     
-    func performLoginAction(_ loginURLString : String, _ completion : @escaping (_ success : Bool, _ message : String) -> Void) {
+    func performLoginAction(_ loginURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataDic : NSDictionary?) -> Void) {
         let session : URLSession = URLSession.shared
         let loginURL : URL = URL.init(string: loginURLString)!
         
@@ -83,7 +83,7 @@ class ServerClass: NSObject {
             let httpResponse = response as? HTTPURLResponse
             
             if (error != nil) {
-                completion(false, error!.localizedDescription)
+                completion(false, error!.localizedDescription, nil)
                 return
             }
             
@@ -99,6 +99,48 @@ class ServerClass: NSObject {
                         if description == nil || description?.characters.count == 0 || description == "" {
                             status = true
                             description = "Success"
+                        }
+                        completion(status, description!, dataDictionary as? NSDictionary)
+                    } else {
+                        description = "Server Error"
+                        completion(status, description!, dataDictionary as? NSDictionary)
+                    }
+                } catch {
+                    print("\(error)")
+                }
+            }
+        })
+        task.resume()
+    }
+    
+    func performForgotPasswordAction(_ forgotPasswordURLString : String, _ completion : @escaping (_ success : Bool, _ message : String) -> Void) {
+        let session : URLSession = URLSession.shared
+        let forgotPasswordURL : URL = URL.init(string: forgotPasswordURLString)!
+        
+        let task : URLSessionTask = session.dataTask(with: forgotPasswordURL as URL, completionHandler: { (jsonData, response, error) in
+            let httpResponse = response as? HTTPURLResponse
+            
+            if (error != nil) {
+                completion(false, error!.localizedDescription)
+                return
+            }
+            
+            let sessionData = NSString(data: jsonData!, encoding: String.Encoding.utf8.rawValue)
+            print(sessionData ?? "Raw")
+            if sessionData?.length != 0 {
+                do {
+                    let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
+                    var description : String? = "Error"
+                    var status : Bool = false
+                    var returnedStatus : String?
+                    if httpResponse?.statusCode == 200 {
+                        returnedStatus = ((dataDictionary as! NSDictionary).object(forKey: "status") as? String)
+                        description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
+                        if returnedStatus == "1" {
+                            status = true
+                            if description == nil || description?.characters.count == 0 || description == "" {
+                                description = "Success"
+                            }
                         }
                         completion(status, description!)
                     } else {

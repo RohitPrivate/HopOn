@@ -81,16 +81,28 @@ class LoginViewController: WelcomeViewController {
             
             Helper.sharedInstance.fadeInLoaderView(self.view)
             
-            ServerClass.sharedInstance.performLoginAction(registerURLString as String, { (success, message) in
+            ServerClass.sharedInstance.performLoginAction(registerURLString as String, { (success, message, dataDict) in
                 DispatchQueue.main.sync(execute: {
                     OperationQueue.main.addOperation {
-                        Helper.sharedInstance.fadeOutLoaderView()
                         if success {
                             //Show Home Screen
-                            let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("Logged In successfully"), baseView: self.view)
-                            Helper.sharedInstance.fadeInAlertPopup(popupLabel)
+                            let hasVerified : Bool = self.checkVerification()
+                            if hasVerified {
+                                Helper.sharedInstance.fadeOutLoaderView()
+                                self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
+                            } else {
+                                let userMobileNumber : String? = dataDict?.object(forKey: AppConstants.MOBILE_API_KEY) as? String
+                                if (userMobileNumber == nil || userMobileNumber == "") {
+                                    let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("Verification Error"), baseView: self.view)
+                                    Helper.sharedInstance.fadeInAlertPopup(popupLabel)
+                                } else {
+                                    _ = self.generateVerificationCode(userMobileNumber!)
+                                }
+                            }
+                            
                             return
                         } else {
+                            Helper.sharedInstance.fadeOutLoaderView()
                             let alertString = message
                             let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(alertString)"), baseView: self.view)
                             Helper.sharedInstance.fadeInAlertPopup(popupLabel)
@@ -99,6 +111,36 @@ class LoginViewController: WelcomeViewController {
                 })
             })
         }
+    }
+    
+    func checkVerification() -> Bool {
+        return UserDefaults.standard.bool(forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)    }
+    
+    func generateVerificationCode(_ mobileNumber : String) -> Bool {
+        //var isGenerated : Bool! = false
+        
+        let verificationCode : String? = Helper.sharedInstance.verificationCode();
+        if verificationCode != nil {
+            UserDefaults.standard.set(verificationCode, forKey: AppConstants.VERIFICATION_CODE_KEY)
+            UserDefaults.standard.set(false, forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)
+            let sendVerificationURL : String = String(format : AppConstants.SMS_VERIFICATION_API, mobileNumber, verificationCode!)
+            ServerClass.sharedInstance.sendVerificationCodeToUserMobile(sendVerificationURL, mobileNumber, { (success, message) in
+                DispatchQueue.main.sync {
+                    OperationQueue.main.addOperation {
+                        Helper.sharedInstance.fadeOutLoaderView()
+                        if success {
+                            self.performSegue(withIdentifier: AppConstants.VERIFICATION_PAGE_SEGUE, sender: nil)
+                        } else {
+                            let alertString = message
+                            let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(alertString)"), baseView: self.view)
+                            Helper.sharedInstance.fadeInAlertPopup(popupLabel)
+                        }
+                    }
+                }
+            })
+            return true
+        }
+        return false
     }
     
     func validateLoginFields() -> Bool {
@@ -117,7 +159,7 @@ class LoginViewController: WelcomeViewController {
         }
         
         if showPopup == false {
-            let isEmailOrMobileFieldValidated : Bool = self.validateEmailOrMobile(emailOrMobileString: emailOrMobileString)
+            let isEmailOrMobileFieldValidated : Bool = Helper.sharedInstance.validateEmailOrMobile(emailOrMobileString: emailOrMobileString)
             if !isEmailOrMobileFieldValidated {
                 showPopup = true
                 alertString = "Please enter valid email or mobile"
@@ -133,27 +175,6 @@ class LoginViewController: WelcomeViewController {
             //Make server call to register the user and proceed
             return true
         }
-    }
-    
-    func validateEmailOrMobile(emailOrMobileString : String) -> Bool {
-        var isValidated : Bool = false
-        
-        let badCharacters = NSCharacterSet.decimalDigits.inverted
-        
-        //Check if the string is mobile number or email id
-        if emailOrMobileString.rangeOfCharacter(from: badCharacters) == nil {
-            //The string is a number
-            if emailOrMobileString.characters.count == 10 {
-                isValidated = true
-            }
-        } else {
-            //The string is not a number
-            if Helper.sharedInstance.validateEmail(emailOrMobileString) {
-                isValidated = true
-            }
-        }
-        
-        return isValidated
     }
     
     @IBAction func loginWithFacebook(_ sender: Any) {

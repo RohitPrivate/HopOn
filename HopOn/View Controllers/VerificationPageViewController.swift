@@ -47,10 +47,11 @@ class VerificationPageViewController: WelcomeViewController {
             if enteredVerificationCode.characters.count != 0 {
                 let generatedVerificationCode : String = UserDefaults.standard.object(forKey: AppConstants.VERIFICATION_CODE_KEY) as! String
                 if enteredVerificationCode == generatedVerificationCode {
+                    UserDefaults.standard.set(true, forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)
                     self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
                 } else {
                     showPopup = true
-                    alertString = "Please enter the correct verification code"
+                    alertString = "Verification code does not match"
                 }
             } else {
                 showPopup = true

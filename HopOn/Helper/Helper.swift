@@ -68,7 +68,7 @@ class Helper: NSObject {
             return nil
         }
         
-        let popupLabel : UILabel = UILabel()
+        let popupLabel : UILabel = UILabel.init(frame: CGRect(x:0, y:0, width:baseView.frame.size.width - 60, height: 0))
         popupLabel.backgroundColor = UIColor.darkGray
         popupLabel.textColor = UIColor.white
         popupLabel.text = alertText
@@ -141,6 +141,27 @@ class Helper: NSObject {
     
     func verificationCode() -> String {
         return String(arc4random_uniform(9999))
+    }
+    
+    func validateEmailOrMobile(emailOrMobileString : String) -> Bool {
+        var isValidated : Bool = false
+        
+        let badCharacters = NSCharacterSet.decimalDigits.inverted
+        
+        //Check if the string is mobile number or email id
+        if emailOrMobileString.rangeOfCharacter(from: badCharacters) == nil {
+            //The string is a number
+            if emailOrMobileString.characters.count == 10 {
+                isValidated = true
+            }
+        } else {
+            //The string is not a number
+            if Helper.sharedInstance.validateEmail(emailOrMobileString) {
+                isValidated = true
+            }
+        }
+        
+        return isValidated
     }
     
 }

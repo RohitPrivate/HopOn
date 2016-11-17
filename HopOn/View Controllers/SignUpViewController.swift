@@ -116,6 +116,7 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
         let verificationCode : String? = Helper.sharedInstance.verificationCode();
         if verificationCode != nil {
             UserDefaults.standard.set(verificationCode, forKey: AppConstants.VERIFICATION_CODE_KEY)
+            UserDefaults.standard.set(false, forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)
             let sendVerificationURL : String = String(format : AppConstants.SMS_VERIFICATION_API, mobileNumber, verificationCode!)
             ServerClass.sharedInstance.sendVerificationCodeToUserMobile(sendVerificationURL, mobileNumber, { (success, message) in
                 DispatchQueue.main.sync {
@@ -219,9 +220,7 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
         scrollView.isScrollEnabled = true
         
         var  contentSize : CGSize! = scrollView.contentSize;
-        
-        scrollView.isScrollEnabled = true
-        
+                
         //if scrollView.contentOffset.y <= -20 {
             let keyboardFrame : CGRect = (((notification.userInfo! as NSDictionary).object(forKey: UIKeyboardFrameBeginUserInfoKey) as AnyObject).cgRectValue)!
             contentSize.height = scrollViewContentSize.height + (keyboardFrame.size.height - (self.view.frame.size.height - (scrollView.frame.origin.y + scrollView.frame.size.height)))

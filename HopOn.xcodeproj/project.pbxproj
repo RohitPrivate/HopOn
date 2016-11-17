@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8208E6A01DDD8738001DB4D6 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */; };
 		823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823D3ABB1DDC74F800F97A5D /* SignUpViewController.swift */; };
 		827126041DD5A3F9009ADC24 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126031DD5A3F9009ADC24 /* Helper.swift */; };
 		827126071DD5A917009ADC24 /* ServerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126061DD5A917009ADC24 /* ServerClass.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		823D3ABB1DDC74F800F97A5D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		827126031DD5A3F9009ADC24 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		827126061DD5A917009ADC24 /* ServerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerClass.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				82C81D251DCCAD73005CC046 /* LoginViewController.swift */,
 				82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */,
 				82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */,
+				8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			files = (
 				82845D5B1DD457CC00AD780A /* ChooseOneViewController.swift in Sources */,
 				82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */,
+				8208E6A01DDD8738001DB4D6 /* ForgotPasswordViewController.swift in Sources */,
 				82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */,
 				828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */,
 				823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */,
