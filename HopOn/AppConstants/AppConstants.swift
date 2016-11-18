@@ -31,6 +31,14 @@ class AppConstants: NSObject {
     static let COUNTRY_API_KEY = "country"
     static let ORGANISATION_API_VKEY = "organisation"
     
+    static let MENU_ITEM_CELL_IDENTIFIER : String = "Menu Item Cell"
+    
+    static let GRADIENT_COLOR : UIColor = UIColor.init(red: 117 / 255.0, green: 135 / 255.0, blue: 75 / 255.0, alpha: 1)
+    
+    static let REAR_VIEW_WIDTH : CGFloat = 76
+    static let MENU_BAR_ROWS_COUNT : Int = 8
+    static let MENU_ITEM_ICON_SIZE : CGSize = CGSize.init(width: 46, height: 46)
+    
     static var deviceType : DeviceType = DeviceType.none
     
     public enum DeviceType {
@@ -46,6 +54,28 @@ class AppConstants: NSObject {
         case CaviarDreamsBoldItalic = "CaviarDreams_BoldItalic"
         case CaviarDreamsItalic = "CaviarDreams_Italic"
         case CaviarDreamsBold = "CaviarDreams_Bold"
+    }
+    
+    public enum MenuItemIndices : Int {
+        case Profile = 0
+        case Home = 1
+        case ReferFriend = 2
+        case Chat = 3
+        case History = 4
+        case Notification = 5
+        case Help = 6
+        case Settings = 7
+    }
+    
+    public enum MenuItemImageNames : String {
+        case Profile = "Profile Menu Icon"
+        case Home = "Home Menu Icon"
+        case ReferFriend = "ReferFriend Menu Icon"
+        case Chat = "Chat Menu Icon"
+        case History = "History Menu Icon"
+        case Notification = "Notification Menu Icon"
+        case Help = "Help Menu Icon"
+        case Settings = "Settings Menu Icon"
     }
 
 }

@@ -50,6 +50,8 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
+	</array>    
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>This application requires location services to work</string>
 </dict>
 </plist>

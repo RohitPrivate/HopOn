@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8208E6A01DDD8738001DB4D6 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */; };
 		823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823D3ABB1DDC74F800F97A5D /* SignUpViewController.swift */; };
+		825CE0871DDEE81900961D27 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825CE0861DDEE81900961D27 /* SWRevealViewController.m */; };
+		825CE0891DDEEEAD00961D27 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825CE0881DDEEEAD00961D27 /* MenuViewController.swift */; };
+		825CE08C1DDF1B8A00961D27 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825CE08B1DDF1B8A00961D27 /* MenuItemTableViewCell.swift */; };
 		827126041DD5A3F9009ADC24 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126031DD5A3F9009ADC24 /* Helper.swift */; };
 		827126071DD5A917009ADC24 /* ServerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126061DD5A917009ADC24 /* ServerClass.swift */; };
 		8271260A1DD5A9F5009ADC24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827126081DD5A9F5009ADC24 /* Main.storyboard */; };
@@ -27,6 +30,7 @@
 		829EED911DD9F3D70045CC3A /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */; };
 		82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D251DCCAD73005CC046 /* LoginViewController.swift */; };
 		82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */; };
+		82E1C0201DDF362B0049CF8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,11 @@
 /* Begin PBXFileReference section */
 		8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		823D3ABB1DDC74F800F97A5D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		825CE0841DDEE81800961D27 /* HopOn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopOn-Bridging-Header.h"; sourceTree = "<group>"; };
+		825CE0851DDEE81900961D27 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		825CE0861DDEE81900961D27 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		825CE0881DDEEEAD00961D27 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		825CE08B1DDF1B8A00961D27 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		827126031DD5A3F9009ADC24 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		827126061DD5A917009ADC24 /* ServerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerClass.swift; sourceTree = "<group>"; };
 		827126091DD5A9F5009ADC24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,6 +82,7 @@
 		829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		82C81D251DCCAD73005CC046 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationPageViewController.swift; sourceTree = "<group>"; };
+		82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E1C0201DDF362B0049CF8D /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +111,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		825CE07E1DDEDFE100961D27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				825CE07F1DDEDFE100961D27 /* SWRevealViewController */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		825CE07F1DDEDFE100961D27 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				825CE0851DDEE81900961D27 /* SWRevealViewController.h */,
+				825CE0861DDEE81900961D27 /* SWRevealViewController.m */,
+				825CE0841DDEE81800961D27 /* HopOn-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		825CE08A1DDF1B6400961D27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				825CE08B1DDF1B8A00961D27 /* MenuItemTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		827126021DD5A3E0009ADC24 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +168,7 @@
 				828DA7CE1DCC528400698B41 /* HopOnTests */,
 				828DA7D91DCC528500698B41 /* HopOnUITests */,
 				828DA7B81DCC528400698B41 /* Products */,
+				82E1C01E1DDF362B0049CF8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +185,8 @@
 		828DA7B91DCC528400698B41 /* HopOn */ = {
 			isa = PBXGroup;
 			children = (
+				825CE08A1DDF1B6400961D27 /* Views */,
+				825CE07E1DDEDFE100961D27 /* Frameworks */,
 				8271260D1DD5C44E009ADC24 /* AppConstants */,
 				827126051DD5A8F5009ADC24 /* ServerManager */,
 				827126021DD5A3E0009ADC24 /* Helper */,
@@ -189,6 +229,7 @@
 				82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */,
 				82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */,
 				8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */,
+				825CE0881DDEEEAD00961D27 /* MenuViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -202,6 +243,14 @@
 				829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		82E1C01E1DDF362B0049CF8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +321,8 @@
 				TargetAttributes = {
 					828DA7B61DCC528400698B41 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = PY3LT3EKXV;
+						DevelopmentTeam = 2P5GT7V5CU;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					828DA7CA1DCC528400698B41 = {
@@ -350,10 +400,13 @@
 				828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */,
 				823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */,
 				828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */,
+				825CE0891DDEEEAD00961D27 /* MenuViewController.swift in Sources */,
 				828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */,
 				827126071DD5A917009ADC24 /* ServerClass.swift in Sources */,
 				827126041DD5A3F9009ADC24 /* Helper.swift in Sources */,
+				825CE08C1DDF1B8A00961D27 /* MenuItemTableViewCell.swift in Sources */,
 				8271260F1DD5C472009ADC24 /* AppConstants.swift in Sources */,
+				825CE0871DDEE81900961D27 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,15 +558,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PY3LT3EKXV;
+				DEVELOPMENT_TEAM = 2P5GT7V5CU;
 				INFOPLIST_FILE = HopOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PY3LT3EKXV.com.AppLives.HopOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "HopOn/Frameworks/SWRevealViewController/HopOn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -522,15 +578,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PY3LT3EKXV;
+				DEVELOPMENT_TEAM = 2P5GT7V5CU;
 				INFOPLIST_FILE = HopOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PY3LT3EKXV.com.AppLives.HopOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "HopOn/Frameworks/SWRevealViewController/HopOn-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

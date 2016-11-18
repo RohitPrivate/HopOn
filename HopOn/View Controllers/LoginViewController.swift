@@ -71,6 +71,7 @@ class LoginViewController: WelcomeViewController {
     
     //This method is used to start the login process
     @IBAction func loginAction(_ sender: Any) {
+        return self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
         //To dismiss the keyboard
         scrollView.endEditing(true)
         

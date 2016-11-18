@@ -7,25 +7,41 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class ChooseOneViewController: WelcomeViewController {
+class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var driverButton: UIButton!
     @IBOutlet weak var riderButton: UIButton!
     
     var isDriverButtonSelected : Bool! = false
     var isRiderButtonSelected : Bool! = false
+    var locationManager : CLLocationManager?
+    var userLocation : CLLocationCoordinate2D?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if revealViewController() != nil {
+        self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+            revealViewController().setFrontViewPosition(FrontViewPosition.leftSide, animated: true)
+            revealViewController().rearViewRevealWidth = AppConstants.REAR_VIEW_WIDTH
+        }
         
+        if locationManager == nil {
+            locationManager = CLLocationManager()
+            locationManager?.delegate = self
+            locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager?.requestAlwaysAuthorization()
+            locationManager?.startUpdatingLocation()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,6 +69,12 @@ class ChooseOneViewController: WelcomeViewController {
         
     }
     
+    @IBAction func openMenuBar(_ sender: Any) {
+        if revealViewController() != nil {
+            revealViewController().revealToggle(animated: true)
+        }
+    }
+    
     @IBAction func riderButtonSelected(_ sender: Any) {
         if !isRiderButtonSelected! {
             isRiderButtonSelected = true
@@ -66,6 +88,15 @@ class ChooseOneViewController: WelcomeViewController {
         } else {
             riderButton.setBackgroundImage(UIImage.init(named: "Rider Icon"), for: UIControlState.normal)
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = locationManager!.location!.coordinate
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
     
     override func didReceiveMemoryWarning() {
