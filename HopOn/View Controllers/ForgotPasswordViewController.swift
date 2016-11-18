@@ -131,6 +131,12 @@ class ForgotPasswordViewController: WelcomeViewController {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
     @IBAction func backAction(_ sender: Any) {
         self.backButtonAction(nil)
     }

@@ -704,6 +704,9 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                                 <color key="value" red="0.78823529410000004" green="0.83529411760000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="5MM-WH-1sn" id="Z2N-TW-i52"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -763,6 +766,9 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                                 <color key="value" red="0.78823529410000004" green="0.83529411760000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="5MM-WH-1sn" id="ffJ-GV-2aV"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1035,6 +1041,9 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                                                 <color key="value" red="0.78823529410000004" green="0.83529411760000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="0Di-8x-rAj" id="x0M-8l-2Pg"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2147,7 +2156,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
         <scene sceneID="opE-su-4p2">
             <objects>
                 <navigationController id="ozx-BW-ab8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GRF-4S-Kfc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GRF-4S-Kfc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2192,9 +2201,9 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
         <image name="Welcome Page Driver" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EeI-NQ-0Cz"/>
-        <segue reference="Hqn-4W-CgG"/>
         <segue reference="L6n-L0-7Iy"/>
-        <segue reference="hbA-44-bUd"/>
+        <segue reference="Hqn-4W-CgG"/>
+        <segue reference="Fug-LZ-Kjf"/>
+        <segue reference="EeI-NQ-0Cz"/>
     </inferredMetricsTieBreakers>
 </document>
