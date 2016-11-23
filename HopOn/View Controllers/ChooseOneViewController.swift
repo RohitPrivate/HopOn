@@ -19,7 +19,7 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
     var isRiderButtonSelected : Bool! = false
     var locationManager : CLLocationManager?
     var userLocation : CLLocationCoordinate2D?
-    
+    var datePicker : UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,6 +108,31 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }
+    
+    func addDatePickerInputViewToDateFields(textField : UITextField, target: Any) {
+        let doneButtonHeight : CGFloat = 50
+        let doneButtonWidth : CGFloat = 100
+        let inputView = UIView(frame: CGRect(x:0, y:0, width:self.view.frame.width, height:240))
+        
+        datePicker = Helper.sharedInstance.datePickerWithTarget(target: self, action : #selector(RiderProfileViewController.updateDateTextField(sender:)))
+        datePicker.frame = CGRect(x:0, y:doneButtonHeight, width:inputView.frame.size.width, height: (inputView.frame.size.height - doneButtonHeight))
+        inputView.addSubview(datePicker)
+        
+        let doneButton = UIButton(frame: CGRect(x:(self.view.frame.size.width/2) - (doneButtonWidth/2), y:0, width:doneButtonWidth, height:doneButtonHeight))
+        doneButton.setTitle("Done", for: UIControlState.normal)
+        doneButton.setTitle("Done", for: UIControlState.highlighted)
+        doneButton.setTitleColor(UIColor.black, for: UIControlState.normal)
+        doneButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
+        doneButton.addTarget(self, action: #selector((target as AnyObject).resignDatePicker(sender:)), for: UIControlEvents.touchUpInside)
+        
+        inputView.addSubview(doneButton)
+        
+        textField.inputView = inputView
+    }
+    
+    func resignDatePicker(sender : UIButton) {
+        self.view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {

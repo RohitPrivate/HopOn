@@ -121,6 +121,15 @@ class Helper: NSObject {
         })
     }
     
+    func datePickerWithTarget(target : Any, action : Selector) -> UIDatePicker {
+        let datePicker : UIDatePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePickerMode.date
+        datePicker.date = Date()
+        datePicker.addTarget(target, action: action, for: .valueChanged)
+        
+        return datePicker
+    }
+    
     func deviceType() -> AppConstants.DeviceType {
         
         if AppConstants.deviceType == AppConstants.DeviceType.none {
@@ -173,6 +182,22 @@ class Helper: NSObject {
     
     func currentUserObject() -> UserDetailsDataObject {
         return currentUser!
+    }
+    
+    func formattedStringFromDate(date : Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let strDate = dateFormatter.string(from: date)
+        
+        return strDate
+    }
+    
+    func formattedDateFromString(stringDate : String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let date = dateFormatter.date(from: stringDate)
+        
+        return date!
     }
     
 }

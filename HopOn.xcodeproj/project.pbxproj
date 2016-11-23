@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8208E6A01DDD8738001DB4D6 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */; };
 		823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823D3ABB1DDC74F800F97A5D /* SignUpViewController.swift */; };
+		82408A2D1DE5C79700416B9D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA91DE2D63700C6165E /* FBSDKCoreKit.framework */; };
+		82408A2E1DE5C79700416B9D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA71DE2CFF500C6165E /* FBSDKLoginKit.framework */; };
 		825CE0871DDEE81900961D27 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825CE0861DDEE81900961D27 /* SWRevealViewController.m */; };
 		825CE0891DDEEEAD00961D27 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825CE0881DDEEEAD00961D27 /* MenuViewController.swift */; };
 		825CE08C1DDF1B8A00961D27 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825CE08B1DDF1B8A00961D27 /* MenuItemTableViewCell.swift */; };
@@ -33,10 +35,6 @@
 		829EED8F1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8B1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf */; };
 		829EED901DD9F3D70045CC3A /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */; };
 		829EED911DD9F3D70045CC3A /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */; };
-		82B52FB01DE2D86600C6165E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA91DE2D63700C6165E /* FBSDKCoreKit.framework */; };
-		82B52FB11DE2D86600C6165E /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA91DE2D63700C6165E /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		82B52FB21DE2D86600C6165E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA71DE2CFF500C6165E /* FBSDKLoginKit.framework */; };
-		82B52FB31DE2D86600C6165E /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA71DE2CFF500C6165E /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82B52FB61DE2DD4A00C6165E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FB51DE2DD4A00C6165E /* Bolts.framework */; };
 		82B52FB81DE32B1700C6165E /* DriverProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52FB71DE32B1700C6165E /* DriverProfileViewController.swift */; };
 		82B52FBA1DE32B2600C6165E /* RiderProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52FB91DE32B2600C6165E /* RiderProfileViewController.swift */; };
@@ -61,21 +59,6 @@
 			remoteInfo = HopOn;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		82B52FB41DE2D86600C6165E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				82B52FB31DE2D86600C6165E /* FBSDKLoginKit.framework in Embed Frameworks */,
-				82B52FB11DE2D86600C6165E /* FBSDKCoreKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -128,9 +111,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E1C0201DDF362B0049CF8D /* CoreLocation.framework in Frameworks */,
-				82B52FB01DE2D86600C6165E /* FBSDKCoreKit.framework in Frameworks */,
-				82B52FB21DE2D86600C6165E /* FBSDKLoginKit.framework in Frameworks */,
 				82B52FB61DE2DD4A00C6165E /* Bolts.framework in Frameworks */,
+				82408A2D1DE5C79700416B9D /* FBSDKCoreKit.framework in Frameworks */,
+				82408A2E1DE5C79700416B9D /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +312,6 @@
 				828DA7B31DCC528400698B41 /* Sources */,
 				828DA7B41DCC528400698B41 /* Frameworks */,
 				828DA7B51DCC528400698B41 /* Resources */,
-				82B52FB41DE2D86600C6165E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,7 +370,7 @@
 				TargetAttributes = {
 					828DA7B61DCC528400698B41 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2P5GT7V5CU;
+						DevelopmentTeam = PY3LT3EKXV;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -635,7 +617,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2P5GT7V5CU;
+				DEVELOPMENT_TEAM = PY3LT3EKXV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -659,7 +641,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2P5GT7V5CU;
+				DEVELOPMENT_TEAM = PY3LT3EKXV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

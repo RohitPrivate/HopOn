@@ -191,6 +191,7 @@ class LoginViewController: WelcomeViewController {
                 let loginManagerResult : FBSDKLoginManagerLoginResult! = loginResult
                 if loginManagerResult.isCancelled {
                     print("Cancelled")
+                    Helper.sharedInstance.fadeOutLoaderView()
                 } else if ((loginManagerResult?.grantedPermissions.contains("email"))! && (loginManagerResult?.grantedPermissions.contains("public_profile"))!) {
                     self.registerWithFacebook()
                 }

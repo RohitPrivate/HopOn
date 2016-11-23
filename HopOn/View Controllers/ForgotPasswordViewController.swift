@@ -35,7 +35,7 @@ class ForgotPasswordViewController: WelcomeViewController {
         scrollViewContentOffset = scrollView.contentOffset
         scrollViewContentSize = scrollView.contentSize
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ForgotPasswordViewController.keybpoardDidShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ForgotPasswordViewController.keybpoardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ForgotPasswordViewController.keybpoardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
@@ -44,22 +44,18 @@ class ForgotPasswordViewController: WelcomeViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keybpoardDidShow(notification : NSNotification) {
+    func keybpoardWillShow(notification : NSNotification) {
         scrollView.isScrollEnabled = true
         
         var  contentSize : CGSize! = scrollView.contentSize;
-        let keyboardFrame : CGRect = (((notification.userInfo! as NSDictionary).object(forKey: UIKeyboardFrameBeginUserInfoKey) as AnyObject).cgRectValue)!
-        let yBottomOffset : CGFloat = (scrollView.frame.origin.y + forgotPasswordFillUpBox.frame.origin.y + forgotPasswordFillUpBox.frame.size.height)
         
-        if (yBottomOffset > keyboardFrame.size.height) {
-            let contentHeight : CGFloat = (scrollView.contentSize.height) + ((yBottomOffset - keyboardFrame.size.height) / 2)
-            contentSize.height = contentHeight
-        }
+        let keyboardFrame : CGRect = (((notification.userInfo! as NSDictionary).object(forKey: UIKeyboardFrameBeginUserInfoKey) as AnyObject).cgRectValue)!
+        contentSize.height = scrollViewContentSize.height + (keyboardFrame.size.height - (self.view.frame.size.height - (scrollView.frame.origin.y + scrollView.frame.size.height)))
         
         UIView.animate(withDuration: 0.2, animations: {
             self.scrollView.contentSize = contentSize
-            self.scrollView.contentOffset.y = (self.scrollViewContentOffset?.y)! + (yBottomOffset - keyboardFrame.size.height) / 2
         })
+
     }
     
     func keybpoardWillHide(notification : NSNotification) {

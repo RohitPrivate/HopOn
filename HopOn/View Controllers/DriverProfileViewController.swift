@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DriverProfileViewController: UIViewController {
+class DriverProfileViewController: ChooseOneViewController {
     
     var scrollViewContentSize : CGSize! = CGSize.zero
     var scrollViewContentOffset : CGPoint = CGPoint.zero
@@ -36,6 +36,8 @@ class DriverProfileViewController: UIViewController {
         if !isDriverDataFetched {
             self.fetchDriverData()
         }
+        
+        self.addDatePickerInputViewToDateFields(textField: driveDateField, target: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +65,11 @@ class DriverProfileViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(DriverProfileViewController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(DriverProfileViewController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
+    
+    func updateDateTextField(sender : Any) {
+        let strDate = Helper.sharedInstance.formattedStringFromDate(date: datePicker.date)
+        self.driveDateField.text = "\(strDate)"
+    }
 
     @IBAction func openMenuAction(_ sender: Any) {
         if revealViewController() != nil {
@@ -85,6 +92,9 @@ class DriverProfileViewController: UIViewController {
                         if (dataArray?.lastObject != nil) {
                             self.driverDetailsDataObject = dataArray?.lastObject as? DriverDetailsDataObject
                             self.populateDriverDetails(dataObject: self.driverDetailsDataObject)
+                        }
+                        if (self.driveDateField.text?.characters.count)! > 0 {
+                            self.datePicker.date = Helper.sharedInstance.formattedDateFromString(stringDate: self.driveDateField.text!)
                         }
                     } else {
                         let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(message)"), baseView: self.view)
@@ -119,19 +129,12 @@ class DriverProfileViewController: UIViewController {
         
         var  contentSize : CGSize! = scrollView.contentSize;
         
-        //if scrollView.contentOffset.y <= -20 {
         let keyboardFrame : CGRect = (((notification.userInfo! as NSDictionary).object(forKey: UIKeyboardFrameBeginUserInfoKey) as AnyObject).cgRectValue)!
         contentSize.height = scrollViewContentSize.height + (keyboardFrame.size.height - (self.view.frame.size.height - (scrollView.frame.origin.y + scrollView.frame.size.height)))
-        //var yOffset = (scrollView.frame.origin.y + (selectedTextField?.superview?.superview?.frame.origin.y)! + (selectedTextField?.superview?.frame.origin.y)! + (selectedTextField?.frame.origin.y)!) + scrollView.contentOffset.y
-        //if yOffset > keyboardFrame.origin.y {
-        //yOffset = keyboardFrame.size.height
-        //}
         
         UIView.animate(withDuration: 0.2, animations: {
             self.scrollView.contentSize = contentSize
-            //self.scrollView.contentOffset.y = yOffset
         })
-        //}
     }
     
     func keyboardWillHide(notification : NSNotification) {

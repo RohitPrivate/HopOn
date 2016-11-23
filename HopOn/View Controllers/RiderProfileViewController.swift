@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RiderProfileViewController: UIViewController {
+class RiderProfileViewController: ChooseOneViewController {
     
     var scrollViewContentSize : CGSize! = CGSize.zero
     var scrollViewContentOffset : CGPoint = CGPoint.zero
@@ -29,6 +29,7 @@ class RiderProfileViewController: UIViewController {
         if !isRiderDataFetched {
             self.fetchRiderData()
         }
+        self.addDatePickerInputViewToDateFields(textField: pickUpDateField, target: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +70,9 @@ class RiderProfileViewController: UIViewController {
                             self.riderDetailsDataObject = dataArray?.lastObject as? RiderDetailsDataObject
                             self.populateRiderDetails(dataObject: self.riderDetailsDataObject)
                         }
+                        if (self.pickUpDateField.text?.characters.count)! > 0 {
+                            self.datePicker.date = Helper.sharedInstance.formattedDateFromString(stringDate: self.pickUpDateField.text!)
+                        }
                     } else {
                         let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(message)"), baseView: self.view)
                         Helper.sharedInstance.fadeInAlertPopup(popupLabel)
@@ -83,6 +87,11 @@ class RiderProfileViewController: UIViewController {
         pickUpTimeField.text! = dataObject.pickUpTime
         pickUpLocationField.text! = dataObject.pickUpLocation
         destinationField.text! = dataObject.destination
+    }
+    
+    func updateDateTextField(sender : Any) {
+        let strDate = Helper.sharedInstance.formattedStringFromDate(date: datePicker.date)
+        self.pickUpDateField.text = "\(strDate)"
     }
 
     @IBAction func openMenuAction(_ sender: Any) {
