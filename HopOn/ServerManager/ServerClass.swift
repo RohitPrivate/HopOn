@@ -12,16 +12,18 @@ class ServerClass: NSObject {
     
     static let sharedInstance = ServerClass()
     
-    func performRegisterAction(_ registerURLString : String, _ completion : @escaping (_ success : Bool, _ message : String) -> Void) {
+    func performRegisterAction(_ registerURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataArray : NSArray?) -> Void) {
         
         let session : URLSession = URLSession.shared
-        let registerURL : URL = URL.init(string: registerURLString)!
+        let encodedHost = registerURLString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+    
+        let registerURL = URL.init(string: encodedHost!)!
         
         let task : URLSessionTask = session.dataTask(with: registerURL as URL, completionHandler: { (jsonData, response, error) in
             let httpResponse = response as? HTTPURLResponse
     
             if (error != nil) {
-                completion(false, error!.localizedDescription)
+                completion(false, error!.localizedDescription, nil)
                 return
             }
             
@@ -30,18 +32,21 @@ class ServerClass: NSObject {
             if sessionData?.length != 0 {
                 do {
                     let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
-                    var description : String? = "Success"
+                    var description : String? = "Suc cess"
                     var status : Bool = false
+                    var dataArray : NSArray? = nil
                     if httpResponse?.statusCode == 200 {
                         description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
                         if description == nil || description?.characters.count == 0 || description == "" {
                             status = true
                             description = "Success"
+                            
+                            dataArray = DataParser().parseUserDataDictionary(dataDict: dataDictionary as! NSDictionary)
                         }
-                        completion(status, description!)
+                        completion(status, description!, dataArray)
                     } else {
                         description = "Server Error"
-                        completion(status, description!)
+                        completion(status, description!, dataArray)
                     }
                 } catch {
                     print("\(error)")
@@ -53,7 +58,8 @@ class ServerClass: NSObject {
     
     func sendVerificationCodeToUserMobile(_ sendVerificationURL : String, _ mobileNumber : String, _ completion : @escaping (_ success : Bool, _ message : String) -> Void) {
         let session : URLSession = URLSession.shared
-        let sendVerificationURL : URL = URL.init(string: sendVerificationURL)!
+        let encodedHost = sendVerificationURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        let sendVerificationURL : URL = URL.init(string: encodedHost!)!
         
         let task = session.dataTask(with: sendVerificationURL, completionHandler: { (jsonData, response, error) in
             let httpResponse = response as? HTTPURLResponse
@@ -75,9 +81,10 @@ class ServerClass: NSObject {
         task.resume()
     }
     
-    func performLoginAction(_ loginURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataDic : NSDictionary?) -> Void) {
+    func performLoginAction(_ loginURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataArray : NSArray?) -> Void) {
         let session : URLSession = URLSession.shared
-        let loginURL : URL = URL.init(string: loginURLString)!
+        let encodedHost = loginURLString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        let loginURL : URL = URL.init(string: encodedHost!)!
         
         let task : URLSessionTask = session.dataTask(with: loginURL as URL, completionHandler: { (jsonData, response, error) in
             let httpResponse = response as? HTTPURLResponse
@@ -94,16 +101,19 @@ class ServerClass: NSObject {
                     let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
                     var description : String? = "Success"
                     var status : Bool = false
+                    var dataArray : NSArray? = nil
                     if httpResponse?.statusCode == 200 {
                         description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
                         if description == nil || description?.characters.count == 0 || description == "" {
                             status = true
                             description = "Success"
+                            
+                            dataArray = DataParser().parseUserDataDictionary(dataDict: (dataDictionary as! NSDictionary))
                         }
-                        completion(status, description!, dataDictionary as? NSDictionary)
+                        completion(status, description!, dataArray)
                     } else {
                         description = "Server Error"
-                        completion(status, description!, dataDictionary as? NSDictionary)
+                        completion(status, description!, dataArray)
                     }
                 } catch {
                     print("\(error)")
@@ -115,7 +125,8 @@ class ServerClass: NSObject {
     
     func performForgotPasswordAction(_ forgotPasswordURLString : String, _ completion : @escaping (_ success : Bool, _ message : String) -> Void) {
         let session : URLSession = URLSession.shared
-        let forgotPasswordURL : URL = URL.init(string: forgotPasswordURLString)!
+        let encodedHost = forgotPasswordURLString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        let forgotPasswordURL : URL = URL.init(string: encodedHost!)!
         
         let task : URLSessionTask = session.dataTask(with: forgotPasswordURL as URL, completionHandler: { (jsonData, response, error) in
             let httpResponse = response as? HTTPURLResponse
@@ -146,6 +157,145 @@ class ServerClass: NSObject {
                     } else {
                         description = "Server Error"
                         completion(status, description!)
+                    }
+                } catch {
+                    print("\(error)")
+                }
+            }
+        })
+        task.resume()
+    }
+    
+    func performRegisterActionWithFacebook(_ registerWithFacebookURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataArray : NSArray?) -> Void) {
+        
+        let session : URLSession = URLSession.shared
+        let encodedHost = registerWithFacebookURLString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        
+        let registerWithFacebookURL = URL.init(string: encodedHost!)!
+        
+        let task : URLSessionTask = session.dataTask(with: registerWithFacebookURL as URL, completionHandler: { (jsonData, response, error) in
+            let httpResponse = response as? HTTPURLResponse
+            
+            if (error != nil) {
+                completion(false, error!.localizedDescription, nil)
+                return
+            }
+            
+            let sessionData = NSString(data: jsonData!, encoding: String.Encoding.utf8.rawValue)
+            print(sessionData ?? "Raw")
+            if sessionData?.length != 0 {
+                do {
+                    let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
+                    var description : String? = "Success"
+                    var status : Bool = false
+                    var dataArray : NSArray? = nil
+                    if httpResponse?.statusCode == 200 {
+                        description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
+                        if description == nil || description?.characters.count == 0 || description == "" {
+                            status = true
+                            description = "Success"
+                            
+                            dataArray = DataParser().parseUserDataDictionary(dataDict: (dataDictionary as! NSDictionary))
+                        } else if (((dataDictionary as! NSDictionary).object(forKey: "status") as? String) == "1") {
+                            status = true
+                            description = "Success"
+                            
+                            dataArray = DataParser().parseUserDataDictionary(dataDict: (dataDictionary as! NSDictionary))
+                        }
+                        completion(status, description!, dataArray)
+                    } else {
+                        description = "Server Error"
+                        completion(status, description!, dataArray)
+                    }
+                } catch {
+                    print("\(error)")
+                }
+            }
+        })
+        task.resume()
+    }
+    
+    func fetchDriverData(_ driverDataURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataArray : NSArray?) -> Void) {
+        
+        let session : URLSession = URLSession.shared
+        let encodedHost = driverDataURLString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        
+        let fetchDriverDataURL = URL.init(string: encodedHost!)!
+        
+        let task : URLSessionTask = session.dataTask(with: fetchDriverDataURL as URL, completionHandler: { (jsonData, response, error) in
+            let httpResponse = response as? HTTPURLResponse
+            
+            if (error != nil) {
+                completion(false, error!.localizedDescription, nil)
+                return
+            }
+            
+            let sessionData = NSString(data: jsonData!, encoding: String.Encoding.utf8.rawValue)
+            print(sessionData ?? "Raw")
+            if sessionData?.length != 0 {
+                do {
+                    let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
+                    var description : String? = "Success"
+                    var status : Bool = false
+                    var dataArray : NSArray! = nil
+                    var responseStatus : String?
+                    if httpResponse?.statusCode == 200 {
+                        description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
+                        responseStatus = ((dataDictionary as! NSDictionary).object(forKey: "status") as? String)
+                        if responseStatus == "1" {
+                            status = true
+                            description = "Success"
+                            
+                            dataArray = DataParser().parseDriverDataDictionary(dataDict: ((((dataDictionary as! NSDictionary).object(forKey: "message")) as? NSDictionary)!.object(forKey: "status") as! NSArray).lastObject as! NSDictionary)
+                        }
+                        completion(status, description!, dataArray)
+                    } else {
+                        description = "Server Error"
+                        completion(status, description!, dataArray)
+                    }
+                } catch {
+                    print("\(error)")
+                }
+            }
+        })
+        task.resume()
+    }
+    
+    func fetchRiderData(_ riderDataURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataArray : NSArray?) -> Void) {
+        
+        let session : URLSession = URLSession.shared
+        let encodedHost = riderDataURLString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        
+        let fetchRiderDataURL = URL.init(string: encodedHost!)!
+        
+        let task : URLSessionTask = session.dataTask(with: fetchRiderDataURL as URL, completionHandler: { (jsonData, response, error) in
+            let httpResponse = response as? HTTPURLResponse
+            
+            if (error != nil) {
+                completion(false, error!.localizedDescription, nil)
+                return
+            }
+            
+            let sessionData = NSString(data: jsonData!, encoding: String.Encoding.utf8.rawValue)
+            print(sessionData ?? "Raw")
+            if sessionData?.length != 0 {
+                do {
+                    let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
+                    var description : String? = "Success"
+                    var status : Bool = false
+                    var dataArray : NSArray! = nil
+                    if httpResponse?.statusCode == 200 {
+                        description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
+                        if description == nil || description?.characters.count == 0 || description == "" {
+                            status = true
+                            description = "Success"
+                            
+                            dataArray = DataParser().parseRiderDataDictionary(dataDict: ((((dataDictionary as! NSDictionary).object(forKey: "message")) as? NSDictionary)!.object(forKey: "status") as! NSArray).lastObject as! NSDictionary)
+                        }
+                        completion(status, description!, dataArray)
+                    } else {
+                        description = "Server Error"
+                        completion(status, description!, dataArray)
                     }
                 } catch {
                     print("\(error)")

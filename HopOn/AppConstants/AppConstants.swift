@@ -15,21 +15,59 @@ class AppConstants: NSObject {
     static let SMS_VERIFICATION_API : String = "http://smsgateway.ca/SendSMS.aspx?AccountKey=V34TIzaa7H5D0HV12N1sI06Aiy21C0lY&CellNumber=%@&MessageBody=%@&Reference=ref"
     static let LOGIN_API : String = "http://appscoopsolutions.com/aim_api/hopon.php?rule=login&mobile=%@&password=%@"
     static let FORGOT_PASSWORD_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=forgot_password&email=%@"
+    static let REGISTER_WITH_FACEBOOK_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=register_fb&device_type=2&device_id=ggyt54545&full_name=%@&email=%@&password=%@&mobile=%@&street_address=%@&profile_image=%@&city=%@&country=%@&organisation=%@"
+    static let GET_DRIVER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=get_drive_details&user_id=%@"
+    static let GET_RIDER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=get_ride_details&user_id=%@"
+    static let SAVE_DRIVER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=drive_details&user_id=87&lattitude=%@&longitude=%@&drive_date=%@&drive_time=%@&start_loc=%@&destination=%@&seat_available=%@&rate_per_person=%@&car_model=%@&car_type=%@&car_color=%@"
+    static let SAVE_RIDER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=rider_details&pickup_date=%@&pickup_time=%@&pickup_loc=%@&destination=%@&lattitude=%@&longitude=%@&profile_image=%@&user_id=87"
     
     static var VERIFICATION_CODE_KEY = "VerificationCode"
     static var VERIFICATION_CODE_VERIFIED_KEY = "isVerified"
     
     static let VERIFICATION_PAGE_SEGUE = "VerificationPage"
     static let CHOOSE_ONE_PAGE_SEGUE = "ChooseOne"
+    static let RIDER_PAGE_SEGUE = "Rider Page"
+    static let DRIVER_PAGE_SEGUE = "Driver Page"
     
     //API response keys
+    //User Details
     static let FULL_NAME_API_KEY = "full_name"
     static let EMAIL_API_KEY = "email"
     static let PASSWORD_API_KEY = "password"
     static let MOBILE_API_KEY = "mobile"
+    static let STREET_ADDRESS_API_KEY = "mobile"
     static let CITY_API_KEY = "city"
     static let COUNTRY_API_KEY = "country"
-    static let ORGANISATION_API_VKEY = "organisation"
+    static let ORGANIZATION_API_KEY = "organisation"
+    static let USER_ID_API_KEY = "user_id"
+    static let DEVICE_TYPE_API_KEY = "device_type"
+    static let DEVICE_ID_API_KEY = "device_id"
+    static let PROFILE_IMAGE_URL_API_KEY = "profile_image"
+    static let ID_API_KEY = "id"
+    
+    //API response keys
+    //Driver Details
+    static let LATTITUDE_API_KEY = "lattitude"
+    static let LONGITUDE_API_KEY = "longitude"
+    static let DRIVE_DATE_API_KEY = "drive_date"
+    static let DRIVE_TIME_API_KEY = "drive_time"
+    static let START_LOCATION_API_KEY = "start_loc"
+    static let DESTINATION_API_KEY = "destination"
+    
+    //API response keys
+    //Car Details
+    static let SEATS_AVAILABLE_API_KEY = "seat_available"
+    static let RATE_API_KEY = "rate"
+    static let CAR_MODEL_API_KEY = "car_model"
+    static let CAR_TYPE_API_KEY = "car_type"
+    static let CAR_COLOR_API_KEY = "car_color"
+    static let CAR_NUMBER_API_KEY = "car_number"
+    
+    //API response keys
+    //Rider Details
+    static let PICK_UP_DATE_API_KEY = "pickup_dt"
+    static let PICK_UP_TIME_API_KEY = "pickup_tm"
+    static let PICK_UP_LOCATION_API_KEY = "pickup_loc"
     
     static let MENU_ITEM_CELL_IDENTIFIER : String = "Menu Item Cell"
     

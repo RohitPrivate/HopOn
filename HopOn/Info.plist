@@ -50,8 +50,29 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>    
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>This application requires location services to work</string>
+	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This application requires location services to work</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb985624338210182</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>985624338210182</string>
+	<key>FacebookDisplayName</key>
+	<string>HopOn</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fb</string>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 </dict>
 </plist>

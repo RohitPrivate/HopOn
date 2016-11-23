@@ -90,6 +90,17 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    @IBAction func startAction(_ sender: Any) {
+        if isRiderButtonSelected == true {
+            _ = [self.performSegue(withIdentifier: AppConstants.RIDER_PAGE_SEGUE, sender: nil)];
+        } else if (isDriverButtonSelected == true) {
+             _ = [self.performSegue(withIdentifier: AppConstants.DRIVER_PAGE_SEGUE, sender: nil)];
+        } else {
+            let alertPopUp : UILabel! = Helper.sharedInstance.popupLabelForCustomAlert("Please select Driver or Rider", baseView: self.view)!
+            Helper.sharedInstance.fadeInAlertPopup(alertPopUp)
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = locationManager!.location!.coordinate
         print("locations = \(locValue.latitude) \(locValue.longitude)")

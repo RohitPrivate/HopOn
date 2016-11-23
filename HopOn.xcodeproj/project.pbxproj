@@ -24,10 +24,22 @@
 		828DA7DB1DCC528500698B41 /* HopOnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7DA1DCC528500698B41 /* HopOnUITests.swift */; };
 		828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */; };
 		828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7EE1DCC947D00698B41 /* T&CViewController.swift */; };
+		829ABEC21DE4404C0063E122 /* UserDetailsDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829ABEC11DE4404C0063E122 /* UserDetailsDataObject.swift */; };
+		829ABEC41DE466E90063E122 /* RiderDetailsDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829ABEC31DE466E90063E122 /* RiderDetailsDataObject.swift */; };
+		829ABEC61DE467020063E122 /* DriverDetailsDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829ABEC51DE467020063E122 /* DriverDetailsDataObject.swift */; };
+		829ABEC81DE467140063E122 /* CarDetailsDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829ABEC71DE467140063E122 /* CarDetailsDataObject.swift */; };
+		829ABECB1DE47AA50063E122 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829ABECA1DE47AA50063E122 /* DataParser.swift */; };
 		829EED8E1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8A1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf */; };
 		829EED8F1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8B1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf */; };
 		829EED901DD9F3D70045CC3A /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */; };
 		829EED911DD9F3D70045CC3A /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */; };
+		82B52FB01DE2D86600C6165E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA91DE2D63700C6165E /* FBSDKCoreKit.framework */; };
+		82B52FB11DE2D86600C6165E /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA91DE2D63700C6165E /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82B52FB21DE2D86600C6165E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA71DE2CFF500C6165E /* FBSDKLoginKit.framework */; };
+		82B52FB31DE2D86600C6165E /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FA71DE2CFF500C6165E /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82B52FB61DE2DD4A00C6165E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B52FB51DE2DD4A00C6165E /* Bolts.framework */; };
+		82B52FB81DE32B1700C6165E /* DriverProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52FB71DE32B1700C6165E /* DriverProfileViewController.swift */; };
+		82B52FBA1DE32B2600C6165E /* RiderProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B52FB91DE32B2600C6165E /* RiderProfileViewController.swift */; };
 		82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D251DCCAD73005CC046 /* LoginViewController.swift */; };
 		82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */; };
 		82E1C0201DDF362B0049CF8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */; };
@@ -49,6 +61,21 @@
 			remoteInfo = HopOn;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		82B52FB41DE2D86600C6165E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				82B52FB31DE2D86600C6165E /* FBSDKLoginKit.framework in Embed Frameworks */,
+				82B52FB11DE2D86600C6165E /* FBSDKCoreKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +103,20 @@
 		828DA7DC1DCC528500698B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		828DA7EE1DCC947D00698B41 /* T&CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "T&CViewController.swift"; sourceTree = "<group>"; };
+		829ABEC11DE4404C0063E122 /* UserDetailsDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsDataObject.swift; sourceTree = "<group>"; };
+		829ABEC31DE466E90063E122 /* RiderDetailsDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderDetailsDataObject.swift; sourceTree = "<group>"; };
+		829ABEC51DE467020063E122 /* DriverDetailsDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverDetailsDataObject.swift; sourceTree = "<group>"; };
+		829ABEC71DE467140063E122 /* CarDetailsDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarDetailsDataObject.swift; sourceTree = "<group>"; };
+		829ABECA1DE47AA50063E122 /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		829EED8A1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
 		829EED8B1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
 		829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		82B52FA71DE2CFF500C6165E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		82B52FA91DE2D63700C6165E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		82B52FB51DE2DD4A00C6165E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		82B52FB71DE32B1700C6165E /* DriverProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverProfileViewController.swift; sourceTree = "<group>"; };
+		82B52FB91DE32B2600C6165E /* RiderProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderProfileViewController.swift; sourceTree = "<group>"; };
 		82C81D251DCCAD73005CC046 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationPageViewController.swift; sourceTree = "<group>"; };
 		82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -91,6 +128,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E1C0201DDF362B0049CF8D /* CoreLocation.framework in Frameworks */,
+				82B52FB01DE2D86600C6165E /* FBSDKCoreKit.framework in Frameworks */,
+				82B52FB21DE2D86600C6165E /* FBSDKLoginKit.framework in Frameworks */,
+				82B52FB61DE2DD4A00C6165E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +225,8 @@
 		828DA7B91DCC528400698B41 /* HopOn */ = {
 			isa = PBXGroup;
 			children = (
+				829ABEC91DE47A920063E122 /* Parser */,
+				82B52FBB1DE3519A00C6165E /* Data Objects */,
 				825CE08A1DDF1B6400961D27 /* Views */,
 				825CE07E1DDEDFE100961D27 /* Frameworks */,
 				8271260D1DD5C44E009ADC24 /* AppConstants */,
@@ -230,6 +272,8 @@
 				82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */,
 				8208E69F1DDD8738001DB4D6 /* ForgotPasswordViewController.swift */,
 				825CE0881DDEEEAD00961D27 /* MenuViewController.swift */,
+				82B52FB71DE32B1700C6165E /* DriverProfileViewController.swift */,
+				82B52FB91DE32B2600C6165E /* RiderProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -245,9 +289,31 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		829ABEC91DE47A920063E122 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				829ABECA1DE47AA50063E122 /* DataParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		82B52FBB1DE3519A00C6165E /* Data Objects */ = {
+			isa = PBXGroup;
+			children = (
+				829ABEC11DE4404C0063E122 /* UserDetailsDataObject.swift */,
+				829ABEC31DE466E90063E122 /* RiderDetailsDataObject.swift */,
+				829ABEC51DE467020063E122 /* DriverDetailsDataObject.swift */,
+				829ABEC71DE467140063E122 /* CarDetailsDataObject.swift */,
+			);
+			path = "Data Objects";
+			sourceTree = "<group>";
+		};
 		82E1C01E1DDF362B0049CF8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82B52FB51DE2DD4A00C6165E /* Bolts.framework */,
+				82B52FA91DE2D63700C6165E /* FBSDKCoreKit.framework */,
+				82B52FA71DE2CFF500C6165E /* FBSDKLoginKit.framework */,
 				82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -263,6 +329,7 @@
 				828DA7B31DCC528400698B41 /* Sources */,
 				828DA7B41DCC528400698B41 /* Frameworks */,
 				828DA7B51DCC528400698B41 /* Resources */,
+				82B52FB41DE2D86600C6165E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,12 +460,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829ABEC61DE467020063E122 /* DriverDetailsDataObject.swift in Sources */,
 				82845D5B1DD457CC00AD780A /* ChooseOneViewController.swift in Sources */,
 				82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */,
+				82B52FBA1DE32B2600C6165E /* RiderProfileViewController.swift in Sources */,
 				8208E6A01DDD8738001DB4D6 /* ForgotPasswordViewController.swift in Sources */,
+				829ABECB1DE47AA50063E122 /* DataParser.swift in Sources */,
+				82B52FB81DE32B1700C6165E /* DriverProfileViewController.swift in Sources */,
 				82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */,
 				828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */,
 				823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */,
+				829ABEC21DE4404C0063E122 /* UserDetailsDataObject.swift in Sources */,
 				828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */,
 				825CE0891DDEEEAD00961D27 /* MenuViewController.swift in Sources */,
 				828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */,
@@ -406,6 +478,8 @@
 				827126041DD5A3F9009ADC24 /* Helper.swift in Sources */,
 				825CE08C1DDF1B8A00961D27 /* MenuItemTableViewCell.swift in Sources */,
 				8271260F1DD5C472009ADC24 /* AppConstants.swift in Sources */,
+				829ABEC41DE466E90063E122 /* RiderDetailsDataObject.swift in Sources */,
+				829ABEC81DE467140063E122 /* CarDetailsDataObject.swift in Sources */,
 				825CE0871DDEE81900961D27 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +636,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2P5GT7V5CU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HopOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PY3LT3EKXV.com.AppLives.HopOn;
@@ -582,6 +660,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2P5GT7V5CU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HopOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PY3LT3EKXV.com.AppLives.HopOn;

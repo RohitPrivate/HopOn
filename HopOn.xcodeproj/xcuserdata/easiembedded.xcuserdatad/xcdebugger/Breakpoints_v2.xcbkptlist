@@ -4,21 +4,67 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            scope = "0"
-            stopOnStyle = "0">
+            filePath = "HopOn/ServerManager/ServerClass.swift"
+            timestampString = "501515417.6036"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "performRegisterActionWithFacebook(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HopOn/View Controllers/DriverProfileViewController.swift"
+            timestampString = "501519952.811733"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "fetchDriverData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HopOn.DriverProfileViewController.fetchDriverData () -&gt; ()"
+                  moduleName = "HopOn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/easiembedded/Documents/HopOn/Code/HopOn/HopOn/View%20Controllers/DriverProfileViewController.swift"
+                  timestampString = "501521793.920849"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HopOn.DriverProfileViewController.(fetchDriverData () -&gt; ()).(closure #1)"
+                  moduleName = "HopOn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/easiembedded/Documents/HopOn/Code/HopOn/HopOn/View%20Controllers/DriverProfileViewController.swift"
+                  timestampString = "501521793.922085"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -28,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HopOn/ServerManager/ServerClass.swift"
-            timestampString = "501087263.744783"
+            timestampString = "501519239.049225"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "performForgotPasswordAction(_:_:)"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "performRegisterActionWithFacebook(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -43,13 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HopOn/View Controllers/LoginViewController.swift"
-            timestampString = "501153395.228855"
+            filePath = "HopOn/View Controllers/DriverProfileViewController.swift"
+            timestampString = "501522699.758424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "generateVerificationCode(_:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "fetchDriverData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -59,13 +105,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HopOn/View Controllers/VerificationPageViewController.swift"
-            timestampString = "501088849.172591"
+            filePath = "HopOn/ServerManager/ServerClass.swift"
+            timestampString = "501519594.422151"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "verifyCodeAction(_:)"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "fetchDriverData(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -75,13 +121,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HopOn/View Controllers/ChooseOneViewController.swift"
-            timestampString = "501167260.717095"
+            filePath = "HopOn/ServerManager/ServerClass.swift"
+            timestampString = "501519601.127256"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "fetchDriverData(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -91,14 +137,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HopOn/View Controllers/ChooseOneViewController.swift"
-            timestampString = "501168124.323491"
+            filePath = "HopOn/ServerManager/ServerClass.swift"
+            timestampString = "501521348.426386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "locationManager(_:didFailWithError:)"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
+            landmarkName = "fetchRiderData(_:_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HopOn.ServerClass.(fetchRiderData (Swift.String, (Swift.Bool, Swift.String, Swift.Optional&lt;__ObjC.NSArray&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "HopOn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/easiembedded/Documents/HopOn/Code/HopOn/HopOn/ServerManager/ServerClass.swift"
+                  timestampString = "501521793.933138"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "293"
+                  endingLineNumber = "293"
+                  offsetFromSymbolStart = "3392">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HopOn.ServerClass.(fetchRiderData (Swift.String, (Swift.Bool, Swift.String, Swift.Optional&lt;__ObjC.NSArray&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "HopOn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/easiembedded/Documents/HopOn/Code/HopOn/HopOn/ServerManager/ServerClass.swift"
+                  timestampString = "501521793.934371"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "293"
+                  endingLineNumber = "293"
+                  offsetFromSymbolStart = "5900">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -107,13 +185,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HopOn/View Controllers/ChooseOneViewController.swift"
-            timestampString = "501168252.74469"
+            filePath = "HopOn/View Controllers/RiderProfileViewController.swift"
+            timestampString = "501522782.948263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "fetchRiderData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

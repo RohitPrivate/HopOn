@@ -10,6 +10,9 @@ import UIKit
 
 class Helper: NSObject {
     
+    var currentUser : UserDetailsDataObject? = nil
+    
+    
     static let sharedInstance = Helper()
     var loaderView : UIView? = nil
     
@@ -54,6 +57,10 @@ class Helper: NSObject {
     }
     
     func fadeOutLoaderView() {
+        if self.loaderView == nil {
+            return
+        }
+        
         UIView.animate(withDuration: 0.5, animations: {
             self.loaderView!.alpha = 0.0
         }, completion: { (finished : Bool) in
@@ -162,6 +169,10 @@ class Helper: NSObject {
         }
         
         return isValidated
+    }
+    
+    func currentUserObject() -> UserDetailsDataObject {
+        return currentUser!
     }
     
 }

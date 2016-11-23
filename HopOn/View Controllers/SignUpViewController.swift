@@ -92,18 +92,20 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
             
             Helper.sharedInstance.fadeInLoaderView(self.view)
             
-            ServerClass.sharedInstance.performRegisterAction(registerURLString as String, { (success, message) in
+            ServerClass.sharedInstance.performRegisterAction(registerURLString as String, { (success, message, dataArray) in
                 DispatchQueue.main.sync(execute: {
-                    if success {
-                        OperationQueue.main.addOperation {
+                    OperationQueue.main.addOperation {
+                        if success {
+                            let userDataObject : UserDetailsDataObject = (dataArray?.lastObject as? UserDetailsDataObject)!
+                            Helper.sharedInstance.currentUser = userDataObject
                             _ = self.generateVerificationCode(self.mobileNumberField.text!)
+                            return
+                        } else {
+                            Helper.sharedInstance.fadeOutLoaderView()
+                            let alertString = message
+                            let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(alertString)"), baseView: self.view)
+                            Helper.sharedInstance.fadeInAlertPopup(popupLabel)
                         }
-                        return
-                    } else {
-                        Helper.sharedInstance.fadeOutLoaderView()
-                        let alertString = message
-                        let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(alertString)"), baseView: self.view)
-                        Helper.sharedInstance.fadeInAlertPopup(popupLabel)
                     }
                 })
             })
@@ -198,10 +200,12 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
             } else if mobileNumberString.characters.count < 10 || mobileNumberString.characters.count > 10 {
                 showPopup = true
                 alertString = "Phone number should be of 10 digit"
-            }
-            else if !isTermsAndConditionAccepted {
+            } else if !isTermsAndConditionAccepted {
                 showPopup = true
                 alertString = "Please accept the terms & conditions"
+            } else if (passwordString.contains(" ")) {
+                showPopup = true
+                alertString = "Please remove space from password"
             }
         }
         

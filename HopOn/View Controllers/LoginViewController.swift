@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class LoginViewController: WelcomeViewController {
     
@@ -71,7 +73,6 @@ class LoginViewController: WelcomeViewController {
     
     //This method is used to start the login process
     @IBAction func loginAction(_ sender: Any) {
-        return self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
         //To dismiss the keyboard
         scrollView.endEditing(true)
         
@@ -82,20 +83,22 @@ class LoginViewController: WelcomeViewController {
             
             Helper.sharedInstance.fadeInLoaderView(self.view)
             
-            ServerClass.sharedInstance.performLoginAction(registerURLString as String, { (success, message, dataDict) in
+            ServerClass.sharedInstance.performLoginAction(registerURLString as String, { (success, message, dataArray) in
                 DispatchQueue.main.sync(execute: {
                     OperationQueue.main.addOperation {
                         if success {
                             //Show Home Screen
+                            let userDataObject : UserDetailsDataObject = (dataArray?.lastObject as? UserDetailsDataObject)!
+                            Helper.sharedInstance.currentUser = userDataObject
                             let hasVerified : Bool = self.checkVerification()
                             if hasVerified {
                                 Helper.sharedInstance.fadeOutLoaderView()
                                 self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
                             } else {
-                                let userMobileNumber : String? = dataDict?.object(forKey: AppConstants.MOBILE_API_KEY) as? String
+                                let userMobileNumber : String? = userDataObject.mobile
                                 if (userMobileNumber == nil || userMobileNumber == "") {
-                                    let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("Verification Error"), baseView: self.view)
-                                    Helper.sharedInstance.fadeInAlertPopup(popupLabel)
+                                    Helper.sharedInstance.fadeOutLoaderView()
+                                    self.showAlertWithMessage(message: "Verification Error")
                                 } else {
                                     _ = self.generateVerificationCode(userMobileNumber!)
                                 }
@@ -179,7 +182,78 @@ class LoginViewController: WelcomeViewController {
     }
     
     @IBAction func loginWithFacebook(_ sender: Any) {
+        let loginManager = FBSDKLoginManager()
+        let permissions = ["public_profile", "email"];
+
+        Helper.sharedInstance.fadeInLoaderView(self.view)
+        loginManager.logIn(withReadPermissions: permissions, from: self, handler: { (loginResult, error) -> Void in
+            if error == nil {
+                let loginManagerResult : FBSDKLoginManagerLoginResult! = loginResult
+                if loginManagerResult.isCancelled {
+                    print("Cancelled")
+                } else if ((loginManagerResult?.grantedPermissions.contains("email"))! && (loginManagerResult?.grantedPermissions.contains("public_profile"))!) {
+                    self.registerWithFacebook()
+                }
+            }
+        })
+    }
+    
+    func registerWithFacebook() {
+        if((FBSDKAccessToken.current()) != nil) {
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil){
+                    let resultDict : NSDictionary = result as! NSDictionary
+                    let userDetailsDataObject : UserDetailsDataObject = self.userDetailsFromFacebookGraphResult(resultDict: resultDict)
+                    
+                    let registerWithFacebookURLString : String! = String(format : AppConstants.REGISTER_WITH_FACEBOOK_API, userDetailsDataObject.name!, userDetailsDataObject.email!, userDetailsDataObject.password!, userDetailsDataObject.mobile!, userDetailsDataObject.streetAddress!, userDetailsDataObject.profileImageUrl!, userDetailsDataObject.city!, userDetailsDataObject.country!, userDetailsDataObject.organization!)
+                    
+                    self.registerUserWithFacebookDetails(urlString: registerWithFacebookURLString)
+                }
+            })
+        }
+    }
+    
+    func userDetailsFromFacebookGraphResult(resultDict : NSDictionary) -> UserDetailsDataObject {
+        let userDetailsDataObject : UserDetailsDataObject = UserDetailsDataObject()
+        userDetailsDataObject.name = resultDict.value(forKey: "name") as! String!
+        userDetailsDataObject.email = resultDict.value(forKey: "email") as! String!
+        userDetailsDataObject.password = resultDict.value(forKey: "id") as! String!
         
+        let milliseconds : Int64 = 0
+        let timeStamp = TimeInterval(milliseconds)/1000.0
+        userDetailsDataObject.mobile = String(timeStamp)
+        
+        userDetailsDataObject.streetAddress = ""
+        userDetailsDataObject.profileImageUrl = ((resultDict.value(forKey: "picture") as! NSDictionary!).value(forKey: "data") as! NSDictionary).value(forKey: "url") as! String
+        userDetailsDataObject.city = ""
+        userDetailsDataObject.country = ""
+        userDetailsDataObject.organization = ""
+        userDetailsDataObject.userId = ""
+        
+        return userDetailsDataObject
+    }
+    
+    func registerUserWithFacebookDetails(urlString : String) {
+        ServerClass.sharedInstance.performRegisterActionWithFacebook(urlString as String, { (success, message, dataArray) in
+            DispatchQueue.main.sync(execute: {
+                OperationQueue.main.addOperation {
+                    Helper.sharedInstance.fadeOutLoaderView()
+                    if success {
+                        let userDataObject : UserDetailsDataObject = (dataArray?.lastObject as? UserDetailsDataObject)!
+                        Helper.sharedInstance.currentUser = userDataObject
+                        
+                        self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
+                    } else {
+                        self.showAlertWithMessage(message: message)
+                    }
+                }
+            })
+        })
+    }
+    
+    func showAlertWithMessage(message : String) {
+        let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(message)"), baseView: self.view)
+        Helper.sharedInstance.fadeInAlertPopup(popupLabel)
     }
     
     @IBAction func stayLoggedInAction(_ sender: Any) {
