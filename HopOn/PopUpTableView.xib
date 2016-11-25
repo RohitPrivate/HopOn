@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PopUpTableView" customModule="HopOn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLG-qI-pdI" userLabel="Header">
+                    <rect key="frame" x="25" y="0.0" width="350" height="70"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpG-Hb-3pE">
+                    <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="bf9-Ox-yNR"/>
+                    </constraints>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="3s7-hM-uxd"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MVr-gd-pu3">
+                    <rect key="frame" x="25" y="70" width="350" height="557"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MVr-gd-pu3" firstAttribute="leading" secondItem="oLG-qI-pdI" secondAttribute="leading" id="17p-Ac-KVm"/>
+                <constraint firstItem="oLG-qI-pdI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="4kF-lN-QMx"/>
+                <constraint firstItem="MVr-gd-pu3" firstAttribute="top" secondItem="oLG-qI-pdI" secondAttribute="bottom" id="67D-KP-xWc"/>
+                <constraint firstItem="oLG-qI-pdI" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.1049" id="6bO-kz-aeK"/>
+                <constraint firstItem="oLG-qI-pdI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FH8-HM-uma"/>
+                <constraint firstAttribute="trailing" secondItem="wpG-Hb-3pE" secondAttribute="trailing" id="MUY-Kp-S7T"/>
+                <constraint firstItem="wpG-Hb-3pE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Mdv-jO-8je"/>
+                <constraint firstItem="MVr-gd-pu3" firstAttribute="trailing" secondItem="oLG-qI-pdI" secondAttribute="trailing" id="RQq-gC-Eis"/>
+                <constraint firstAttribute="bottom" secondItem="wpG-Hb-3pE" secondAttribute="bottom" id="bEz-e2-VRA"/>
+                <constraint firstItem="wpG-Hb-3pE" firstAttribute="top" secondItem="MVr-gd-pu3" secondAttribute="bottom" id="jq0-YV-eRL"/>
+                <constraint firstAttribute="trailing" secondItem="oLG-qI-pdI" secondAttribute="trailing" id="ykg-gK-rKE"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelButton" destination="wpG-Hb-3pE" id="qy8-k8-bbE"/>
+                <outlet property="headerLabel" destination="oLG-qI-pdI" id="tRa-CQ-jdv"/>
+                <outlet property="tableView" destination="MVr-gd-pu3" id="NfO-Pn-nse"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

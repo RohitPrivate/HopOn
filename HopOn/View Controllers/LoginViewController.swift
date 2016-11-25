@@ -28,9 +28,11 @@ class LoginViewController: WelcomeViewController {
     
     @IBOutlet weak var emailOrMobileField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var countryCodeButton: UIButton!
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
+        selectedCountryCode = "+1"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,6 +73,11 @@ class LoginViewController: WelcomeViewController {
         scrollView.contentSize.height = loginFillUpBox.frame.origin.y + loginFillUpBox.frame.size.height + padding;
     }
     
+    @IBAction func selectCountryCode(_ sender: Any) {
+        countryButton = countryCodeButton
+        self.createCountryCodeSelectionView()
+    }
+    
     //This method is used to start the login process
     @IBAction func loginAction(_ sender: Any) {
         //To dismiss the keyboard
@@ -78,8 +85,15 @@ class LoginViewController: WelcomeViewController {
         
         let isValidated : Bool = self.validateLoginFields()
         if isValidated {
+            var emailOrMobileValue : String!
+            if Helper.sharedInstance.isMobileNumber(emailOrMobileString: emailOrMobileField.text!) {
+                emailOrMobileValue = String (format : self.selectedCountryCode + emailOrMobileField.text!)
+            } else {
+                emailOrMobileValue = emailOrMobileField.text!
+            }
+            
             //Make server call to register the user and proceed
-            let registerURLString : String = String(format : AppConstants.LOGIN_API, emailOrMobileField.text!, passwordField.text!)
+            let registerURLString : String = String(format : AppConstants.LOGIN_API, emailOrMobileValue, passwordField.text!)
             
             Helper.sharedInstance.fadeInLoaderView(self.view)
             
@@ -186,6 +200,7 @@ class LoginViewController: WelcomeViewController {
         let permissions = ["public_profile", "email"];
 
         Helper.sharedInstance.fadeInLoaderView(self.view)
+        loginManager.loginBehavior = FBSDKLoginBehavior.native
         loginManager.logIn(withReadPermissions: permissions, from: self, handler: { (loginResult, error) -> Void in
             if error == nil {
                 let loginManagerResult : FBSDKLoginManagerLoginResult! = loginResult

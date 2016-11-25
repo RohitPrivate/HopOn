@@ -161,22 +161,32 @@ class Helper: NSObject {
     
     func validateEmailOrMobile(emailOrMobileString : String) -> Bool {
         var isValidated : Bool = false
+        isValidated = self.isMobileNumber(emailOrMobileString: emailOrMobileString)
         
-        let badCharacters = NSCharacterSet.decimalDigits.inverted
-        
-        //Check if the string is mobile number or email id
-        if emailOrMobileString.rangeOfCharacter(from: badCharacters) == nil {
-            //The string is a number
-            if emailOrMobileString.characters.count == 10 {
-                isValidated = true
-            }
-        } else {
+        if !isValidated {
             //The string is not a number
-            if Helper.sharedInstance.validateEmail(emailOrMobileString) {
+            if self.validateEmail(emailOrMobileString) {
                 isValidated = true
             }
         }
         
+        return isValidated
+    }
+    
+    func isMobileNumber(emailOrMobileString : String?) -> Bool {
+        if (emailOrMobileString == nil) {
+            return false
+        }
+        var isValidated : Bool = false
+        let badCharacters = NSCharacterSet.decimalDigits.inverted
+        
+        //Check if the string is mobile number
+        if emailOrMobileString?.rangeOfCharacter(from: badCharacters) == nil {
+            //The string is a number
+            if emailOrMobileString?.characters.count == 10 {
+                isValidated = true
+            }
+        }
         return isValidated
     }
     

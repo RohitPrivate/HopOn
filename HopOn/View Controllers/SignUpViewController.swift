@@ -8,12 +8,13 @@
 
 import UIKit
 
-class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
+class SignUpViewController: WelcomeViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate {
 
     var scrollViewContentSize : CGSize! = CGSize.zero
     var scrollViewContentOffset : CGPoint! = CGPoint.zero
     var selectedTextField : UITextField?
     var isTermsAndConditionAccepted : Bool = false
+    var uploadImageActionSheet : UIActionSheet!
     
     @IBOutlet weak var termsAndConditionsButton: UIButton!
     @IBOutlet weak var termsAndConditionsLabelButton: UIButton!
@@ -27,11 +28,14 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
     @IBOutlet weak var organizationField: UITextField!
     
     @IBOutlet weak var signUpFillUpBox: UIImageView!
+    @IBOutlet weak var countryCodeButton: UIButton!
+    @IBOutlet weak var uploadImageButton: UIButton!
     
     @IBOutlet weak var topViewTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
+        selectedCountryCode = "+1"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +84,11 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
     
+    @IBAction func selectCountryCode(_ sender: Any) {
+        countryButton = countryCodeButton
+        self.createCountryCodeSelectionView()
+    }
+    
     //This method is used for the sign up process
     @IBAction func signUpAction(_ sender: Any) {
         //To dismiss the keyboard
@@ -88,7 +97,7 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
         let isValidated : Bool = self.validateRegistrationFields()
         if isValidated {
             //Make server call to register the user and proceed            
-            let registerURLString : String = String(format : AppConstants.REGISTER_API, nameField.text!, emailField.text!, passwordField.text!, mobileNumberField.text!,"", "", "", organizationField.text!, "userId", "iPhone", "deviceId")
+            let registerURLString : String = String(format : AppConstants.REGISTER_API, nameField.text!, emailField.text!, passwordField.text!, String(format:selectedCountryCode + mobileNumberField.text!),"", "", "", organizationField.text!, "userId", "iPhone", "deviceId")
             
             Helper.sharedInstance.fadeInLoaderView(self.view)
             
@@ -98,7 +107,7 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
                         if success {
                             let userDataObject : UserDetailsDataObject = (dataArray?.lastObject as? UserDetailsDataObject)!
                             Helper.sharedInstance.currentUser = userDataObject
-                            _ = self.generateVerificationCode(self.mobileNumberField.text!)
+                            _ = self.generateVerificationCode(String(format: self.selectedCountryCode! + self.mobileNumberField.text!))
                             return
                         } else {
                             Helper.sharedInstance.fadeOutLoaderView()
@@ -140,6 +149,53 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate {
     }
     
     @IBAction func uploadProfileImage(_ sender: Any) {
+        self.showUploadActionSheet()
+    }
+    
+    func showUploadActionSheet() {
+        if uploadImageActionSheet == nil {
+            uploadImageActionSheet = UIActionSheet(title: "Choose Option", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Upload with Camera", "Choose from Photos")
+        }
+        uploadImageActionSheet.show(in: self.view)
+    }
+    
+    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int)
+    {
+        print("\(buttonIndex)")
+        let imagePickerViewController = UIImagePickerController()
+        imagePickerViewController.delegate = self
+        imagePickerViewController.allowsEditing = false
+        
+        switch (buttonIndex) {
+        case 0:
+            print("Cancel")
+        case 1:
+            print("Upload with Camera")
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+                imagePickerViewController.sourceType = .camera
+                self.present(imagePickerViewController, animated: true, completion: { _ in
+                })
+            }
+            else {
+                print("Camera not available on the device")
+            }
+        case 2:
+            print("Choose from Photos")
+            imagePickerViewController.sourceType = .photoLibrary
+            self.present(imagePickerViewController, animated: true, completion: { _ in
+            })
+        default:
+            print("Default")
+            //Some code here..
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: { (_ success) in
+            let capturedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.uploadImageButton.setImage(capturedImage, for: UIControlState.normal)
+            print("i've got an image %@", capturedImage);
+        })
     }
     
     @IBAction func selectOrDeselectTermsAndConditions(_ sender: Any) {

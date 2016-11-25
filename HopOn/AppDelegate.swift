@@ -22,6 +22,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    //Function created to parse the given country list. Useless now.
+    func createCountryDataPList() {
+        if let path = Bundle.main.path(forResource: "CountryCodes", ofType: "txt"){
+            
+            do {
+            let content = try String.init(contentsOf: URL.init(fileURLWithPath: path), encoding: String.Encoding.utf8)
+                let lines : [String] = content.components(separatedBy: "\r\n")
+                print(lines)
+                let array : NSMutableArray = NSMutableArray()
+                for var string in lines as NSArray {
+                    string = (string as! String).replacingOccurrences(of: "<item>", with: "")
+                    string = (string as! String).replacingOccurrences(of: "</item>", with: "")
+                    string = (string as! String).replacingOccurrences(of: " ", with: "")
+                    let objects : [String] = (string as AnyObject).components(separatedBy: ",")
+                    array.add(objects)
+                }
+                if array.count > 0 {
+                    let paths : String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+                    let path = paths.appending("CountryList.plist")
+                    let fileManager = FileManager.default
+                    if (!(fileManager.fileExists(atPath: path)))
+                    {
+                        let bundle : String? = Bundle.main.path(forResource: "CountryList", ofType: "plist")
+                        array.write(toFile: bundle!, atomically: true)
+                        //try fileManager.copyItem(atPath: bundle! as String, toPath: path)
+                    }
+                    //let data : NSDictionary? = NSDictionary.init()
+                    
+                    //data?.setValue(array, forKey: "object")
+                    //data?.write(toFile: path, atomically: true)
+                }
+            } catch {
+                
+            }
+        }
+    }
+    
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }

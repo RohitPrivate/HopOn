@@ -41,6 +41,15 @@
 		82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D251DCCAD73005CC046 /* LoginViewController.swift */; };
 		82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */; };
 		82E1C0201DDF362B0049CF8D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */; };
+		82FDC0481DE6CCB000D7B9C3 /* CountryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82FDC0471DE6CCB000D7B9C3 /* CountryList.plist */; };
+		82FDC04C1DE7112F00D7B9C3 /* PopUpTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FDC04B1DE7112F00D7B9C3 /* PopUpTableView.xib */; };
+		82FDC04E1DE7114A00D7B9C3 /* PopUpTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDC04D1DE7114A00D7B9C3 /* PopUpTableView.swift */; };
+		82FDC0601DE73D1800D7B9C3 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 82FDC0591DE73D1800D7B9C3 /* .gitkeep */; };
+		82FDC0611DE73D1800D7B9C3 /* SwiftCountryPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 82FDC05A1DE73D1800D7B9C3 /* SwiftCountryPicker.bundle */; };
+		82FDC0621DE73D1800D7B9C3 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 82FDC05C1DE73D1800D7B9C3 /* .gitkeep */; };
+		82FDC0631DE73D1800D7B9C3 /* SwiftCountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDC05D1DE73D1800D7B9C3 /* SwiftCountryPicker.swift */; };
+		82FDC0641DE73D1800D7B9C3 /* SwiftCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FDC05E1DE73D1800D7B9C3 /* SwiftCountryView.swift */; };
+		82FDC0651DE73D1800D7B9C3 /* SwiftCountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82FDC05F1DE73D1800D7B9C3 /* SwiftCountryView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +112,15 @@
 		82C81D251DCCAD73005CC046 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C81D291DCCC1AD005CC046 /* VerificationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationPageViewController.swift; sourceTree = "<group>"; };
 		82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		82FDC0471DE6CCB000D7B9C3 /* CountryList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CountryList.plist; sourceTree = "<group>"; };
+		82FDC04B1DE7112F00D7B9C3 /* PopUpTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpTableView.xib; sourceTree = "<group>"; };
+		82FDC04D1DE7114A00D7B9C3 /* PopUpTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpTableView.swift; sourceTree = "<group>"; };
+		82FDC0591DE73D1800D7B9C3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		82FDC05A1DE73D1800D7B9C3 /* SwiftCountryPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SwiftCountryPicker.bundle; sourceTree = "<group>"; };
+		82FDC05C1DE73D1800D7B9C3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		82FDC05D1DE73D1800D7B9C3 /* SwiftCountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCountryPicker.swift; sourceTree = "<group>"; };
+		82FDC05E1DE73D1800D7B9C3 /* SwiftCountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftCountryView.swift; sourceTree = "<group>"; };
+		82FDC05F1DE73D1800D7B9C3 /* SwiftCountryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftCountryView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +155,7 @@
 		825CE07E1DDEDFE100961D27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82FDC0571DE73D1800D7B9C3 /* MRCountryPicker */,
 				825CE07F1DDEDFE100961D27 /* SWRevealViewController */,
 			);
 			path = Frameworks;
@@ -156,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				825CE08B1DDF1B8A00961D27 /* MenuItemTableViewCell.swift */,
+				82FDC04D1DE7114A00D7B9C3 /* PopUpTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +242,7 @@
 				828DA7C31DCC528400698B41 /* LaunchScreen.storyboard */,
 				827126081DD5A9F5009ADC24 /* Main.storyboard */,
 				828DA7C61DCC528400698B41 /* Info.plist */,
+				82FDC04B1DE7112F00D7B9C3 /* PopUpTableView.xib */,
 			);
 			path = HopOn;
 			sourceTree = "<group>";
@@ -264,6 +285,7 @@
 		8294D1BE1DD37DED00920A43 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				82FDC0471DE6CCB000D7B9C3 /* CountryList.plist */,
 				829EED8A1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf */,
 				829EED8B1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf */,
 				829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */,
@@ -300,6 +322,35 @@
 				82E1C01F1DDF362B0049CF8D /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82FDC0571DE73D1800D7B9C3 /* MRCountryPicker */ = {
+			isa = PBXGroup;
+			children = (
+				82FDC0581DE73D1800D7B9C3 /* Assets */,
+				82FDC05B1DE73D1800D7B9C3 /* Classes */,
+			);
+			path = MRCountryPicker;
+			sourceTree = "<group>";
+		};
+		82FDC0581DE73D1800D7B9C3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				82FDC0591DE73D1800D7B9C3 /* .gitkeep */,
+				82FDC05A1DE73D1800D7B9C3 /* SwiftCountryPicker.bundle */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		82FDC05B1DE73D1800D7B9C3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				82FDC05C1DE73D1800D7B9C3 /* .gitkeep */,
+				82FDC05D1DE73D1800D7B9C3 /* SwiftCountryPicker.swift */,
+				82FDC05E1DE73D1800D7B9C3 /* SwiftCountryView.swift */,
+				82FDC05F1DE73D1800D7B9C3 /* SwiftCountryView.xib */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,11 +462,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FDC0611DE73D1800D7B9C3 /* SwiftCountryPicker.bundle in Resources */,
 				8271260A1DD5A9F5009ADC24 /* Main.storyboard in Resources */,
 				828DA7C51DCC528400698B41 /* LaunchScreen.storyboard in Resources */,
+				82FDC0621DE73D1800D7B9C3 /* .gitkeep in Resources */,
 				828DA7C21DCC528400698B41 /* Assets.xcassets in Resources */,
+				82FDC0481DE6CCB000D7B9C3 /* CountryList.plist in Resources */,
+				82FDC04C1DE7112F00D7B9C3 /* PopUpTableView.xib in Resources */,
 				829EED911DD9F3D70045CC3A /* CaviarDreams.ttf in Resources */,
+				82FDC0651DE73D1800D7B9C3 /* SwiftCountryView.xib in Resources */,
 				829EED8F1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf in Resources */,
+				82FDC0601DE73D1800D7B9C3 /* .gitkeep in Resources */,
 				829EED901DD9F3D70045CC3A /* CaviarDreams_Italic.ttf in Resources */,
 				829EED8E1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf in Resources */,
 			);
@@ -450,15 +507,18 @@
 				829ABECB1DE47AA50063E122 /* DataParser.swift in Sources */,
 				82B52FB81DE32B1700C6165E /* DriverProfileViewController.swift in Sources */,
 				82C81D261DCCAD73005CC046 /* LoginViewController.swift in Sources */,
+				82FDC04E1DE7114A00D7B9C3 /* PopUpTableView.swift in Sources */,
 				828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */,
 				823D3ABC1DDC74F800F97A5D /* SignUpViewController.swift in Sources */,
 				829ABEC21DE4404C0063E122 /* UserDetailsDataObject.swift in Sources */,
 				828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */,
+				82FDC0641DE73D1800D7B9C3 /* SwiftCountryView.swift in Sources */,
 				825CE0891DDEEEAD00961D27 /* MenuViewController.swift in Sources */,
 				828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */,
 				827126071DD5A917009ADC24 /* ServerClass.swift in Sources */,
 				827126041DD5A3F9009ADC24 /* Helper.swift in Sources */,
 				825CE08C1DDF1B8A00961D27 /* MenuItemTableViewCell.swift in Sources */,
+				82FDC0631DE73D1800D7B9C3 /* SwiftCountryPicker.swift in Sources */,
 				8271260F1DD5C472009ADC24 /* AppConstants.swift in Sources */,
 				829ABEC41DE466E90063E122 /* RiderDetailsDataObject.swift in Sources */,
 				829ABEC81DE467140063E122 /* CarDetailsDataObject.swift in Sources */,
@@ -618,6 +678,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PY3LT3EKXV;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -642,6 +703,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PY3LT3EKXV;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

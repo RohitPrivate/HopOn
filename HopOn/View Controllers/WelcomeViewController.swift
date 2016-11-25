@@ -8,9 +8,14 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, MRCountryPickerDelegate {
     
     var isBackActionRequested : Bool! = false
+    var countryCodesView : UIView!
+    var countryWithCode : String!
+    var countryButton : UIButton!
+    var selectedCountryCode : String!
+    
 
     @IBOutlet weak var welcomeToHopOnLabel: UILabel!
     @IBOutlet weak var splitCostLabel: UILabel!
@@ -116,6 +121,55 @@ class WelcomeViewController: UIViewController {
             _ = self.navigationController?.popViewController(animated: true)
             isBackActionRequested = false
         }
+    }
+    
+    func createCountryCodeSelectionView() {
+        if countryCodesView == nil {
+            let xPadding : CGFloat = 30
+            let yPadding : CGFloat = 60
+            let width = (self.view.frame.size.width - (2 * xPadding))
+            let height = (self.view.frame.size.height - (2 * yPadding))
+            let okButtonHeight = 35
+            
+            countryCodesView = UIView.init(frame: CGRect(x : 0, y : 0, width : self.view.frame.size.width, height : self.view.frame.size.height))
+            countryCodesView.backgroundColor = UIColor.clear
+            
+            let tapGestureRecognizer : UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(LoginViewController.dismissCodePickerView(sender:)))
+            countryCodesView.addGestureRecognizer(tapGestureRecognizer)
+            
+            let countryPickerView : MRCountryPicker = MRCountryPicker.init(frame: CGRect(x : xPadding, y : yPadding, width : width, height : height - CGFloat(okButtonHeight)))
+            countryPickerView.countryPickerDelegate = self
+            countryPickerView.backgroundColor = UIColor.white
+            countryPickerView.showPhoneNumbers = true
+            countryPickerView.setCountry("CA")
+            countryPickerView.backgroundColor = UIColor.white
+            countryCodesView.addSubview(countryPickerView)
+            
+            let okView : UIButton = UIButton.init(frame: CGRect(x : xPadding, y : countryPickerView.frame.size.height, width : width, height : CGFloat(okButtonHeight)))
+            okView.setTitle("OK", for: UIControlState.normal)
+            okView.setTitleColor(UIColor.black, for: UIControlState.normal)
+            
+            okView.addTarget(self, action: #selector(WelcomeViewController.dismissCodePickerView(sender:)), for: UIControlEvents.touchUpInside)
+            countryCodesView.addSubview(okView)
+            countryCodesView.bringSubview(toFront: okView)
+            
+            self.view.addSubview(countryCodesView)
+        } else {
+            self.view.addSubview(countryCodesView)
+        }
+    }
+    
+    func dismissCodePickerView(sender : UITapGestureRecognizer) {
+        countryCodesView.removeFromSuperview()
+    }
+    
+    //MRCountryPicker Delegate
+    func countryPhoneCodePicker(_ picker: MRCountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
+        print("Hello")
+        var countryWithCode : String = String(format : phoneCode + "|" + countryCode)
+        countryWithCode = countryWithCode.replacingOccurrences(of: "+", with: "")
+        countryButton.setTitle(countryWithCode, for: UIControlState.normal)
+        selectedCountryCode = phoneCode
     }
 
     override func didReceiveMemoryWarning() {
