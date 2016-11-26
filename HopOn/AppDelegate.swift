@@ -16,9 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UserDefaults.standard.set(true, forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)
         //Delay to display the splash screen for a longer time
         Thread.sleep(forTimeInterval:3.0)
+        
+//        if UserDefaults.standard.bool(forKey: AppConstants.SHOULD_STAY_LOGGED_IN) {
+//            let mainStoryBoard : UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
+//            let rootViewController : UIViewController? = mainStoryBoard?.instantiateViewController(withIdentifier: "SWRevealViewController")
+//            UIApplication.shared.keyWindow?.rootViewController = rootViewController
+//        }
+        
         return true
     }
     

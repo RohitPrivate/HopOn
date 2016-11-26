@@ -15,6 +15,8 @@ class AppConstants: NSObject {
     static let SMS_VERIFICATION_API : String = "http://smsgateway.ca/SendSMS.aspx?AccountKey=V34TIzaa7H5D0HV12N1sI06Aiy21C0lY&CellNumber=%@&MessageBody=%@&Reference=ref"
     static let LOGIN_API : String = "http://appscoopsolutions.com/aim_api/hopon.php?rule=login&mobile=%@&password=%@"
     static let FORGOT_PASSWORD_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=forgot_password&email=%@"
+    static let VERIFY_USER_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=set_verify&user_id=%@"
+    static let CHECK_VERIFICATION_STATUS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=verify_user&user_id=%@"
     static let REGISTER_WITH_FACEBOOK_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=register_fb&device_type=2&device_id=ggyt54545&full_name=%@&email=%@&password=%@&mobile=%@&street_address=%@&profile_image=%@&city=%@&country=%@&organisation=%@"
     static let GET_DRIVER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=get_drive_details&user_id=%@"
     static let GET_RIDER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=get_ride_details&user_id=%@"
@@ -22,7 +24,7 @@ class AppConstants: NSObject {
     static let SAVE_RIDER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=rider_details&pickup_date=%@&pickup_time=%@&pickup_loc=%@&destination=%@&lattitude=%@&longitude=%@&profile_image=%@&user_id=87"
     
     static var VERIFICATION_CODE_KEY = "VerificationCode"
-    static var VERIFICATION_CODE_VERIFIED_KEY = "isVerified"
+    static var SHOULD_STAY_LOGGED_IN = "ShouldStayLoggedIn"
     
     static let VERIFICATION_PAGE_SEGUE = "VerificationPage"
     static let CHOOSE_ONE_PAGE_SEGUE = "ChooseOne"

@@ -20,6 +20,8 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager : CLLocationManager?
     var userLocation : CLLocationCoordinate2D?
     var datePicker : UIDatePicker!
+    var shouldStayLoggedIn : Bool! = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

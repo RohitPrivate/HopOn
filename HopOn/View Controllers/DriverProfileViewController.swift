@@ -87,8 +87,8 @@ class DriverProfileViewController: ChooseOneViewController {
             DispatchQueue.main.sync(execute: {
                 OperationQueue.main.addOperation {
                     self.isDriverDataFetched = true
+                    Helper.sharedInstance.fadeOutLoaderView()
                     if success {
-                        Helper.sharedInstance.fadeOutLoaderView()
                         if (dataArray?.lastObject != nil) {
                             self.driverDetailsDataObject = dataArray?.lastObject as? DriverDetailsDataObject
                             self.populateDriverDetails(dataObject: self.driverDetailsDataObject)

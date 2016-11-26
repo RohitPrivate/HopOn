@@ -93,31 +93,39 @@ class LoginViewController: WelcomeViewController {
             }
             
             //Make server call to register the user and proceed
-            let registerURLString : String = String(format : AppConstants.LOGIN_API, emailOrMobileValue, passwordField.text!)
+            let loginURLString : String = String(format : AppConstants.LOGIN_API, emailOrMobileValue, passwordField.text!)
             
             Helper.sharedInstance.fadeInLoaderView(self.view)
             
-            ServerClass.sharedInstance.performLoginAction(registerURLString as String, { (success, message, dataArray) in
+            ServerClass.sharedInstance.performLoginAction(loginURLString as String, { (success, message, dataArray) in
                 DispatchQueue.main.sync(execute: {
                     OperationQueue.main.addOperation {
                         if success {
                             //Show Home Screen
                             let userDataObject : UserDetailsDataObject = (dataArray?.lastObject as? UserDetailsDataObject)!
                             Helper.sharedInstance.currentUser = userDataObject
-                            let hasVerified : Bool = self.checkVerification()
-                            if hasVerified {
-                                Helper.sharedInstance.fadeOutLoaderView()
-                                self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
-                            } else {
-                                let userMobileNumber : String? = userDataObject.mobile
-                                if (userMobileNumber == nil || userMobileNumber == "") {
-                                    Helper.sharedInstance.fadeOutLoaderView()
-                                    self.showAlertWithMessage(message: "Verification Error")
-                                } else {
-                                    _ = self.generateVerificationCode(userMobileNumber!)
-                                }
-                            }
                             
+                            let userVerificationStatusURLString : String = String(format : AppConstants.CHECK_VERIFICATION_STATUS_API, (Helper.sharedInstance.currentUser?.id)!)
+                            
+                            ServerClass.sharedInstance.performUserVerificationCheck(userVerificationStatusURLString as String, { (success, message, dataDict) in
+                                DispatchQueue.main.sync {
+                                    OperationQueue.main.addOperation {
+                                        if success {
+                                            Helper.sharedInstance.fadeOutLoaderView()
+                                            self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
+                                        } else {
+                                            let userMobileNumber : String? = userDataObject.mobile
+                                            if (userMobileNumber == nil || userMobileNumber == "") {
+                                                Helper.sharedInstance.fadeOutLoaderView()
+                                                self.showAlertWithMessage(message: "Verification Error")
+                                            } else {
+                                                _ = self.generateVerificationCode(userMobileNumber!)
+                                            }
+
+                                        }
+                                    }
+                                }
+                            })
                             return
                         } else {
                             Helper.sharedInstance.fadeOutLoaderView()
@@ -131,16 +139,13 @@ class LoginViewController: WelcomeViewController {
         }
     }
     
-    func checkVerification() -> Bool {
-        return UserDefaults.standard.bool(forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)    }
-    
     func generateVerificationCode(_ mobileNumber : String) -> Bool {
         //var isGenerated : Bool! = false
         
         let verificationCode : String? = Helper.sharedInstance.verificationCode();
+        print(verificationCode)
         if verificationCode != nil {
             UserDefaults.standard.set(verificationCode, forKey: AppConstants.VERIFICATION_CODE_KEY)
-            UserDefaults.standard.set(false, forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)
             let sendVerificationURL : String = String(format : AppConstants.SMS_VERIFICATION_API, mobileNumber, verificationCode!)
             ServerClass.sharedInstance.sendVerificationCodeToUserMobile(sendVerificationURL, mobileNumber, { (success, message) in
                 DispatchQueue.main.sync {
@@ -224,6 +229,8 @@ class LoginViewController: WelcomeViewController {
                     let registerWithFacebookURLString : String! = String(format : AppConstants.REGISTER_WITH_FACEBOOK_API, userDetailsDataObject.name!, userDetailsDataObject.email!, userDetailsDataObject.password!, userDetailsDataObject.mobile!, userDetailsDataObject.streetAddress!, userDetailsDataObject.profileImageUrl!, userDetailsDataObject.city!, userDetailsDataObject.country!, userDetailsDataObject.organization!)
                     
                     self.registerUserWithFacebookDetails(urlString: registerWithFacebookURLString)
+                } else {
+                    Helper.sharedInstance.fadeOutLoaderView()
                 }
             })
         }
@@ -278,10 +285,9 @@ class LoginViewController: WelcomeViewController {
         
         if shouldStayLoggedIn == true {
             image = UIImage.init(named: "Circle without Tick")!
-            shouldStayLoggedIn = false
-        } else {
-            shouldStayLoggedIn = true
         }
+        shouldStayLoggedIn = !shouldStayLoggedIn
+        UserDefaults.standard.set(shouldStayLoggedIn, forKey: AppConstants.SHOULD_STAY_LOGGED_IN)
         stayLogginginButton.setImage(image, for: UIControlState.normal)
     }
     

@@ -304,5 +304,93 @@ class ServerClass: NSObject {
         })
         task.resume()
     }
+    
+    func performUserVerificationAction(_ userVerificationURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataArray : NSArray?) -> Void) {
+        
+        let session : URLSession = URLSession.shared
+        let encodedHost = userVerificationURLString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        
+        let fetchRiderDataURL = URL.init(string: encodedHost!)!
+        
+        let task : URLSessionTask = session.dataTask(with: fetchRiderDataURL as URL, completionHandler: { (jsonData, response, error) in
+            let httpResponse = response as? HTTPURLResponse
+            
+            if (error != nil) {
+                completion(false, error!.localizedDescription, nil)
+                return
+            }
+            
+            let sessionData = NSString(data: jsonData!, encoding: String.Encoding.utf8.rawValue)
+            print(sessionData ?? "Raw")
+            if sessionData?.length != 0 {
+                do {
+                    let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
+                    var description : String? = "Success"
+                    var status : Bool = false
+                    var statusResponse : String?
+                    if httpResponse?.statusCode == 200 {
+                        description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
+                        statusResponse = ((dataDictionary as! NSDictionary).object(forKey: "status") as? String)
+                        if (statusResponse == "1" && description == "Inserted successfully") {
+                            status = true
+                            description = "Success"
+                        }
+                        
+                        completion(status, description!, nil)
+                    } else {
+                        description = "Server Error"
+                        completion(status, description!, nil)
+                    }
+                } catch {
+                    print("\(error)")
+                }
+            }
+        })
+        task.resume()
+    }
+    
+    func performUserVerificationCheck(_ userVerificationStatusURLString : String, _ completion : @escaping (_ success : Bool, _ message : String, _ dataArray : NSArray?) -> Void) {
+        
+        let session : URLSession = URLSession.shared
+        let encodedHost = userVerificationStatusURLString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        
+        let fetchRiderDataURL = URL.init(string: encodedHost!)!
+        
+        let task : URLSessionTask = session.dataTask(with: fetchRiderDataURL as URL, completionHandler: { (jsonData, response, error) in
+            let httpResponse = response as? HTTPURLResponse
+            
+            if (error != nil) {
+                completion(false, error!.localizedDescription, nil)
+                return
+            }
+            
+            let sessionData = NSString(data: jsonData!, encoding: String.Encoding.utf8.rawValue)
+            print(sessionData ?? "Raw")
+            if sessionData?.length != 0 {
+                do {
+                    let dataDictionary = try JSONSerialization.jsonObject(with: jsonData!, options: [JSONSerialization.ReadingOptions.allowFragments, JSONSerialization.ReadingOptions.mutableLeaves])
+                    var description : String? = "Success"
+                    var status : Bool = false
+                    var statusResponse : String?
+                    if httpResponse?.statusCode == 200 {
+                        description = ((dataDictionary as! NSDictionary).object(forKey: "message") as? String)
+                        statusResponse = ((dataDictionary as! NSDictionary).object(forKey: "status") as? String)
+                        if (statusResponse == "1" && description == "User verified") {
+                            status = true
+                            description = "Success"
+                        }
+                        
+                        completion(status, description!, nil)
+                    } else {
+                        description = "Server Error"
+                        completion(status, description!, nil)
+                    }
+                } catch {
+                    print("\(error)")
+                }
+            }
+        })
+        task.resume()
+    }
 
 }

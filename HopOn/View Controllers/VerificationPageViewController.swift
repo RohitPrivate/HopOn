@@ -47,8 +47,7 @@ class VerificationPageViewController: WelcomeViewController {
             if enteredVerificationCode.characters.count != 0 {
                 let generatedVerificationCode : String = UserDefaults.standard.object(forKey: AppConstants.VERIFICATION_CODE_KEY) as! String
                 if enteredVerificationCode == generatedVerificationCode {
-                    UserDefaults.standard.set(true, forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)
-                    self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
+                    self.makeUserVerificationApiCall()
                 } else {
                     showPopup = true
                     alertString = "Verification code does not match"
@@ -64,6 +63,29 @@ class VerificationPageViewController: WelcomeViewController {
         }
     }
     
+    func makeUserVerificationApiCall() {
+        let userVerificationUrlString : String = String(format : AppConstants.VERIFY_USER_API, (Helper.sharedInstance.currentUser?.id)!)
+        Helper.sharedInstance.fadeInLoaderView(self.view)
+        ServerClass.sharedInstance.performUserVerificationAction(userVerificationUrlString as String, { (success, message, dataArray) in
+            DispatchQueue.main.sync(execute: {
+                OperationQueue.main.addOperation {
+                    Helper.sharedInstance.fadeOutLoaderView()
+                    if success {
+                        //Show Home Screen
+                        print("success")
+                        self.performSegue(withIdentifier: AppConstants.CHOOSE_ONE_PAGE_SEGUE, sender: nil)
+                        return
+                    } else {
+                        Helper.sharedInstance.fadeOutLoaderView()
+                        let alertString = message
+                        let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(alertString)"), baseView: self.view)
+                        Helper.sharedInstance.fadeInAlertPopup(popupLabel)
+                    }
+                }
+            })
+        })
+    }
+    
     @IBAction func backAction(_ sender: Any) {
         self.backButtonAction(nil)
     }
@@ -72,6 +94,36 @@ class VerificationPageViewController: WelcomeViewController {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    @IBAction func resendVerificationCode(_ sender: Any) {
+        _ = self.generateVerificationCode((Helper.sharedInstance.currentUser?.mobile)!)
+    }
+    
+    func generateVerificationCode(_ mobileNumber : String) -> Bool {
+        let verificationCode : String? = Helper.sharedInstance.verificationCode();
+        print("\(verificationCode)")
+        if verificationCode != nil {
+            UserDefaults.standard.set(verificationCode, forKey: AppConstants.VERIFICATION_CODE_KEY)
+            let sendVerificationURL : String = String(format : AppConstants.SMS_VERIFICATION_API, mobileNumber, verificationCode!)
+            Helper.sharedInstance.fadeInLoaderView(self.view)
+            ServerClass.sharedInstance.sendVerificationCodeToUserMobile(sendVerificationURL, mobileNumber, { (success, message) in
+                DispatchQueue.main.sync {
+                    OperationQueue.main.addOperation {
+                        Helper.sharedInstance.fadeOutLoaderView()
+                        var alertString = message
+                        var popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(alertString)"), baseView: self.view)
+                        if success {
+                            alertString = "Verification Code sent successfully"
+                            popupLabel = Helper.sharedInstance.popupLabelForCustomAlert(("\(alertString)"), baseView: self.view)
+                        }
+                        Helper.sharedInstance.fadeInAlertPopup(popupLabel)
+                    }
+                }
+            })
+            return true
+        }
+        return false
     }
     
     override func didReceiveMemoryWarning() {

@@ -125,9 +125,9 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate, UIImageP
         //var isGenerated : Bool! = false
         
         let verificationCode : String? = Helper.sharedInstance.verificationCode();
+        print("\(verificationCode)")
         if verificationCode != nil {
             UserDefaults.standard.set(verificationCode, forKey: AppConstants.VERIFICATION_CODE_KEY)
-            UserDefaults.standard.set(false, forKey: AppConstants.VERIFICATION_CODE_VERIFIED_KEY)
             let sendVerificationURL : String = String(format : AppConstants.SMS_VERIFICATION_API, mobileNumber, verificationCode!)
             ServerClass.sharedInstance.sendVerificationCodeToUserMobile(sendVerificationURL, mobileNumber, { (success, message) in
                 DispatchQueue.main.sync {
