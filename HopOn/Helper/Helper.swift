@@ -156,7 +156,10 @@ class Helper: NSObject {
     }
     
     func verificationCode() -> String {
-        return String(arc4random_uniform(9999))
+        let min: UInt32 = 1000
+        let max: UInt32 = 9999
+        let verificationCode = min + arc4random_uniform(max - min + 1)
+        return String(verificationCode)
     }
     
     func validateEmailOrMobile(emailOrMobileString : String) -> Bool {

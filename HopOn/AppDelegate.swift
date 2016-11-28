@@ -19,12 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Delay to display the splash screen for a longer time
         Thread.sleep(forTimeInterval:3.0)
         
-//        if UserDefaults.standard.bool(forKey: AppConstants.SHOULD_STAY_LOGGED_IN) {
-//            let mainStoryBoard : UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
-//            let rootViewController : UIViewController? = mainStoryBoard?.instantiateViewController(withIdentifier: "SWRevealViewController")
-//            UIApplication.shared.keyWindow?.rootViewController = rootViewController
-//        }
-        
+        //Checked if the user is logged in
+        if UserDefaults.standard.bool(forKey: AppConstants.SHOULD_STAY_LOGGED_IN) && UserDefaults.standard.bool(forKey: AppConstants.VISITED_DASHBOARD) {
+            
+            let decodedLoggedInUserData = UserDefaults.standard.object(forKey: AppConstants.LOGGED_IN_USER_OBJECT) as? Data
+            if decodedLoggedInUserData != nil {
+                let loggedInUserDetailsObject = NSKeyedUnarchiver.unarchiveObject(with: decodedLoggedInUserData!) as? UserDetailsDataObject
+                Helper.sharedInstance.currentUser = loggedInUserDetailsObject
+            }
+            
+            let mainStoryBoard : UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
+            let rootViewController : UIViewController? = mainStoryBoard?.instantiateViewController(withIdentifier: "SWRevealViewController")
+            self.window?.rootViewController = rootViewController
+        }
         return true
     }
     

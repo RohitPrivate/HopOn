@@ -59,6 +59,7 @@ class ServerClass: NSObject {
     func sendVerificationCodeToUserMobile(_ sendVerificationURL : String, _ mobileNumber : String, _ completion : @escaping (_ success : Bool, _ message : String) -> Void) {
         let session : URLSession = URLSession.shared
         let encodedHost = sendVerificationURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        print("Generated Verification Code URL: %@", encodedHost)
         let sendVerificationURL : URL = URL.init(string: encodedHost!)!
         
         let task = session.dataTask(with: sendVerificationURL, completionHandler: { (jsonData, response, error) in

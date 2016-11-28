@@ -13,21 +13,21 @@ class DataParser: NSObject {
     func parseUserDataDictionary(dataDict : NSDictionary) -> NSArray {
         let userArray : NSMutableArray? = NSMutableArray.init()
         
-        let userDataObject : UserDetailsDataObject = UserDetailsDataObject()
+        let name = dataDict.value(forKey: AppConstants.FULL_NAME_API_KEY) as! String!
+        let email = dataDict.value(forKey: AppConstants.EMAIL_API_KEY) as! String!
+        let password = dataDict.value(forKey: AppConstants.PASSWORD_API_KEY) as! String!
+        let mobile = dataDict.value(forKey: AppConstants.MOBILE_API_KEY) as! String!
+        let streetAddress = dataDict.value(forKey: AppConstants.STREET_ADDRESS_API_KEY) as! String!
+        let profileImageUrl = dataDict.value(forKey: AppConstants.PROFILE_IMAGE_URL_API_KEY) as! String!
+        let city = dataDict.value(forKey: AppConstants.CITY_API_KEY) as! String!
+        let country = dataDict.value(forKey: AppConstants.COUNTRY_API_KEY) as! String!
+        let organization = dataDict.value(forKey: AppConstants.ORGANIZATION_API_KEY) as! String!
+        let userId = dataDict.value(forKey: AppConstants.USER_ID_API_KEY) as! String!
+        let deviceId = dataDict.value(forKey: AppConstants.DEVICE_ID_API_KEY) as! String!
+        let deviceType = dataDict.value(forKey: AppConstants.DEVICE_TYPE_API_KEY) as! String!
+        let id = dataDict.value(forKey: AppConstants.ID_API_KEY) as! String!
         
-        userDataObject.name = dataDict.value(forKey: AppConstants.FULL_NAME_API_KEY) as! String!
-        userDataObject.email = dataDict.value(forKey: AppConstants.EMAIL_API_KEY) as! String!
-        userDataObject.password = dataDict.value(forKey: AppConstants.PASSWORD_API_KEY) as! String!
-        userDataObject.mobile = dataDict.value(forKey: AppConstants.MOBILE_API_KEY) as! String!
-        userDataObject.streetAddress = dataDict.value(forKey: AppConstants.STREET_ADDRESS_API_KEY) as! String!
-        userDataObject.profileImageUrl = dataDict.value(forKey: AppConstants.PROFILE_IMAGE_URL_API_KEY) as! String!
-        userDataObject.city = dataDict.value(forKey: AppConstants.CITY_API_KEY) as! String!
-        userDataObject.country = dataDict.value(forKey: AppConstants.COUNTRY_API_KEY) as! String!
-        userDataObject.organization = dataDict.value(forKey: AppConstants.ORGANIZATION_API_KEY) as! String!
-        userDataObject.userId = dataDict.value(forKey: AppConstants.USER_ID_API_KEY) as! String!
-        userDataObject.deviceId = dataDict.value(forKey: AppConstants.DEVICE_ID_API_KEY) as! String!
-        userDataObject.deviceType = dataDict.value(forKey: AppConstants.DEVICE_TYPE_API_KEY) as! String!
-        userDataObject.id = dataDict.value(forKey: AppConstants.ID_API_KEY) as! String!
+        let userDataObject : UserDetailsDataObject = UserDetailsDataObject.init(name: name!, email: email!, password: password!, mobile: mobile!, streetAddress: streetAddress!, profileImageUrl: profileImageUrl!, city: city!, country: country!, organization: organization!, userId: userId!, deviceId: deviceId!, deviceType: deviceType!, id: id!)
         
         userArray?.add(userDataObject)
         

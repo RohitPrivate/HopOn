@@ -25,6 +25,8 @@ class AppConstants: NSObject {
     
     static var VERIFICATION_CODE_KEY = "VerificationCode"
     static var SHOULD_STAY_LOGGED_IN = "ShouldStayLoggedIn"
+    static var VISITED_DASHBOARD = "VisitedDashboard"
+    static var LOGGED_IN_USER_OBJECT = "LoggedInUserObject"
     
     static let VERIFICATION_PAGE_SEGUE = "VerificationPage"
     static let CHOOSE_ONE_PAGE_SEGUE = "ChooseOne"

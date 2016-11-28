@@ -23,8 +23,6 @@ class RiderProfileViewController: ChooseOneViewController {
     @IBOutlet weak var destinationField: UITextField!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         if !isRiderDataFetched {
             self.fetchRiderData()
@@ -82,6 +80,10 @@ class RiderProfileViewController: ChooseOneViewController {
         })
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        
+    }
+    
     func populateRiderDetails(dataObject : RiderDetailsDataObject) {
         pickUpDateField.text! = dataObject.pickUpDate
         pickUpTimeField.text! = dataObject.pickUpTime
@@ -135,6 +137,10 @@ class RiderProfileViewController: ChooseOneViewController {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        self.backButtonAction()
     }
     
     override func didReceiveMemoryWarning() {

@@ -28,7 +28,14 @@ class ForgotPasswordViewController: WelcomeViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        var font : UIFont = UIFont.init(name: AppConstants.Font.CaviarDreamsRegular.rawValue, size: 13.0)!
         
+        if (AppConstants.deviceType == AppConstants.DeviceType.iPhone7PlusType) {
+           font = UIFont.init(name: AppConstants.Font.CaviarDreamsRegular.rawValue, size: 18.0)!
+        } else if (AppConstants.deviceType == AppConstants.DeviceType.iPhone7Type) {
+            font = UIFont.init(name: AppConstants.Font.CaviarDreamsRegular.rawValue, size: 16.0)!
+        }
+        emailField.font = font
     }
     
     override func viewDidAppear(_ animated: Bool) {

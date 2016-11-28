@@ -30,8 +30,6 @@ class DriverProfileViewController: ChooseOneViewController {
     @IBOutlet weak var carColorField: UITextField!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         if !isDriverDataFetched {
             self.fetchDriverData()
@@ -64,6 +62,10 @@ class DriverProfileViewController: ChooseOneViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(DriverProfileViewController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(DriverProfileViewController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
     }
     
     func updateDateTextField(sender : Any) {
@@ -142,6 +144,10 @@ class DriverProfileViewController: ChooseOneViewController {
             self.scrollView.contentSize = self.scrollViewContentSize
             self.scrollView.contentOffset = self.scrollViewContentOffset
         })
+    }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        self.backButtonAction()
     }
     
     override func didReceiveMemoryWarning() {

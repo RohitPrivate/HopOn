@@ -32,10 +32,19 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var uploadImageButton: UIButton!
     
     @IBOutlet weak var topViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var termsAndConditionsViewBottomLayoutConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         selectedCountryCode = "+1"
+    }
+    
+    func cancelNumberPad() {
+        mobileNumberField.resignFirstResponder()
+    }
+    
+    func doneWithNumberPad() {
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +74,11 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate, UIImageP
             var scrollViewFrame : CGRect = scrollView.frame
             scrollViewFrame.size.height -= 20
             scrollView.frame = scrollViewFrame
+            termsAndConditionsViewBottomLayoutConstraint.constant = 5
+        } else if (AppConstants.deviceType == AppConstants.DeviceType.iPhone7Type) {
+            
+        } else if (AppConstants.deviceType == AppConstants.DeviceType.iPhone7PlusType) {
+            
         }
     }
     
@@ -97,7 +111,7 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate, UIImageP
         let isValidated : Bool = self.validateRegistrationFields()
         if isValidated {
             //Make server call to register the user and proceed            
-            let registerURLString : String = String(format : AppConstants.REGISTER_API, nameField.text!, emailField.text!, passwordField.text!, String(format:selectedCountryCode + mobileNumberField.text!),"", "", "", organizationField.text!, "userId", "iPhone", "deviceId")
+            let registerURLString : String = String(format : AppConstants.REGISTER_API, nameField.text!, emailField.text!, passwordField.text!, mobileNumberField.text!,"", "", "", organizationField.text!, "userId", "iPhone", "deviceId")
             
             Helper.sharedInstance.fadeInLoaderView(self.view)
             
@@ -107,7 +121,7 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate, UIImageP
                         if success {
                             let userDataObject : UserDetailsDataObject = (dataArray?.lastObject as? UserDetailsDataObject)!
                             Helper.sharedInstance.currentUser = userDataObject
-                            _ = self.generateVerificationCode(String(format: self.selectedCountryCode! + self.mobileNumberField.text!))
+                            _ = self.generateVerificationCode(self.mobileNumberField.text!)
                             return
                         } else {
                             Helper.sharedInstance.fadeOutLoaderView()
@@ -129,6 +143,7 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate, UIImageP
         if verificationCode != nil {
             UserDefaults.standard.set(verificationCode, forKey: AppConstants.VERIFICATION_CODE_KEY)
             let sendVerificationURL : String = String(format : AppConstants.SMS_VERIFICATION_API, mobileNumber, verificationCode!)
+            print(sendVerificationURL)
             ServerClass.sharedInstance.sendVerificationCodeToUserMobile(sendVerificationURL, mobileNumber, { (success, message) in
                 DispatchQueue.main.sync {
                     OperationQueue.main.addOperation {
@@ -253,9 +268,9 @@ class SignUpViewController: WelcomeViewController, UITextFieldDelegate, UIImageP
             } else if passwordString != reEnterPasswordString {
                 showPopup = true
                 alertString = "The password you entered do not match"
-            } else if mobileNumberString.characters.count < 10 || mobileNumberString.characters.count > 10 {
+            } else if (mobileNumberString.characters.count < 10 || mobileNumberString.characters.count > 10 || !Helper.sharedInstance.isMobileNumber(emailOrMobileString: mobileNumberString)) {
                 showPopup = true
-                alertString = "Phone number should be of 10 digit"
+                alertString = "Please enter a valid mobile number"
             } else if !isTermsAndConditionAccepted {
                 showPopup = true
                 alertString = "Please accept the terms & conditions"

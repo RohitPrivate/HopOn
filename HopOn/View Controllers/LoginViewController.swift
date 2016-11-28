@@ -59,13 +59,20 @@ class LoginViewController: WelcomeViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        var font : UIFont = UIFont.init(name: AppConstants.Font.CaviarDreamsRegular.rawValue, size: 16)!
         if (AppConstants.deviceType == AppConstants.DeviceType.iPhone5Type || AppConstants.deviceType == AppConstants.DeviceType.iPhone4Type) {
             loginBoxViewTopLayout.constant = 0
             loginButtonTopLayooutConstraint.constant = 20
             
             forgotPasswordButton.frame.size.width += 20
             forgotPasswordButton.frame.origin.x -= 20
+        } else if (AppConstants.deviceType == AppConstants.DeviceType.iPhone7Type) {
+            font = UIFont.init(name: AppConstants.Font.CaviarDreamsRegular.rawValue, size: 19)!
+        } else if (AppConstants.deviceType == AppConstants.DeviceType.iPhone7PlusType) {
+            font = UIFont.init(name: AppConstants.Font.CaviarDreamsRegular.rawValue, size: 19)!
         }
+        emailOrMobileField.font = font
+        passwordField.font = font
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,7 +94,7 @@ class LoginViewController: WelcomeViewController {
         if isValidated {
             var emailOrMobileValue : String!
             if Helper.sharedInstance.isMobileNumber(emailOrMobileString: emailOrMobileField.text!) {
-                emailOrMobileValue = String (format : self.selectedCountryCode + emailOrMobileField.text!)
+                emailOrMobileValue = emailOrMobileField.text!
             } else {
                 emailOrMobileValue = emailOrMobileField.text!
             }
@@ -147,6 +154,7 @@ class LoginViewController: WelcomeViewController {
         if verificationCode != nil {
             UserDefaults.standard.set(verificationCode, forKey: AppConstants.VERIFICATION_CODE_KEY)
             let sendVerificationURL : String = String(format : AppConstants.SMS_VERIFICATION_API, mobileNumber, verificationCode!)
+            print(sendVerificationURL)
             ServerClass.sharedInstance.sendVerificationCodeToUserMobile(sendVerificationURL, mobileNumber, { (success, message) in
                 DispatchQueue.main.sync {
                     OperationQueue.main.addOperation {
@@ -237,21 +245,26 @@ class LoginViewController: WelcomeViewController {
     }
     
     func userDetailsFromFacebookGraphResult(resultDict : NSDictionary) -> UserDetailsDataObject {
-        let userDetailsDataObject : UserDetailsDataObject = UserDetailsDataObject()
-        userDetailsDataObject.name = resultDict.value(forKey: "name") as! String!
-        userDetailsDataObject.email = resultDict.value(forKey: "email") as! String!
-        userDetailsDataObject.password = resultDict.value(forKey: "id") as! String!
+        
+        let name = resultDict.value(forKey: "name") as! String!
+        let email = resultDict.value(forKey: "email") as! String!
+        let password = resultDict.value(forKey: "id") as! String!
         
         let milliseconds : Int64 = 0
         let timeStamp = TimeInterval(milliseconds)/1000.0
-        userDetailsDataObject.mobile = String(timeStamp)
+        let mobile = String(timeStamp)
         
-        userDetailsDataObject.streetAddress = ""
-        userDetailsDataObject.profileImageUrl = ((resultDict.value(forKey: "picture") as! NSDictionary!).value(forKey: "data") as! NSDictionary).value(forKey: "url") as! String
-        userDetailsDataObject.city = ""
-        userDetailsDataObject.country = ""
-        userDetailsDataObject.organization = ""
-        userDetailsDataObject.userId = ""
+        let streetAddress = ""
+        let profileImageUrl = ((resultDict.value(forKey: "picture") as! NSDictionary!).value(forKey: "data") as! NSDictionary).value(forKey: "url") as! String
+        let city = ""
+        let country = ""
+        let organization = ""
+        let userId = ""
+        let deviceId = ""
+        let deviceType = ""
+        let id = ""
+        
+        let userDetailsDataObject : UserDetailsDataObject = UserDetailsDataObject.init(name: name!, email: email!, password: password!, mobile: mobile, streetAddress: streetAddress, profileImageUrl: profileImageUrl, city: city, country: country, organization: organization, userId: userId, deviceId: deviceId, deviceType: deviceType, id: id)
         
         return userDetailsDataObject
     }

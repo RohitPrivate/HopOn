@@ -106,6 +106,7 @@ class VerificationPageViewController: WelcomeViewController {
         if verificationCode != nil {
             UserDefaults.standard.set(verificationCode, forKey: AppConstants.VERIFICATION_CODE_KEY)
             let sendVerificationURL : String = String(format : AppConstants.SMS_VERIFICATION_API, mobileNumber, verificationCode!)
+            print(sendVerificationURL)
             Helper.sharedInstance.fadeInLoaderView(self.view)
             ServerClass.sharedInstance.sendVerificationCodeToUserMobile(sendVerificationURL, mobileNumber, { (success, message) in
                 DispatchQueue.main.sync {

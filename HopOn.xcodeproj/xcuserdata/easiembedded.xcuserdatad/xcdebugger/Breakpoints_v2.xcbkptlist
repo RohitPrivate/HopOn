@@ -28,13 +28,141 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HopOn/View Controllers/VerificationPageViewController.swift"
-            timestampString = "501852797.845846"
+            timestampString = "502024811.313319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "makeUserVerificationApiCall()"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "generateVerificationCode(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HopOn/View Controllers/LoginViewController.swift"
+            timestampString = "502024811.313319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "generateVerificationCode(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HopOn/ServerManager/ServerClass.swift"
+            timestampString = "502027857.667335"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "sendVerificationCodeToUserMobile(_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HopOn/ServerManager/ServerClass.swift"
+            timestampString = "502036285.553067"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "performLoginAction(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HopOn.ServerClass.performLoginAction (Swift.String, (Swift.Bool, Swift.String, Swift.Optional&lt;__ObjC.NSArray&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "HopOn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/easiembedded/Documents/HopOn/Code/HopOn/HopOn/ServerManager/ServerClass.swift"
+                  timestampString = "502036593.338429"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HopOn.ServerClass.(performLoginAction (Swift.String, (Swift.Bool, Swift.String, Swift.Optional&lt;__ObjC.NSArray&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "HopOn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/easiembedded/Documents/HopOn/Code/HopOn/HopOn/ServerManager/ServerClass.swift"
+                  timestampString = "502036593.33976"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HopOn/ServerManager/ServerClass.swift"
+            timestampString = "502036292.449404"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "performRegisterAction(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HopOn.ServerClass.performRegisterAction (Swift.String, (Swift.Bool, Swift.String, Swift.Optional&lt;__ObjC.NSArray&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "HopOn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/easiembedded/Documents/HopOn/Code/HopOn/HopOn/ServerManager/ServerClass.swift"
+                  timestampString = "502036593.342105"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HopOn.ServerClass.(performRegisterAction (Swift.String, (Swift.Bool, Swift.String, Swift.Optional&lt;__ObjC.NSArray&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "HopOn"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/easiembedded/Documents/HopOn/Code/HopOn/HopOn/ServerManager/ServerClass.swift"
+                  timestampString = "502036593.343353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

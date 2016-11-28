@@ -40,6 +40,12 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
             locationManager?.requestAlwaysAuthorization()
             locationManager?.startUpdatingLocation()
         }
+        
+        UserDefaults.standard.set(true, forKey: AppConstants.VISITED_DASHBOARD)
+        if UserDefaults.standard.bool(forKey: AppConstants.SHOULD_STAY_LOGGED_IN) && Helper.sharedInstance.currentUser != nil {
+            let encodedData : Data = NSKeyedArchiver.archivedData(withRootObject: Helper.sharedInstance.currentUser!)
+            UserDefaults.standard.set(encodedData, forKey: AppConstants.LOGGED_IN_USER_OBJECT)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +58,14 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        isRiderButtonSelected = false
+        isDriverButtonSelected = false
+        
+        riderButton.setBackgroundImage(UIImage.init(named: "Rider Icon"), for: UIControlState.normal)
+        driverButton.setBackgroundImage(UIImage.init(named: "Driver Icon"), for: UIControlState.normal)
     }
     
     @IBAction func driverButtonSelected(_ sender: Any) {
@@ -135,6 +149,10 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
     
     func resignDatePicker(sender : UIButton) {
         self.view.endEditing(true)
+    }
+    
+    func backButtonAction() {
+        _ = self.navigationController?.popViewController(animated: false)
     }
     
     override func didReceiveMemoryWarning() {
