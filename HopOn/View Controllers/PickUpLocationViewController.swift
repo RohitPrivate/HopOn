@@ -18,7 +18,7 @@ class PickUpLocationViewController: ChooseOneViewController, UITextFieldDelegate
     var selectedLocation : String?
     
     var dropdownView : DropDownView? = nil
-    var selectLocationField: UITextField!
+    var selectedLocationTextField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +60,7 @@ class PickUpLocationViewController: ChooseOneViewController, UITextFieldDelegate
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        selectedTextField = textField
         return true
     }
     
@@ -172,13 +173,13 @@ class PickUpLocationViewController: ChooseOneViewController, UITextFieldDelegate
         return 0
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let data = dropDownData?.object(at: indexPath.row)
-//        
-//        if data is String {
-//            selectedLocation = dropDownData?.object(at: indexPath.row) as? String
-//            selectLocationField.text = selectedCity
-//        } else if data is GMSAutocompletePrediction {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = dropDownData?.object(at: indexPath.row)
+        
+        if data is String {
+            //selectedLocation = dropDownData?.object(at: indexPath.row) as? String
+            selectedLocationTextField?.text = dropDownData?.object(at: indexPath.row) as? String
+        } else if data is GMSAutocompletePrediction {
 //            if toField.isFirstResponder {
 //                toLocation = data as? GMSAutocompletePrediction
 //                toField.attributedText = toLocation!.attributedFullText
@@ -186,10 +187,10 @@ class PickUpLocationViewController: ChooseOneViewController, UITextFieldDelegate
 //                fromLocation = data as? GMSAutocompletePrediction
 //                fromField.attributedText = fromLocation!.attributedFullText
 //            }
-//        }
-//        
-//        dropdownView!.fadeOutDropdownView()
-//    }
+        }
+        
+        dropdownView!.fadeOutDropdownView()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
