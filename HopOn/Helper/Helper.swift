@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 class Helper: NSObject {
     
     var currentUser : UserDetailsDataObject? = nil
-    
+    var currentLocation : CLLocationCoordinate2D?
     
     static let sharedInstance = Helper()
     var loaderView : UIView? = nil
@@ -124,10 +125,15 @@ class Helper: NSObject {
     func datePickerWithTarget(target : Any, action : Selector) -> UIDatePicker {
         let datePicker : UIDatePicker = UIDatePicker()
         datePicker.datePickerMode = UIDatePickerMode.date
-        datePicker.date = Date()
         datePicker.addTarget(target, action: action, for: .valueChanged)
         
         return datePicker
+    }
+    
+    func timePicker() -> UIPickerView {
+        let timePicker : UIPickerView = UIPickerView()
+        
+        return timePicker
     }
     
     func deviceType() -> AppConstants.DeviceType {
@@ -146,6 +152,10 @@ class Helper: NSObject {
             }
         }
         return AppConstants.deviceType
+    }
+    
+    func userCurrentLocation(location : CLLocationCoordinate2D) {
+        currentLocation = location
     }
     
     //MARK: Email Validation
@@ -205,7 +215,23 @@ class Helper: NSObject {
         return strDate
     }
     
-    func formattedDateFromString(stringDate : String) -> Date {
+    func formattedTimeFromDate(time : Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let strTime = dateFormatter.string(from: time)
+        
+        return strTime
+    }
+    
+    func formattedDateFromTimeString(time : String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let date = dateFormatter.date(from: time)
+        
+        return date!
+    }
+    
+    func formattedDateFromDateString(stringDate : String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         let date = dateFormatter.date(from: stringDate)

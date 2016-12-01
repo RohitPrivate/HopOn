@@ -27,7 +27,8 @@ class RiderProfileViewController: ChooseOneViewController {
         if !isRiderDataFetched {
             self.fetchRiderData()
         }
-        self.addDatePickerInputViewToDateFields(textField: pickUpDateField, target: self)
+        self.addDatePickerInputViewToFields(textField: pickUpDateField, target: self, action: #selector(RiderProfileViewController.updateDateTextField(sender:)), type: AppConstants.InputType.date)
+        self.addTimePickerInputViewToFields(textField: pickUpTimeField, target: self, action: #selector(RiderProfileViewController.updateTimeTextField(sender:)), type: AppConstants.InputType.time)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +70,10 @@ class RiderProfileViewController: ChooseOneViewController {
                             self.populateRiderDetails(dataObject: self.riderDetailsDataObject)
                         }
                         if (self.pickUpDateField.text?.characters.count)! > 0 {
-                            self.datePicker.date = Helper.sharedInstance.formattedDateFromString(stringDate: self.pickUpDateField.text!)
+                            self.setTimePickerIndex(pickerView: self.timePickerView, time: self.pickUpTimeField.text!)
+                        }
+                        if (self.pickUpTimeField.text?.characters.count)! > 0 {
+//                            self.timePicker.date = Helper.sharedInstance.formattedDateFromTimeString(time: self.pickUpTimeField.text!)
                         }
                     } else {
                         let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(message)"), baseView: self.view)
@@ -94,6 +98,11 @@ class RiderProfileViewController: ChooseOneViewController {
     func updateDateTextField(sender : Any) {
         let strDate = Helper.sharedInstance.formattedStringFromDate(date: datePicker.date)
         self.pickUpDateField.text = "\(strDate)"
+    }
+    
+    func updateTimeTextField(sender : Any) {
+//        let strDate = Helper.sharedInstance.formattedTimeFromDate(time: timePicker.date)
+//        self.pickUpTimeField.text = "\(strDate)"
     }
 
     @IBAction func openMenuAction(_ sender: Any) {
@@ -137,6 +146,17 @@ class RiderProfileViewController: ChooseOneViewController {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        var shouldReturn : Bool = true
+        
+        if textField == pickUpLocationField || textField == destinationField {
+            self.performSegue(withIdentifier: "PickUpLocationView", sender: nil)
+            shouldReturn = false
+        }
+        
+        return shouldReturn
     }
     
     @IBAction func cancelAction(_ sender: Any) {

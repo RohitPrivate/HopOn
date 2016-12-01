@@ -55,8 +55,8 @@ class WelcomeViewController: UIViewController, MRCountryPickerDelegate {
         } else if (AppConstants.deviceType == AppConstants.DeviceType.iPhone7Type) {
             welcomeIconTopLayoutConstraint.constant = 40
             welcomeToHopOnLabelConstraint.constant = 30
-            listScrollViewLeadingConstraint.constant = 25
-            listScrollViewTrailingConstraint.constant = 25
+            listScrollViewLeadingConstraint.constant = 20
+            listScrollViewTrailingConstraint.constant = 20
             bottomLayoutConstraintToNextButton.constant = 25
             listScrollViewTopConstraint.constant = 10
         } else if (AppConstants.deviceType == AppConstants.DeviceType.iPhone5Type) {
@@ -165,7 +165,6 @@ class WelcomeViewController: UIViewController, MRCountryPickerDelegate {
     
     //MRCountryPicker Delegate
     func countryPhoneCodePicker(_ picker: MRCountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
-        print("Hello")
         var countryWithCode : String = String(format : phoneCode + "|" + countryCode)
         countryWithCode = countryWithCode.replacingOccurrences(of: "+", with: "")
         countryButton.setTitle(countryWithCode, for: UIControlState.normal)

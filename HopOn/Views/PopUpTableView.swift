@@ -8,16 +8,14 @@
 
 import UIKit
 
-extension UIView {
-    class func loadFromNibNamed(_ nibNamed: String, bundle: Bundle? = nil) -> UIView {
+class PopUpTableView: UIView, UITableViewDelegate, UITableViewDataSource {
+    
+    func loadFromNibNamed(_ nibNamed: String, bundle: Bundle? = nil) -> UIView {
         return (UINib(
             nibName: nibNamed,
             bundle: bundle
             ).instantiate(withOwner: nil, options: nil)[0] as? UIView)!
     }
-}
-
-class PopUpTableView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!

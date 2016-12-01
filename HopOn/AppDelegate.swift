@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //Delay to display the splash screen for a longer time
         Thread.sleep(forTimeInterval:3.0)
+        GMSPlacesClient.provideAPIKey(AppConstants.GOOGLE_PLACES_API_KEY)
         
         //Checked if the user is logged in
         if UserDefaults.standard.bool(forKey: AppConstants.SHOULD_STAY_LOGGED_IN) && UserDefaults.standard.bool(forKey: AppConstants.VISITED_DASHBOARD) {

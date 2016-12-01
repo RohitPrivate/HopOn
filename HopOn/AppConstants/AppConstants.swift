@@ -23,6 +23,9 @@ class AppConstants: NSObject {
     static let SAVE_DRIVER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=drive_details&user_id=87&lattitude=%@&longitude=%@&drive_date=%@&drive_time=%@&start_loc=%@&destination=%@&seat_available=%@&rate_per_person=%@&car_model=%@&car_type=%@&car_color=%@"
     static let SAVE_RIDER_DETAILS_API = "http://appscoopsolutions.com/aim_api/hopon.php?rule=rider_details&pickup_date=%@&pickup_time=%@&pickup_loc=%@&destination=%@&lattitude=%@&longitude=%@&profile_image=%@&user_id=87"
     
+    
+    static let GOOGLE_PLACES_API_KEY = "AIzaSyAR_32DRgvS3N5ypJ95EC7M6nDTTleONKc"
+    
     static var VERIFICATION_CODE_KEY = "VerificationCode"
     static var SHOULD_STAY_LOGGED_IN = "ShouldStayLoggedIn"
     static var VISITED_DASHBOARD = "VisitedDashboard"
@@ -89,6 +92,12 @@ class AppConstants: NSObject {
         case iPhone5Type
         case iPhone7Type
         case iPhone7PlusType
+    }
+    
+    public enum InputType {
+        case none
+        case time
+        case date
     }
     
     public enum Font : String {

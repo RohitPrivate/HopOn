@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
+class ChooseOneViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource  {
 
     @IBOutlet weak var driverButton: UIButton!
     @IBOutlet weak var riderButton: UIButton!
@@ -19,9 +19,14 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
     var isRiderButtonSelected : Bool! = false
     var locationManager : CLLocationManager?
     var userLocation : CLLocationCoordinate2D?
-    var datePicker : UIDatePicker!
-    var shouldStayLoggedIn : Bool! = false
+    var timePickerDataSource : NSDictionary?
     
+    var datePicker : UIDatePicker!
+    var timePickerView : UIPickerView!
+    var selectedTextField : UITextField!
+    
+    var shouldStayLoggedIn : Bool! = false
+    var popUpTableView : PopUpTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +91,10 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func openMenuBar(_ sender: Any) {
+        self.showMenuBar()
+    }
+    
+    func showMenuBar() {
         if revealViewController() != nil {
             revealViewController().revealToggle(animated: true)
         }
@@ -118,41 +127,122 @@ class ChooseOneViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = locationManager!.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        Helper.sharedInstance.currentLocation = locationManager!.location!.coordinate
+        print("locations = \(locationManager!.location!.coordinate.latitude) \(locationManager!.location!.coordinate.longitude)")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
     
-    func addDatePickerInputViewToDateFields(textField : UITextField, target: Any) {
+    func addDatePickerInputViewToFields(textField : UITextField, target: Any, action : Selector, type : AppConstants.InputType) {
         let doneButtonHeight : CGFloat = 50
         let doneButtonWidth : CGFloat = 100
         let inputView = UIView(frame: CGRect(x:0, y:0, width:self.view.frame.width, height:240))
         
-        datePicker = Helper.sharedInstance.datePickerWithTarget(target: self, action : #selector(RiderProfileViewController.updateDateTextField(sender:)))
-        datePicker.frame = CGRect(x:0, y:doneButtonHeight, width:inputView.frame.size.width, height: (inputView.frame.size.height - doneButtonHeight))
-        inputView.addSubview(datePicker)
+        if type == AppConstants.InputType.date {
+        datePicker = Helper.sharedInstance.datePickerWithTarget(target: self, action : action)
+        datePicker.date = Date()
+        datePicker?.frame = CGRect(x:0, y:doneButtonHeight, width:inputView.frame.size.width, height: (inputView.frame.size.height - doneButtonHeight))
+        inputView.addSubview(datePicker!)
         
         let doneButton = UIButton(frame: CGRect(x:(self.view.frame.size.width/2) - (doneButtonWidth/2), y:0, width:doneButtonWidth, height:doneButtonHeight))
         doneButton.setTitle("Done", for: UIControlState.normal)
         doneButton.setTitle("Done", for: UIControlState.highlighted)
         doneButton.setTitleColor(UIColor.black, for: UIControlState.normal)
         doneButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
-        doneButton.addTarget(self, action: #selector((target as AnyObject).resignDatePicker(sender:)), for: UIControlEvents.touchUpInside)
+        doneButton.addTarget(target, action: #selector((target as AnyObject).resignDatePicker(sender:)), for: UIControlEvents.touchUpInside)
+        
+        inputView.addSubview(doneButton)
+        
+        textField.inputView = inputView
+        }
+    }
+    
+    func addTimePickerInputViewToFields(textField : UITextField, target: Any, action : Selector, type : AppConstants.InputType) {
+        
+        selectedTextField = textField
+        
+        let doneButtonHeight : CGFloat = 50
+        let doneButtonWidth : CGFloat = 100
+        let inputView = UIView(frame: CGRect(x:0, y:0, width:self.view.frame.width, height:240))
+        
+        timePickerView = Helper.sharedInstance.timePicker()
+        timePickerView?.frame = CGRect(x:0, y:doneButtonHeight, width:inputView.frame.size.width, height: (inputView.frame.size.height - doneButtonHeight))
+
+        self.dataSourceForTimePicker()
+        
+        timePickerView.delegate = self
+        timePickerView.dataSource = self
+        
+        inputView.addSubview(timePickerView!)
+        
+        let doneButton = UIButton(frame: CGRect(x:(self.view.frame.size.width/2) - (doneButtonWidth/2), y:0, width:doneButtonWidth, height:doneButtonHeight))
+        doneButton.setTitle("Done", for: UIControlState.normal)
+        doneButton.setTitle("Done", for: UIControlState.highlighted)
+        doneButton.setTitleColor(UIColor.black, for: UIControlState.normal)
+        doneButton.setTitleColor(UIColor.gray, for: UIControlState.highlighted)
+        doneButton.addTarget(target, action: #selector((target as AnyObject).resignDatePicker(sender:)), for: UIControlEvents.touchUpInside)
         
         inputView.addSubview(doneButton)
         
         textField.inputView = inputView
     }
     
+    func dataSourceForTimePicker() {
+        let filePath = Bundle.main.path(forResource: "PickTimeList", ofType: "plist")
+        if filePath != nil {
+            timePickerDataSource = NSDictionary.init(contentsOfFile: filePath!)
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if component == 0 {
+            return (timePickerDataSource?.object(forKey: "Time") as! NSArray).count
+        } else if (component == 1) {
+            return (timePickerDataSource?.object(forKey: "Format") as! NSArray).count
+        }
+        return 0
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return (timePickerDataSource?.allKeys.count)!
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        var dataArray : NSArray? = NSArray.init()
+        
+        if component == 0 {
+            dataArray = (timePickerDataSource?.object(forKey: "Time") as! NSArray)
+        } else if (component == 1) {
+            dataArray = (timePickerDataSource?.object(forKey: "Format") as! NSArray)
+        }
+        return (dataArray?.object(at: row) as! String)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedTime = (timePickerDataSource?.object(forKey: "Time") as! NSArray).object(at: pickerView.selectedRow(inComponent: 0)) as! String
+        let selectedFormat = (timePickerDataSource?.object(forKey: "Format") as! NSArray).object(at: pickerView.selectedRow(inComponent: 1)) as! String
+        
+        if selectedTextField != nil {
+            selectedTextField.text = selectedTime + " " + selectedFormat
+        }
+    }
+    
+    func setTimePickerIndex(pickerView : UIPickerView, time : String) {
+        
+    }
+    
     func resignDatePicker(sender : UIButton) {
         self.view.endEditing(true)
     }
     
+    func resignTimePicker(sender : UIButton) {
+        self.view.endEditing(true)
+    }
+    
     func backButtonAction() {
-        _ = self.navigationController?.popViewController(animated: false)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     override func didReceiveMemoryWarning() {

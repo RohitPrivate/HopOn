@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DriverProfileViewController: ChooseOneViewController {
+class DriverProfileViewController: ChooseOneViewController, UITextFieldDelegate {
     
     var scrollViewContentSize : CGSize! = CGSize.zero
     var scrollViewContentOffset : CGPoint = CGPoint.zero
@@ -35,7 +35,8 @@ class DriverProfileViewController: ChooseOneViewController {
             self.fetchDriverData()
         }
         
-        self.addDatePickerInputViewToDateFields(textField: driveDateField, target: self)
+        self.addDatePickerInputViewToFields(textField: driveDateField, target: self, action: #selector(DriverProfileViewController.updateDateTextField(sender:)), type: AppConstants.InputType.date)
+        self.addTimePickerInputViewToFields(textField: driveTimeField, target: self, action: #selector(DriverProfileViewController.updateTimeTextField(sender:)), type: AppConstants.InputType.time)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +73,11 @@ class DriverProfileViewController: ChooseOneViewController {
         let strDate = Helper.sharedInstance.formattedStringFromDate(date: datePicker.date)
         self.driveDateField.text = "\(strDate)"
     }
+    
+    func updateTimeTextField(sender : Any) {
+//        let strDate = Helper.sharedInstance.formattedTimeFromDate(time: timePicker.date)
+//        self.driveTimeField.text = "\(strDate)"
+    }
 
     @IBAction func openMenuAction(_ sender: Any) {
         if revealViewController() != nil {
@@ -96,7 +102,10 @@ class DriverProfileViewController: ChooseOneViewController {
                             self.populateDriverDetails(dataObject: self.driverDetailsDataObject)
                         }
                         if (self.driveDateField.text?.characters.count)! > 0 {
-                            self.datePicker.date = Helper.sharedInstance.formattedDateFromString(stringDate: self.driveDateField.text!)
+                            self.datePicker.date = Helper.sharedInstance.formattedDateFromDateString(stringDate: self.driveDateField.text!)
+                        }
+                        if (self.driveTimeField.text?.characters.count)! > 0 {
+                            self.setTimePickerIndex(pickerView: self.timePickerView, time: self.driveTimeField.text!)
                         }
                     } else {
                         let popupLabel : UILabel? = Helper.sharedInstance.popupLabelForCustomAlert(("\(message)"), baseView: self.view)
@@ -124,6 +133,17 @@ class DriverProfileViewController: ChooseOneViewController {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        var shouldReturn : Bool = true
+        
+        if textField == startLocationField || textField == destinationField {
+            self.performSegue(withIdentifier: "PickUpLocationView", sender: nil)
+            shouldReturn = false
+        }
+        
+        return shouldReturn
     }
     
     func keyboardWillShow(notification : NSNotification) {

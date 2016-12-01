@@ -18,6 +18,15 @@
 		827126071DD5A917009ADC24 /* ServerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827126061DD5A917009ADC24 /* ServerClass.swift */; };
 		8271260A1DD5A9F5009ADC24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827126081DD5A9F5009ADC24 /* Main.storyboard */; };
 		8271260F1DD5C472009ADC24 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8271260E1DD5C472009ADC24 /* AppConstants.swift */; };
+		82767BFC1DED87E100A4C506 /* PickTimeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82767BFB1DED87E100A4C506 /* PickTimeList.plist */; };
+		827C7BE91DEED52000C10448 /* PickUpLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827C7BE81DEED52000C10448 /* PickUpLocationViewController.swift */; };
+		827C7BEB1DEEE67300C10448 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827C7BEA1DEEE67300C10448 /* GooglePlaces.framework */; };
+		827C7BED1DEEE68300C10448 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827C7BEC1DEEE68300C10448 /* GoogleMapsBase.framework */; };
+		827C7BF11DEEE76200C10448 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 827C7BF01DEEE76200C10448 /* libc++.tbd */; };
+		827C7BF31DEEE76F00C10448 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 827C7BF21DEEE76F00C10448 /* libz.tbd */; };
+		827C7BF71DEEE79100C10448 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827C7BF61DEEE79100C10448 /* SystemConfiguration.framework */; };
+		827C7BFF1DEEE7E500C10448 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827C7BFE1DEEE7E500C10448 /* CoreData.framework */; };
+		827C7C011DEEFBA200C10448 /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827C7C001DEEFBA200C10448 /* DropDownView.xib */; };
 		82845D5B1DD457CC00AD780A /* ChooseOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */; };
 		828DA7BB1DCC528400698B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7BA1DCC528400698B41 /* AppDelegate.swift */; };
 		828DA7C21DCC528400698B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828DA7C11DCC528400698B41 /* Assets.xcassets */; };
@@ -26,6 +35,7 @@
 		828DA7DB1DCC528500698B41 /* HopOnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7DA1DCC528500698B41 /* HopOnUITests.swift */; };
 		828DA7EA1DCC61A000698B41 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */; };
 		828DA7EF1DCC947D00698B41 /* T&CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828DA7EE1DCC947D00698B41 /* T&CViewController.swift */; };
+		828E06E71DEFE70800C82085 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E06E61DEFE70800C82085 /* DropDownView.swift */; };
 		829ABEC21DE4404C0063E122 /* UserDetailsDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829ABEC11DE4404C0063E122 /* UserDetailsDataObject.swift */; };
 		829ABEC41DE466E90063E122 /* RiderDetailsDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829ABEC31DE466E90063E122 /* RiderDetailsDataObject.swift */; };
 		829ABEC61DE467020063E122 /* DriverDetailsDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829ABEC51DE467020063E122 /* DriverDetailsDataObject.swift */; };
@@ -81,6 +91,20 @@
 		827126061DD5A917009ADC24 /* ServerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerClass.swift; sourceTree = "<group>"; };
 		827126091DD5A9F5009ADC24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8271260E1DD5C472009ADC24 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		82767BFB1DED87E100A4C506 /* PickTimeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PickTimeList.plist; sourceTree = "<group>"; };
+		827C7BE81DEED52000C10448 /* PickUpLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickUpLocationViewController.swift; sourceTree = "<group>"; };
+		827C7BEA1DEEE67300C10448 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlaces.framework; sourceTree = "<group>"; };
+		827C7BEC1DEEE68300C10448 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
+		827C7BEE1DEEE74D00C10448 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		827C7BF01DEEE76200C10448 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		827C7BF21DEEE76F00C10448 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		827C7BF41DEEE77A00C10448 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		827C7BF61DEEE79100C10448 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		827C7BF81DEEE79C00C10448 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		827C7BFA1DEEE7A900C10448 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		827C7BFC1DEEE7B800C10448 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		827C7BFE1DEEE7E500C10448 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		827C7C001DEEFBA200C10448 /* DropDownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
 		82845D5A1DD457CC00AD780A /* ChooseOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseOneViewController.swift; sourceTree = "<group>"; };
 		828DA7B71DCC528400698B41 /* HopOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828DA7BA1DCC528400698B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +119,7 @@
 		828DA7DC1DCC528500698B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828DA7E91DCC61A000698B41 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		828DA7EE1DCC947D00698B41 /* T&CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "T&CViewController.swift"; sourceTree = "<group>"; };
+		828E06E61DEFE70800C82085 /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		829ABEC11DE4404C0063E122 /* UserDetailsDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsDataObject.swift; sourceTree = "<group>"; };
 		829ABEC31DE466E90063E122 /* RiderDetailsDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderDetailsDataObject.swift; sourceTree = "<group>"; };
 		829ABEC51DE467020063E122 /* DriverDetailsDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverDetailsDataObject.swift; sourceTree = "<group>"; };
@@ -128,10 +153,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827C7BFF1DEEE7E500C10448 /* CoreData.framework in Frameworks */,
+				827C7BF71DEEE79100C10448 /* SystemConfiguration.framework in Frameworks */,
+				827C7BF31DEEE76F00C10448 /* libz.tbd in Frameworks */,
+				827C7BF11DEEE76200C10448 /* libc++.tbd in Frameworks */,
 				82E1C0201DDF362B0049CF8D /* CoreLocation.framework in Frameworks */,
 				82B52FB61DE2DD4A00C6165E /* Bolts.framework in Frameworks */,
 				82408A2D1DE5C79700416B9D /* FBSDKCoreKit.framework in Frameworks */,
+				827C7BED1DEEE68300C10448 /* GoogleMapsBase.framework in Frameworks */,
 				82408A2E1DE5C79700416B9D /* FBSDKLoginKit.framework in Frameworks */,
+				827C7BEB1DEEE67300C10448 /* GooglePlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +207,7 @@
 			children = (
 				825CE08B1DDF1B8A00961D27 /* MenuItemTableViewCell.swift */,
 				82FDC04D1DE7114A00D7B9C3 /* PopUpTableView.swift */,
+				828E06E61DEFE70800C82085 /* DropDownView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +275,7 @@
 				827126081DD5A9F5009ADC24 /* Main.storyboard */,
 				828DA7C61DCC528400698B41 /* Info.plist */,
 				82FDC04B1DE7112F00D7B9C3 /* PopUpTableView.xib */,
+				827C7C001DEEFBA200C10448 /* DropDownView.xib */,
 			);
 			path = HopOn;
 			sourceTree = "<group>";
@@ -278,6 +311,7 @@
 				825CE0881DDEEEAD00961D27 /* MenuViewController.swift */,
 				82B52FB71DE32B1700C6165E /* DriverProfileViewController.swift */,
 				82B52FB91DE32B2600C6165E /* RiderProfileViewController.swift */,
+				827C7BE81DEED52000C10448 /* PickUpLocationViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -290,6 +324,7 @@
 				829EED8B1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf */,
 				829EED8C1DD9F3D70045CC3A /* CaviarDreams_Italic.ttf */,
 				829EED8D1DD9F3D70045CC3A /* CaviarDreams.ttf */,
+				82767BFB1DED87E100A4C506 /* PickTimeList.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -316,6 +351,17 @@
 		82E1C01E1DDF362B0049CF8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				827C7BFE1DEEE7E500C10448 /* CoreData.framework */,
+				827C7BFC1DEEE7B800C10448 /* ImageIO.framework */,
+				827C7BFA1DEEE7A900C10448 /* Accelerate.framework */,
+				827C7BF81DEEE79C00C10448 /* OpenGLES.framework */,
+				827C7BF61DEEE79100C10448 /* SystemConfiguration.framework */,
+				827C7BF41DEEE77A00C10448 /* QuartzCore.framework */,
+				827C7BF21DEEE76F00C10448 /* libz.tbd */,
+				827C7BF01DEEE76200C10448 /* libc++.tbd */,
+				827C7BEE1DEEE74D00C10448 /* CoreGraphics.framework */,
+				827C7BEC1DEEE68300C10448 /* GoogleMapsBase.framework */,
+				827C7BEA1DEEE67300C10448 /* GooglePlaces.framework */,
 				82B52FB51DE2DD4A00C6165E /* Bolts.framework */,
 				82B52FA91DE2D63700C6165E /* FBSDKCoreKit.framework */,
 				82B52FA71DE2CFF500C6165E /* FBSDKLoginKit.framework */,
@@ -462,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827C7C011DEEFBA200C10448 /* DropDownView.xib in Resources */,
 				82FDC0611DE73D1800D7B9C3 /* SwiftCountryPicker.bundle in Resources */,
 				8271260A1DD5A9F5009ADC24 /* Main.storyboard in Resources */,
 				828DA7C51DCC528400698B41 /* LaunchScreen.storyboard in Resources */,
@@ -472,6 +519,7 @@
 				829EED911DD9F3D70045CC3A /* CaviarDreams.ttf in Resources */,
 				82FDC0651DE73D1800D7B9C3 /* SwiftCountryView.xib in Resources */,
 				829EED8F1DD9F3D70045CC3A /* CaviarDreams_BoldItalic.ttf in Resources */,
+				82767BFC1DED87E100A4C506 /* PickTimeList.plist in Resources */,
 				82FDC0601DE73D1800D7B9C3 /* .gitkeep in Resources */,
 				829EED901DD9F3D70045CC3A /* CaviarDreams_Italic.ttf in Resources */,
 				829EED8E1DD9F3D70045CC3A /* CaviarDreams_Bold.ttf in Resources */,
@@ -499,6 +547,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827C7BE91DEED52000C10448 /* PickUpLocationViewController.swift in Sources */,
+				828E06E71DEFE70800C82085 /* DropDownView.swift in Sources */,
 				829ABEC61DE467020063E122 /* DriverDetailsDataObject.swift in Sources */,
 				82845D5B1DD457CC00AD780A /* ChooseOneViewController.swift in Sources */,
 				82C81D2A1DCCC1AD005CC046 /* VerificationPageViewController.swift in Sources */,
