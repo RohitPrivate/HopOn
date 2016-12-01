@@ -994,7 +994,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LL-HB-FQu">
-                                <rect key="frame" x="70" y="20" width="181" height="53"/>
+                                <rect key="frame" x="70.5" y="20" width="180.5" height="53"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1670,13 +1670,13 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree with the " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DO-d0-Gce">
-                                        <rect key="frame" x="43" y="0.0" width="121" height="20"/>
+                                        <rect key="frame" x="43" y="0.0" width="120.5" height="20"/>
                                         <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="16"/>
                                         <color key="textColor" red="0.96470588235294119" green="0.96476620435714722" blue="0.96459084749221802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PM8-II-tVP">
-                                        <rect key="frame" x="168" y="0.0" width="122" height="20"/>
+                                        <rect key="frame" x="167.5" y="0.0" width="122" height="20"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Terms &amp; Conditions">
@@ -2430,7 +2430,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rider Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gE-ko-wfU">
-                                <rect key="frame" x="93" y="20" width="134" height="53"/>
+                                <rect key="frame" x="93.5" y="20" width="133.5" height="53"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -2519,7 +2519,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olb-tR-J1R">
-                                <rect key="frame" x="89" y="20" width="142" height="53"/>
+                                <rect key="frame" x="89.5" y="20" width="141.5" height="53"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -2769,7 +2769,7 @@ Larem Ipsum is simply dummy text of the printing and typ esetting industry. Lore
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShQ-UP-LEv">
-                                <rect key="frame" x="91" y="20" width="139" height="53"/>
+                                <rect key="frame" x="91.5" y="20" width="138.5" height="53"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>

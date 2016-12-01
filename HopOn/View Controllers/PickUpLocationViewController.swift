@@ -85,8 +85,9 @@ class PickUpLocationViewController: ChooseOneViewController, UITextFieldDelegate
         let textField = notification.object as! UITextField
         
         self.clearSelectedLocation(textField)
+        let xPadding = 10
         
-        let dropdownFrame : CGRect = CGRect.init(x: textField.frame.origin.x, y: textField.frame.origin.y + textField.frame.size.height, width: textField.frame.size.width, height: 500)
+        let dropdownFrame : CGRect = CGRect.init(x: textField.frame.origin.x + (textField.superview?.frame.origin.x)! - CGFloat(xPadding), y: textField.frame.origin.y + textField.frame.size.height + (textField.superview?.frame.origin.y)! + CGFloat(AppConstants.HEADER_HEIGHT), width: textField.frame.size.width + CGFloat(xPadding), height: CGFloat(44 * 5))
         self.dropDownView(dropdownFrame)
         self.placeAutoComplete(textField.text)
     }
@@ -96,7 +97,7 @@ class PickUpLocationViewController: ChooseOneViewController, UITextFieldDelegate
             dropdownView = (DropDownView.loadFromNibNamed(nibNamed: "DropDownView") as! DropDownView)
             dropdownView?.frame = CGRect.init(origin: frame.origin, size: frame.size)
             dropdownView?.alpha = 0
-            dropdownView?.backgroundColor = UIColor.clear
+            dropdownView?.backgroundColor = UIColor.white
             dropdownView?.layer.cornerRadius =   15
         } else {
             dropdownView?.frame = frame
@@ -108,19 +109,13 @@ class PickUpLocationViewController: ChooseOneViewController, UITextFieldDelegate
     
     func reFrameDropdownView() {
         if dropdownView?.tableView != nil && dropDownData != nil {
-            var tableViewFrame : CGRect = dropdownView!.tableView.frame
-            let tableViewHeight = self.view.frame.size.height - (dropdownView!.frame.origin.y + 100)
-            
-            if (dropdownView!.rowHeight * (dropDownData?.count)!) < Int(tableViewHeight) {
-                tableViewFrame.size.height = CGFloat(dropdownView!.rowHeight * (dropDownData?.count)!)
-            } else {
-                tableViewFrame.size.height = tableViewHeight
-            }
+            let tableViewFrame : CGRect = dropdownView!.tableView.frame
             dropdownView!.tableView.frame = tableViewFrame
         } else if dropdownView?.tableView != nil {
             var tableViewFrame : CGRect = dropdownView!.tableView.frame
             tableViewFrame.size.height = 0
             dropdownView!.tableView.frame = tableViewFrame
+            dropdownView?.tableView.backgroundColor = UIColor.white
         }
     }
     

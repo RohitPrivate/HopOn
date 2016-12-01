@@ -84,6 +84,8 @@ class AppConstants: NSObject {
     static let MENU_BAR_ROWS_COUNT : Int = 8
     static let MENU_ITEM_ICON_SIZE : CGSize = CGSize.init(width: 46, height: 46)
     
+    static let HEADER_HEIGHT = 73
+    
     static var deviceType : DeviceType = DeviceType.none
     
     public enum DeviceType {
